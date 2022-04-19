@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+/*기본 - 국문*/
+@font-face {
+    font-family: 'Noto Sans KR';
+    src: local('Noto Sans KR'),
+    url('font/NotoSansKR-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('font/NotoSansKR-Regular.woff') format('woff'), /* Modern Browsers */
+    url('font/NotoSansKR-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 400;
+  }
+
+  /* noto-sans-kr-700 - latin */
+  @font-face {
+    font-family: 'Noto Sans KR';
+    src: local('Noto Sans KR'),
+    url('font/NotoSansKR-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('font/NotoSansKR-Bold.woff') format('woff'), /* Modern Browsers */
+    url('font/NotoSansKR-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+}
+
+/* roboto - 영문, 숫자 */
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+    url('font/Roboto-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+    url('font/Roboto-Regular.woff') format('woff'), /* Modern Browsers */
+    url('font/Roboto-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 400;
+  }
+  /* roboto-700 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+    url('font/Roboto-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+    url('font/Roboto-Bold.woff') format('woff'), /* Modern Browsers */
+    url('font/Roboto-Bold.ttf') format('truetype'); /* Safari, Android, iOS */
+    font-weight: 700;
+  }
