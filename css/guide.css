@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* 공통 */
+html { font-size: 62.5%; color: #666;}
+body {font-size: 1.4rem; line-height: 1.4em;}
+body * {box-sizing: border-box;}
+a,
+button {display: inline-block; background: transparent; font-weight: 400; color: inherit; text-decoration: none; border:0; cursor: pointer;}
+.guide header {position: fixed; top: 0; left: 0; width: 100%; min-width: 960px;  padding:13px 20px 12px; background-color: #fff; border-bottom: 1px solid #ddd; z-index: 999; background: #35353d;}
+.guide header h1 {display: inline-block;  }
+.guide header h1 a {font-weight: 700; color: #fff; font-size:18px;}
+.guide header h1 a sup {position: relative; top: -0.8rem;}
+.guide header > a {display: inline-block; float: right; background: #ff3f90; padding: 2px 10px; border-radius: 5px; color: #fff;}
+
+.container {min-width: 960px; padding-top:47px; padding-left: 230px;}
+.wrapper section {padding: 0 !important;}
+.guide nav {position: fixed; left: 0; top: 47px; bottom: 0; width: 230px; padding: 30px; font-size: 15px;  line-height: 1.5; overflow-y: auto; color: #333; background:#f0f0f0}
+.guide nav a {display: block; }
+.guide nav a:hover { text-decoration: underline;}
+.guide nav > ul > li + li {padding-top: 20px;}
+.guide nav li.on > a {font-weight: 700; color: #000;}
+.guide nav > ul > li.on > a:before {content: "#";}
+.guide nav > ul > li > ul li a {position: relative; padding: 5px 5px 5px 10px; font-size: 12px; color: #555;}
+.guide nav > ul > li > ul li a:after {position: absolute; width: 3px; height: 3px; left: 0; top: 15px; background: #999; content: ""; border-radius: 50%;}
+
+.guide main {padding: 40px 30px;}
+.guide section {margin-bottom: 50px;}
+.guide h2:not(.tit_h2,.aTit) {padding-bottom: 30px;  font-size: 24px; font-weight: 700; color: #222;text-transform: uppercase; }
+.guide h3:not(.tit_h3) {padding: 10px 0; margin-bottom: 10px; font-size: 18px;color: #222; font-weight: 700; }
+.guide h4 {padding-bottom: 5px; color: #222;}
+
+
+.mb10 {margin-bottom: 10px;}
+.table + h4 {margin-top: 40px;}
+.table {border-top: 1px solid #999;}
+.table table {width: 100%; line-height: 1.6; font-size: 13px; }
+.guide caption {font-size: 1rem; position: absolute; left: 0; right: 0; width: 0; height: 0; overflow: hidden; }
+.table table th, table.guide td {padding:10px 15px; border-bottom: 1px solid #ddd;}
+.table table th {background: #fafafa; vertical-align: middle; font-weight: 700;}
+.table table th + th {border-left: 1px solid #ddd;}
+.table table tbody td  {padding: 10px 15px; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+
+.guide .guide_dl { margin: 20px 0; padding: 20px; background: #f7f7f7; }
+.guide .guide_dl dt {padding-bottom: 5px; color: #222; font-weight: bold;}
+.guide .guide_dl dd {color: #898989; font-size: 12px; }
+.info_txt, 
+.info_dl dd {text-indent: -11px; padding-left: 11px; font-size: 14px; color: #898989;font-weight: 400;}
+.info_txt:before,
+.info_dl dd:before {content: "- "; }
+.info_txt:last-child {padding-bottom: 10px;}
+.red {color: #d14; font-weight: 700;}
+.tit_h3 {border-bottom: 0; color: #000;}
+
+/*code 영역*/
+.code_wrap {display: flex; flex-wrap: nowrap; justify-content: space-between; margin-top: 10px; margin-bottom: 50px;  overflow: hidden; }
+.code_wrap .code_header {padding: 5px 15px; font-size: 1.2rem; background: #aaa;}
+.code_wrap .code_header h5 {display: inline-block; font-size: 1.1rem; color: #fff;}
+.code_wrap .code_header .btn_box {float: right;}
+.code_wrap .code_header .btn_box a {display: inline-block; padding: 0 5px; min-width: 30px; text-align: center; line-height: 1.7em; background: #888; font-size: 1.1rem; border-radius: 3px; color: #fff;}
+.code_wrap .code_header .btn_box a.on, 
+.code_wrap .code_header .btn_box a:hover {background: #222;}
+.code_wrap .code_pre div  {display: none; border-top: 1px solid #eee;}
+.code_wrap .code_pre div.on {display: block;}
+.code_view {padding: 20px 15px;}
+.hljs {line-height: 1.6em; font-size: 1.2rem; background: transparent; font-family: sans-serif;}
+
+.guide_title {padding: 10px; margin: 30px 0 10px; background: #eaeaea; font-weight: bold ;}
+.guide_title:first-child {margin-top: 0;}
+
+ 
+.mobileWrap {position: relative; width: 395px; min-height: 630px;display: inline-block; border-color:#000; border-radius:40px 40px 20px 20px; border-style: solid; border-width: 50px 10px 30px; background: #fff; }
+.mobileWrap section { padding:40px 20px 50px !important; }
+.mobileWrap:before {position: absolute; top: -30px; left: 50%; margin-left: -35px; width: 70px; height: 10px; background: #fff; border-radius: 5px; content: "";}
+.dl_dotList {margin-top: 0;}
+.formFieldset dl {margin: 0; padding: 0;}
+.formFieldset dl dt {padding: 0;}
+.formFieldset dl dd + dd {margin-top: 10px;}
+
+.code_html {display: inline-block; width: calc(100% - 395px - 80px); padding:20px; background: #f0f0f0;}
+.code_html pre,
+.code_html .hljs {height: 100%;}
+/*-------------------------------------------------------------------
+==============================  form  ==============================
+-------------------------------------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .code_wrap {flex-wrap: wrap; }
+    .code_html {width: 100%; margin-top: 20px;}
+}

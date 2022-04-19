@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 초기화 */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color:#999;}/* Webkit Browser */
+input:-moz-placeholder, textarea:-moz-placeholder {color:#999;}/* Mozilla Firefox 4 to 18 */
+input::-moz-placeholder, textarea::-moz-placeholder {color:#999;}/* Mozilla Firefox 19+ */
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {color:transparent;}/* Webkit Browser */
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder {color:transparent;}/* Mozilla Firefox 4 to 18 */
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {color:transparent;}/* Mozilla Firefox 19+ */
+
+input {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; border:0px; vertical-align:middle;}
+/*위아래 화살표삭제*/
+input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button {-webkit-appearance: none; margin: 0;} /*Webkit*/
+input[type=number] {-moz-appearance:textfield;} /*Firefox*/
+/*검색 삭제버튼 삭제*/
+input::-ms-clear,input::-ms-reveal{display:none;width:0;height:0;}
+input::-webkit-search-decoration,input::-webkit-search-cancel-button,input::-webkit-search-results-button,input::-webkit-search-results-decoration{display:none;}
+/*라디오, 체크박스, 파일 업로드 안보이게 처리*/
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {position: absolute; left: 0; height: 0; width: 0; height: 0; opacity: 0; }
+/*슬라이드바 */
+input[type="range"] {-webkit-appearance: none; width: 100%; background: transparent; /*바 색상*/ }
+input[type="range"]:focus {outline:none}
+input[type="range"]::-webkit-slider-thumb {width: 20px; height: 20px;-webkit-appearance: none;background:transparent;cursor: pointer;border: 1px solid #ddd; border-radius: 0;} /*Webkit 포인터*/
+input[type="range"]::-ms-track {cursor: pointer; background: transparent; border: transparent; color: transparent;} /*ie 기본스타일 */
+input[type="range"]::-moz-range-thumb {width: 20px; height: 20px;cursor: pointer; background: transparent;border-radius: 0;} /*Firefox*/
+input[type="range"]:focus::-ms-fill-lower {background: transparent; } /*진행된 바 배경색*/
+input[type="range"]:focus::-ms-fill-upper {background: transparent;} /*바 배경색*/
+
+label {cursor: pointer; display: inline-block;}
+textarea {width:100%; vertical-align:middle; resize:none; border:0}
+select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;border:0}
+select::-ms-expand {display:none;}
