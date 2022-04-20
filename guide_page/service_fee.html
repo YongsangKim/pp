@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/vendor/highlight.pack.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../js/vendor/editor.css">
+	<link rel="stylesheet" href="../js/vendor/contents.css">
+	<link rel="stylesheet" href="../js/vendor/codemirror.css">
+	<link rel="stylesheet" href="../js/vendor/github.min.css">
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/common.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/contents.css" />
+	<link rel="stylesheet" href="../css/guide.css" />
+
+    <style>
+        .bizPrice .priceSelectWarp {padding: 0 20px !important;}
+        .bizPrice .infoBox {margin: 25px 20px 0 !important;}
+        .priceSwiper .swiper-slide {width: calc(100% - 40px) !important;}
+    </style>
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header>
+        <h1><a href="">U<sup>+</sup>비즈마켓 퍼블리싱 산출물</a></h1>
+        <a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../../모바일_비즈마켓_프론트_퍼블리싱가이드.html">기본정책</a></li>
+				<li><a href="../guide_page/button.html">UI</a>
+					<ul>
+						<li><a href="../guide_page/button.html">Button</a></li>
+						<li><a href="../guide_page/form.html">Form</a></li>
+						<li><a href="../guide_page/form_group.html">Form Group</a></li>
+						<li><a href="../guide_page/list.html">Title / List</a></li>
+						<li><a href="../guide_page/table.html">Tables</a></li>
+						<li><a href="../guide_page/tab.html">Tab</a></li>
+						<li><a href="../guide_page/accordion.html">Accordion</a></li>
+						<li><a href="../guide_page/dropdown.html">Dropdown</a></li>
+						<li><a href="../guide_page/popup.html">Popup</a></li>
+						
+					</ul>
+				</li>
+                <li ><a href="../guide_page/layout.html">레이아웃</a>
+                    <ul>
+						<li><a href="../guide_page/layout.html">header, footer</a></li>
+						<li><a href="../guide_page/main_banner.html">메인배너</a></li>
+					</ul>
+                </li>
+				<li><a href="서비스카드.html">메인 컨텐츠등록</a>
+					<ul>
+						<li><a href="서비스카드.html">서비스카드</a></li>
+						<li><a href="서비스특징.html">서비스특징</a></li>
+					</ul>
+				</li>
+				<li class="on"><a href="서비스별_요금안내.html">서비스별 컨텐츠등록</a>
+					<ul>
+						<li><a href="서비스별_요금안내.html">요금안내</a></li>
+						<li class="on"><a href="서비스별_서비스특징.html">서비스특징</a></li>
+						<li><a href="서비스별_주요기능.html">주요기능</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<main class="id="viewer" class="tui-editor-contents">
+            <h2>서브메인 > 서비스 이용요금</h2>
+            <p class="info_txt">이미지 사이즈 :124px * 124px</p>
+			<section>
+
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+                        <section class="bizPrice bg" style="padding: 40px 0 !important;">
+                            <h2 class="aTit tac">서비스 이용요금</h2>
+                            <!--조건 변경영역 - s-->
+                            <div class="priceSelectWarp">
+                                <div class="fieldSelect">
+                                    <select title="인원설정" disabled>
+                                        <option value="">사용인원 선택</option>
+                                        <option value="">1명 사용</option>
+                                    </select>
+                                </div>
+                                <div class="fieldSelect">
+                                    <select title="약정기간 선택">
+                                        <option value="">약정기간 선택</option>
+                                        <option value="">1년 약정</option>
+                                        <option value="">2년 약정</option>
+                                        <option value="">3년 약정</option>
+                                    </select>
+                                </div>
+                                
+                                <!-- <div class="fieldCheck">
+                                    <input type="checkbox" id="set01" name="">
+                                    <label for="set01">결합할인</label>
+                                </div> -->
+                            </div>
+                            <!--조건 변경영역 - e -->
+                            <!--//스와이프 영역-->
+                            <div class="swiper-container priceSwiper parallax_js height_same">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div class="priceBox">
+                                            <dl>
+                                                <dt>
+                                                    <span class="imgWap"><img src="../../../../common/mobile/imgs/service_main/ico_fax_price01.png" alt=""></span>
+                                                    웹(Web)형
+                                                </dt>
+                                                <dd>
+                                                U<sup>+</sup>웹팩스 전용 웹사이트를 통해 팩스를<br>
+                                                주고 받을 수 있는 상품</dd>
+                                            </dl>
+                                            <strong class="priceWrap">
+                                                <span class="priceCount counter roboto" data-count="6600">6600</span>원<em>/월</em>
+                                                <span class="subTxt">팩스 수신번호 1개 이용료</span>
+                                            </strong>
+                                            <ul class="markList">
+                                                <li>※ 팩스 발송료 1장당 42.9원 별도</li>
+                                            </ul>
+                                            <a href="javascript:void(0);" class="btn arrow_link" target="_blank" title="새창">이용요금 상세보기</a>
+                                            <div class="btnbox">
+                                                <a href="javascript:void(0);" class="btn mid pink">가입상담신청</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <div class="priceBox">
+                                            <dl>
+                                                <dt>
+                                                    <span class="imgWap"><img src="../../../../common/mobile/imgs/service_main/ico_fax_price02.png" alt=""></span>
+                                                    기업연동형
+                                                </dt>
+                                                <dd>이용 중인 사내 시스템과 연동해 <br>팩스를 이용 할 수 있는 상품</dd>
+                                            </dl>
+                                            <strong class="priceWrap">
+                                                <span class="priceCount counter roboto" data-count="6600">6600</span>원<em>/월</em>
+                                                <span class="subTxt">팩스 수신번호 1개 이용료</span>
+                                            </strong>
+            
+                                            <ul class="markList">
+                                                <li>※ 팩스 발송료 1장당 42.9원 별도</li>
+                                                <li>※ 가입문의 또는 사전테스트를 원하시면 U<sup>+</sup>웹팩스 고객센터 <span class="inlineb">1544-7003</span>로 문의해 주세요.</li>
+                                            </ul>
+                                            <a href="javascript:void(0);" class="btn arrow_link" target="_blank" title="새창">이용요금 상세보기</a>
+                                            <div class="btnbox">
+                                                <a href="javascript:void(0);" class="btn mid pink">가입상담신청</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+            
+                                    <script>
+                                    var priceSwiper = new Swiper('.priceSwiper', {
+                                        slidesPerView: 'auto',
+                                        centeredSlides: true,
+                                        spaceBetween: 10,
+                                        pagination: {
+                                            el: '.swiper-pagination',
+                                        },
+                                    on: {
+                                            slideChangeTransitionStart : function(){
+                                            counterAction();
+                                        }
+                                    }
+                                    });
+                                </script>
+                            </div>
+                            <!--스와이프 영역//-->
+                            <div class="infoBox">
+                                <p class="topTxt">오피스넷, 기업070전화, 기업솔루션과 함께 이용하면 <br><span class="fcPink ">최대 35% 할인 혜택을 받을 수 있습니다.</span></p>
+                                <ul class="saleList">
+                                    <li><span>15<em>%</em></span><p>3년 약정 할인</p></li>
+                                    <li><span>15<em>%</em></span><p>패키지 할인</p></li>
+                                    <li><span>5<em>%</em></span><p>기업서비스 결합 할인</p></li>
+                                </ul>
+                            </div>
+                        </section><!-- 서비스 이용요금 - e -->
+						<!--화면 입력영역-->
+                    </div>
+                    
+                    <!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+                                <section class="bizPrice bg">
+                                    <h2 class="aTit tac">서비스 이용요금</h2>
+                                    <!--조건 변경영역 - s-->
+                                    <div class="priceSelectWarp">
+                                        <div class="fieldSelect">
+                                            <select title="인원설정" disabled>
+                                                <option value="">사용인원 선택</option>
+                                                <option value="">1명 사용</option>
+                                            </select>
+                                        </div>
+                                        <div class="fieldSelect">
+                                            <select title="약정기간 선택">
+                                                <option value="">약정기간 선택</option>
+                                                <option value="">1년 약정</option>
+                                                <option value="">2년 약정</option>
+                                                <option value="">3년 약정</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <!-- <div class="fieldCheck">
+                                            <input type="checkbox" id="set01" name="">
+                                            <label for="set01">결합할인</label>
+                                        </div> -->
+                                    </div>
+                                    <!--조건 변경영역 - e -->
+                                    <!--//스와이프 영역-->
+                                    <div class="swiper-container priceSwiper parallax_js height_same">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <div class="priceBox">
+                                                    <dl>
+                                                        <dt>
+                                                            <span class="imgWap"><img src="../../../common/mobile/imgs/service_main/ico_fax_price01.png" alt=""></span>
+                                                            웹(Web)형
+                                                        </dt>
+                                                        <dd>
+                                                        U<sup>+</sup>웹팩스 전용 웹사이트를 통해 팩스를<br>
+                                                        주고 받을 수 있는 상품</dd>
+                                                    </dl>
+                                                    <strong class="priceWrap">
+                                                        <span class="priceCount counter roboto" data-count="6600">6600</span>원<em>/월</em>
+                                                        <span class="subTxt">팩스 수신번호 1개 이용료</span>
+                                                    </strong>
+                                                    <ul class="markList">
+                                                        <li>※ 팩스 발송료 1장당 42.9원 별도</li>
+                                                    </ul>
+                                                    <a href="javascript:void(0);" class="btn arrow_link" target="_blank" title="새창">이용요금 상세보기</a>
+                                                    <div class="btnbox">
+                                                        <a href="javascript:void(0);" class="btn mid pink">가입상담신청</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <div class="priceBox">
+                                                    <dl>
+                                                        <dt>
+                                                            <span class="imgWap"><img src="../../../common/mobile/imgs/service_main/ico_fax_price02.png" alt=""></span>
+                                                            기업연동형
+                                                        </dt>
+                                                        <dd>이용 중인 사내 시스템과 연동해 <br>팩스를 이용 할 수 있는 상품</dd>
+                                                    </dl>
+                                                    <strong class="priceWrap">
+                                                        <span class="priceCount counter roboto" data-count="6600">6600</span>원<em>/월</em>
+                                                        <span class="subTxt">팩스 수신번호 1개 이용료</span>
+                                                    </strong>
+                    
+                                                    <ul class="markList">
+                                                        <li>※ 팩스 발송료 1장당 42.9원 별도</li>
+                                                        <li>※ 가입문의 또는 사전테스트를 원하시면 U<sup>+</sup>웹팩스 고객센터 <span class="inlineb">1544-7003</span>로 문의해 주세요.</li>
+                                                    </ul>
+                                                    <a href="javascript:void(0);" class="btn arrow_link" target="_blank" title="새창">이용요금 상세보기</a>
+                                                    <div class="btnbox">
+                                                        <a href="javascript:void(0);" class="btn mid pink">가입상담신청</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <!-- Add Pagination -->
+                                        <div class="swiper-pagination"></div>
+                    
+                                            <script>
+                                            var priceSwiper = new Swiper('.priceSwiper', {
+                                                slidesPerView: 'auto',
+                                                centeredSlides: true,
+                                                spaceBetween: 10,
+                                                pagination: {
+                                                    el: '.swiper-pagination',
+                                                },
+                                            on: {
+                                                    slideChangeTransitionStart : function(){
+                                                    counterAction();
+                                                }
+                                            }
+                                            });
+                                        </script>
+                                    </div>
+                                    <!--스와이프 영역//-->
+                                    <div class="infoBox">
+                                        <p class="topTxt">오피스넷, 기업070전화, 기업솔루션과 함께 이용하면 <br><span class="fcPink ">최대 35% 할인 혜택을 받을 수 있습니다.</span></p>
+                                        <ul class="saleList">
+                                            <li><span>15<em>%</em></span><p>3년 약정 할인</p></li>
+                                            <li><span>15<em>%</em></span><p>패키지 할인</p></li>
+                                            <li><span>5<em>%</em></span><p>기업서비스 결합 할인</p></li>
+                                        </ul>
+                                    </div>
+                                </section><!-- 서비스 이용요금 - e -->
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+                </div>
+                    
+
+            </section>
+            
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+</body>
+</html>

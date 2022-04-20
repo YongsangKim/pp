@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/vendor/highlight.pack.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../js/vendor/editor.css">
+	<link rel="stylesheet" href="../js/vendor/contents.css">
+	<link rel="stylesheet" href="../js/vendor/codemirror.css">
+	<link rel="stylesheet" href="../js/vendor/github.min.css">
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/common.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/contents.css" />
+	<link rel="stylesheet" href="../css/guide.css" />
+	<style>
+	</style>
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header>
+		<h1><a href="">U<sup>+</sup>비즈마켓 퍼블리싱 산출물</a></h1>
+		<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../../모바일_비즈마켓_프론트_퍼블리싱가이드.html">기본정책</a></li>
+				<li class="on"><a href="button.html">UI</a>
+					<ul>
+						<li><a href="button.html">Button</a></li>
+						<li><a href="form.html">Form</a></li>
+						<li><a href="form_group.html">Form Group</a></li>
+						<li class="on"><a href="list.html">Title / List</a></li>
+						<li><a href="table.html">Tables</a></li>
+						<li><a href="tab.html">Tab</a></li>
+						<li><a href="accordion.html">Accordion</a></li>
+						<li><a href="dropdown.html">Dropdown</a></li>
+						<li><a href="popup.html">Popup</a></li>
+					</ul>
+				</li>
+				<li><a href="layout.html">레이아웃</a>
+                    <ul>
+						<li><a href="layout.html">header, footer</a></li>
+						<li><a href="main_banner.html">메인배너</a></li>
+					</ul>
+                </li>
+				<li><a href="../template/서비스카드.html">메인 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스카드.html">서비스카드</a></li>
+						<li><a href="../template/서비스특징.html">서비스특징</a></li>
+					</ul>
+				</li>
+				<li><a href="../template/서비스별_요금안내.html">서비스별 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스별_요금안내.html">요금안내</a></li>
+						<li><a href="../template/서비스별_서비스특징.html">서비스특징</a></li>
+						<li><a href="../template/서비스별_주요기능.html">주요기능</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<main class="id="viewer" class="tui-editor-contents">
+			<h2>Title / List</h2>
+
+			<section>
+				<h3>Title</h3>
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+							<section>
+								<p class="guide_title">타이틀 단독</p>
+								<!--대타이틀 : 26px, #333, 가운데정렬-->
+								<h2 class="tit_h2">대타이틀</h2>
+								<!--중타이틀 : 18px, #333, 왼쪽정렬-->
+								<h3 class="tit_h3">중타이틀</h3>
+								<!--결과 타이틀 : 중타이틀과 동일하며 가운데 정렬-->
+								<h3 class="tit_h3 tac">회원탈퇴가 완료되었습니다.</h3>
+
+								<p class="guide_title">타이틀 + 서브텍스트</p>
+								<!--대타이틀+서브텍스트 (로그인 페이지 사용)-->
+								<h2 class="tit_h2">대타이틀</h2>
+								<p class="tit_subTxt">대타이틀 아래 들어가는 subtext</p>
+								<!--중타이틀+서브텍스트 (마이페이지 사용)-->
+								<h3 class="tit_h3">중타이틀</h3>
+								<p class="tit_h3_subTxt">중타이틀 아래 들어가는 subtext</p>
+							</section>
+						<!--화면 입력영역-->
+						</div>
+
+						<!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+								<p class="guide_title">타이틀 단독</p>
+								<!--대타이틀 : 26px, #333, 가운데정렬-->
+
+								<h2 class="tit_h2">대타이틀</h2>
+								<!--중타이틀 : 18px, #333, 왼쪽정렬-->
+
+								<h3 class="tit_h3">중타이틀</h3>
+								<!--결과 타이틀 : 중타이틀과 동일하며 가운데 정렬-->
+
+								<h3 class="tit_h3 tac">회원탈퇴가 완료되었습니다.</h3>
+
+
+								<p class="guide_title">타이틀 + 서브텍스트</p>
+								<!--대타이틀+서브텍스트 (로그인 페이지 사용)-->
+
+								<h2 class="tit_h2">대타이틀</h2>
+								<p class="tit_subTxt">대타이틀 아래 들어가는 subtext</p>
+								<!--중타이틀+서브텍스트 (마이페이지 사용)-->
+
+								<h3 class="tit_h3">중타이틀</h3>
+								<p class="tit_h3_subTxt">중타이틀 아래 들어가는 subtext</p>
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+					</div>
+			</section>
+
+			<section>
+				<h3>List</h3>
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+							<section>
+								<p class="guide_title">※ 마크가 앞에 있는 리스트</p>
+								<ul class="markList">
+									<li>※ 사용중인 서비스의 일시정지/해제 신청 및 변경신청은 PC에서만 가능합니다.</li>
+									<li>※ 서비스 해지는 서비스 별 고객센터로 문의 바랍니다.</li>
+									<li>※ 선불제 상품의 경우 서비스 별 관리자 페이지에서 만료일 전에 연장신청을 해주시기 바랍니다.</li>
+								</ul>
+
+								<p class="guide_title">dot가 앞에 있는 리스트</p>
+								<ul class="dotList">
+									<li>회원탈퇴 시, 보유 중인 기존 회원정보는 자동으로 삭제/파기 됩니다.</li>
+									<li>회원탈퇴 시 1개월 간 재가입이 불가합니다. </li>
+									<li>회원탈퇴 철회 요청은 고객지원으로 문의주세요.</li>
+								</ul>
+
+								<p class="guide_title">dot가 앞에 있는 리스트  // 폰트 color다름</p>
+								<ul class="bulList">
+									<li>고객님께서는 이용중인 서비스와 아이디가 다음과 같이 확인 되었습니다.</li>
+								</ul>
+
+							</section>
+						<!--화면 입력영역-->
+						</div>
+
+						<!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+								<p class="guide_title">※ 마크가 앞에 있는 리스트</p>
+								<ul class="markList">
+									<li>※ 사용중인 서비스의 일시정지/해제 신청 및 변경신청은 PC에서만 가능합니다.</li>
+									<li>※ 서비스 해지는 서비스 별 고객센터로 문의 바랍니다.</li>
+									<li>※ 선불제 상품의 경우 서비스 별 관리자 페이지에서 만료일 전에 연장신청을 해주시기 바랍니다.</li>
+								</ul>
+
+								<p class="guide_title">dot가 앞에 있는 리스트</p>
+								<ul class="dotList">
+									<li>회원탈퇴 시, 보유 중인 기존 회원정보는 자동으로 삭제/파기 됩니다.</li>
+									<li>회원탈퇴 시 1개월 간 재가입이 불가합니다. </li>
+									<li>회원탈퇴 철회 요청은 고객지원으로 문의주세요.</li>
+								</ul>
+
+								<p class="guide_title">dot가 앞에 있는 리스트  // 폰트 color다름 </p>
+								<!--서브메인, 회원가입 내 적용-->
+								<ul class="bulList">
+									<li>고객님께서는 이용중인 서비스와 아이디가 다음과 같이 확인 되었습니다.</li>
+								</ul>
+
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+					</div>
+			</section>
+
+			<section>
+				<h3>List Box</h3>
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+							<section>
+								<p class="guide_title">리스트가 들어가는 box  -  배경</p>
+								<dl class="infoBox">
+									<dt>비밀번호 변경 시 참고하세요!</dt>
+									<dd>
+										<ul class="dotList">
+											<li>비밀번호 변경 완료 이후에는 신규 비밀번호로 로그인하십시오.</li>
+											<li>비밀번호로 생년월일, 주민등록번호 앞자리, 핸드폰 번호 등의 개인정보는 사용하지 마십시오.</li>
+											<li>비밀번호는 주기적으로 변경하여 정보 노출을 보호하세요.</li>
+										</ul>
+									</dd>
+								</dl>
+
+								<p class="guide_title">리스트가 들어가는 box  -  라인</p>
+								<div class="lineBox">
+									<dl>
+										<dt>마케팅 정보 수신 동의</dt>
+										<dd>
+											<ul class="dotList">
+												<li>U<sup>+</sup>비즈마켓 에서 제공되는 서비스에 대한 수신동의 여부를 확인해주세요.</li>
+												<li>수신 미동의 시 이벤트 및 할인, 신상품 등의 정보를 받을 수 없습니다. (단, 회원 및 서비스 가입 등에 관련된 이메일과 SMS는 동의와 상관 없이 발송 됩니다.)</li>
+											</ul>
+										</dd>
+									</dl>
+				
+								</div>
+							</section>
+						<!--화면 입력영역-->
+						</div>
+
+						<!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+								<p class="guide_title">리스트가 들어가는 box  -  배경</p>
+								<!-- 마이페이지  > 회원정보관리 하단에 들어감-->
+								<dl class="infoBox">
+									<dt>비밀번호 변경 시 참고하세요!</dt>
+									<dd>
+										<ul class="dotList">
+											<li>비밀번호 변경 완료 이후에는 신규 비밀번호로 로그인하십시오.</li>
+											<li>비밀번호로 생년월일, 주민등록번호 앞자리, 핸드폰 번호 등의 개인정보는 사용하지 마십시오.</li>
+											<li>비밀번호는 주기적으로 변경하여 정보 노출을 보호하세요.</li>
+										</ul>
+									</dd>
+								</dl>
+
+								<!-- 회원가입 > 정보입력 영역 하단에 들어감-->
+								<p class="guide_title">리스트가 들어가는 box  -  라인</p>
+								<div class="lineBox">
+									<dl>
+										<dt>마케팅 정보 수신 동의</dt>
+										<dd>
+											<ul class="dotList">
+												<li>U<sup>+</sup>비즈마켓 에서 제공되는 서비스에 대한 수신동의 여부를 확인해주세요.</li>
+												<li>수신 미동의 시 이벤트 및 할인, 신상품 등의 정보를 받을 수 없습니다. (단, 회원 및 서비스 가입 등에 관련된 이메일과 SMS는 동의와 상관 없이 발송 됩니다.)</li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+					</div>
+			</section>
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+</body>
+</html>

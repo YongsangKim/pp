@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/vendor/highlight.pack.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../js/vendor/editor.css">
+	<link rel="stylesheet" href="../js/vendor/contents.css">
+	<link rel="stylesheet" href="../js/vendor/codemirror.css">
+	<link rel="stylesheet" href="../js/vendor/github.min.css">
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/common.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/contents.css" />
+	<link rel="stylesheet" href="../css/guide.css" />
+
+	<style>
+
+	</style>
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header>
+		<h1><a href="">U<sup>+</sup>비즈마켓 퍼블리싱 산출물</a></h1>
+		<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../../모바일_비즈마켓_프론트_퍼블리싱가이드.html">기본정책</a></li>
+				<li class="on"><a href="button.html">UI</a>
+					<ul>
+						<li><a href="button.html">Button</a></li>
+						<li class="on"><a href="form.html">Form</a></li>
+						<li><a href="form_group.html">Form Group</a></li>
+						<li><a href="list.html">Title / List</a></li>
+						<li><a href="table.html">Tables</a></li>
+						<li><a href="tab.html">Tab</a></li>
+						<li><a href="accordion.html">Accordion</a></li>
+						<li><a href="dropdown.html">Dropdown</a></li>
+						<li><a href="popup.html">Popup</a></li>
+					</ul>
+				</li>
+				<li><a href="layout.html">레이아웃</a>
+                    <ul>
+						<li><a href="layout.html">header, footer</a></li>
+						<li><a href="main_banner.html">메인배너</a></li>
+					</ul>
+                </li>
+				<li><a href="../template/서비스카드.html">메인 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스카드.html">서비스카드</a></li>
+						<li><a href="../template/서비스특징.html">서비스특징</a></li>
+					</ul>
+				</li>
+				<li><a href="../template/서비스별_요금안내.html">서비스별 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스별_요금안내.html">요금안내</a></li>
+						<li><a href="../template/서비스별_서비스특징.html">서비스특징</a></li>
+						<li><a href="../template/서비스별_주요기능.html">주요기능</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<main class="id="viewer" class="tui-editor-contents">
+			<h2>FORM</h2>
+
+			<section>
+				<h3>INPUT</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<p class="guide_title">Default</p>
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="" placeholder="placeholder" >
+							</div>
+							<div class="fieldTxtBox" style="margin-top: 10px;">
+								<input type="text" title="" value="value" placeholder="placeholder" >
+							</div>
+
+							<p class="guide_title">Readonly / Disabled</p>
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="readonly, 우편번호에만 사용" class="no_bg" readonly>
+							</div>
+							<div class="fieldTxtBox" style="margin-top: 10px;">
+								<input type="text" title="" value="readonly" readonly >
+							</div>
+							<div class="fieldTxtBox" style="margin-top: 10px;">
+								<input type="text" title="" value="disabled" disabled >
+							</div>
+
+							<p class="guide_title">Error</p>
+							<div class="fieldTxtBox error">
+								<input type="text" title="" value="error" >
+								<p class="inputError">error 텍스트</p>
+							</div>
+							<div class="fieldTxtBox nodata" style="margin-top: 10px;">
+								<input type="text" title="" value="필수값 미입력" >
+								<p class="inputError">error 텍스트</p>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<!--Default-->
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="" placeholder="placeholder" >
+							</div>
+							<div class="fieldTxtBox" style="margin-top: 10px;">
+								<input type="text" title="" value="value" placeholder="placeholder" >
+							</div>
+
+							<!--readonly-->
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="readonly, 우편번호에만 사용" class="no_bg" readonly>
+							</div>
+							<!--readonly, disabled : 스타일 동일-->
+							<!--readonly-->
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="readonly" readonly >
+							</div>
+
+							<!--disabled-->
+							<div class="fieldTxtBox">
+								<input type="text" title="" value="disabled" disabled >
+							</div>
+
+							<!--error-->
+							<div class="fieldTxtBox error">
+								<input type="text" title="" value="error" >
+								<p class="inputError">error 텍스트</p>
+							</div>
+							<!--필수값 미입력-->
+							<div class="fieldTxtBox nodata" style="margin-top: 10px;">
+								<input type="text" title="" value="필수값 미입력" >
+								<p class="inputError">error 텍스트</p>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+
+			<section>
+				<h3>SELECT</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<p class="guide_title">Default</p>
+							<div class="fieldSelect">
+								<select id="" title="선택">
+									<option value="">선택</option>
+									<option value="">목록1</option>
+									<option value="">목록2</option>
+									<option value="">목록3</option>
+									<option value="">목록4</option>
+									<option value="">목록5</option>
+								</select>
+							</div>
+
+							<p class="guide_title">Readonly</p>
+							<div class="fieldSelect">
+								<input type="text" title="" value="선택" readonly >
+								<p style="font-size:12px; color:#898989">Select box는 readonly 기능이 없으므로 input박스에 select 스타일로 적용후 readonly 처리함 / 접근성 이슈로 readonly 필요</p>
+							</div>
+
+							<p class="guide_title">Disabled</p>
+							<div class="fieldSelect">
+								<select id="" title="선택" disabled>
+									<option value="">선택</option>
+									<option value="">목록1</option>
+									<option value="">목록2</option>
+									<option value="">목록3</option>
+									<option value="">목록4</option>
+									<option value="">목록5</option>
+								</select>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<!--Default-->
+							<div class="fieldSelect">
+								<select id="" title="선택">
+									<option value="">선택</option>
+									<option value="">목록1</option>
+									<option value="">목록2</option>
+									<option value="">목록3</option>
+									<option value="">목록4</option>
+									<option value="">목록5</option>
+								</select>
+							</div>
+							<!--readonly-->
+							<div class="fieldSelect">
+								<input type="text" title="" value="선택" readonly >
+							</div>
+							<!--disabled-->
+							<div class="fieldSelect">
+								<select id="" title="선택" disabled>
+									<option value="">선택</option>
+									<option value="">목록1</option>
+									<option value="">목록2</option>
+									<option value="">목록3</option>
+									<option value="">목록4</option>
+									<option value="">목록5</option>
+								</select>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+
+			<section>
+				<h3>RADIO / CHECKBOX</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<p class="guide_title">Radio</p>
+							<div>
+								<span class="fieldRadio">
+									<input type="radio" id="radio01_1" name="radio01" checked="">
+									<label for="radio01_1">예</label>
+								</span>
+								<span class="fieldRadio">
+									<input type="radio" id="radio01_2" name="radio01">
+									<label for="radio01_2">아니오</label>
+								</span>
+							</div>
+
+							<div style="margin-top: 10px;">
+								<span class="fieldRadio">
+									<input type="radio" id="radio02_1" name="radio02" checked="" disabled>
+									<label for="radio02_1">예</label>
+								</span>
+								<span class="fieldRadio">
+									<input type="radio" id="radio02_1" name="radio02" disabled>
+									<label for="radio02_1">아니오</label>
+								</span>
+							</div>
+
+							<p class="guide_title">Checkbox</p>
+							<div>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check01_1" name="check01" checked="">
+									<label for="check01_1">예</label>
+								</span>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check01_2" name="check01">
+									<label for="check01_2">아니오</label>
+								</span>
+							</div>
+
+							<div style="margin-top: 10px;">
+								<span class="fieldCheck">
+									<input type="checkbox" id="check02_1" name="check02" checked="" disabled>
+									<label for="check02_1">예</label>
+								</span>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check02_2" name="check02" disabled>
+									<label for="check02_2">아니오</label>
+								</span>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<!--rario-->
+							<!--Default-->
+							<div>
+								<span class="fieldRadio">
+									<input type="radio" id="radio01_1" name="radio01" checked="">
+									<label for="radio01_1">예</label>
+								</span>
+								<span class="fieldRadio">
+									<input type="radio" id="radio01_2" name="radio01">
+									<label for="radio01_2">아니오</label>
+								</span>
+							</div>
+							<!--disabled-->
+							<div style="margin-top: 10px;">
+								<span class="fieldRadio">
+									<input type="radio" id="radio02_1" name="radio02" checked="" disabled>
+									<label for="radio02_1">예</label>
+								</span>
+								<span class="fieldRadio">
+									<input type="radio" id="radio02_1" name="radio02" disabled>
+									<label for="radio02_1">아니오</label>
+								</span>
+							</div>
+
+							<!--checkbox-->
+							<!--Default-->
+							<div>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check01_1" name="check01" checked="">
+									<label for="check01_1">예</label>
+								</span>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check01_2" name="check01">
+									<label for="check01_2">아니오</label>
+								</span>
+							</div>
+							<!--disabled-->
+							<div style="margin-top: 10px;">
+								<span class="fieldCheck">
+									<input type="checkbox" id="check02_1" name="check02" checked="" disabled>
+									<label for="check02_1">예</label>
+								</span>
+								<span class="fieldCheck">
+									<input type="checkbox" id="check02_2" name="check02" disabled>
+									<label for="check02_2">아니오</label>
+								</span>
+							</div>
+
+							
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+
+
+
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+</body>
+</html>

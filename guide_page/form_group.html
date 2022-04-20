@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/vendor/highlight.pack.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../js/vendor/editor.css">
+	<link rel="stylesheet" href="../js/vendor/contents.css">
+	<link rel="stylesheet" href="../js/vendor/codemirror.css">
+	<link rel="stylesheet" href="../js/vendor/github.min.css">
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/common.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/contents.css" />
+	<link rel="stylesheet" href="../css/guide.css" />
+	<style>
+
+	</style>
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header>
+		<h1><a href="">U<sup>+</sup>비즈마켓 퍼블리싱 산출물</a></h1>
+		<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../../모바일_비즈마켓_프론트_퍼블리싱가이드.html">기본정책</a></li>
+				<li class="on"><a href="button.html">UI</a>
+					<ul>
+						<li><a href="button.html">Button</a></li>
+						<li><a href="form.html">Form</a></li>
+						<li class="on"><a href="form_group.html">Form Group</a></li>
+						<li><a href="list.html">Title / List</a></li>
+						<li><a href="table.html">Tables</a></li>
+						<li><a href="tab.html">Tab</a></li>
+						<li><a href="accordion.html">Accordion</a></li>
+						<li><a href="dropdown.html">Dropdown</a></li>
+						<li><a href="popup.html">Popup</a></li>
+					</ul>
+				</li>
+				<li><a href="layout.html">레이아웃</a>
+                    <ul>
+						<li><a href="layout.html">header, footer</a></li>
+						<li><a href="main_banner.html">메인배너</a></li>
+					</ul>
+                </li>
+				<li><a href="../template/서비스카드.html">메인 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스카드.html">서비스카드</a></li>
+						<li><a href="../template/서비스특징.html">서비스특징</a></li>
+					</ul>
+				</li>
+				<li><a href="../template/서비스별_요금안내.html">서비스별 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스별_요금안내.html">요금안내</a></li>
+						<li><a href="../template/서비스별_서비스특징.html">서비스특징</a></li>
+						<li><a href="../template/서비스별_주요기능.html">주요기능</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<main class="id="viewer" class="tui-editor-contents">
+			<h2>FORM GROUP</h2>
+			<!--기본 스타일-->
+			<section>
+				<h3>기본 form</h3>
+				<p class="info_txt" >input의 경우 입력 내용에 맞춰 type 적용함</p>
+				<div class="table" style="margin: 10px 0 20px;">
+					<table>
+						<caption>input</caption>
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름, 기업명 등 text입력영역</th>
+								<td>text</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처, 휴대폰번호 등 전화번호 입력영역 </th>
+								<td>tel</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일 입력영역</th>
+								<td>email</td>
+							</tr>
+							<tr>
+								<th scope="row">사업자등록번호, 법인번호, 기업수 등 숫자 입력영역</th>
+								<td>number</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<div class="formFieldset">
+								<dl class="column1">
+									<dt>사용자 아이디 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<div class="btnIn">
+												<input type="text" id="" value="" class="roboto" title="아이디 (6~15자, 영문/숫자 조합) 입력" placeholder="아이디 (6~15자, 영문/숫자 조합)">
+												<a href="javascript:void(0)" class="btn form lineGray">중복확인</a>
+											</div>
+											<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>비밀번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="password" id="" value="" title="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합) 입력" placeholder="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합)">
+											<!-- <p class="inputError">비밀번호는 8~20자리, 영문/숫자를 조합해서 사용해주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>비밀번호 확인 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="password" id="" value="" title="비밀번호 입력" placeholder="비밀번호를 재입력해주세요">
+											<!-- <p class="inputError">비밀번호가 맞지 않습니다. 다시 입력해 주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>이름 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="홍길동" class="" title="이름" placeholder="" readonly>
+										<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>휴대폰 번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="010-000-0000" class="roboto" title="휴대폰번호" placeholder="" readonly>
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>이메일 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox nodata"><!--이메일 형식 맞지 않는 경우 : error class추가 / 데이터 X경우 : nodata class 추가-->
+											<input type="email" id="" value="" class="roboto" title="email" placeholder="">
+											<p class="inputError">이메일 형식을 확인해주세요.</p>
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>주소 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<div class="btnIn">
+												<input type="text" id="" value="" class="roboto no_bg" title="우편번호" readonly>
+												<a href="javascript:void(0)" class="btn form lineGray">우편번호 검색</a>
+											</div>
+										</div>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="" class="no_bg" title="주소" readonly>
+										</div>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="" class="" title="상세주소 입력" placeholder="상세 주소를 입력해 주세요">
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>연락처</dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="tel" id="" value="" class="roboto" title="연락처를 입력해주세요" placeholder="“-”를 제외하고 숫자만 입력해주세요">
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>가입경로</dt>
+									<dd>
+										<div class="fieldSelect">
+											<select title="가입경로를 선택하세요">
+												<option value="">선택하세요</option>
+												<option value="">대리점/영업사원소개</option>
+												<option value="">협력사/고객소개</option>
+												<option value="">이전사용경험 있음</option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="formFieldset">
+								<dl class="column1">
+									<dt>사용자 아이디 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<div class="btnIn">
+												<input type="text" id="" value="" class="roboto" title="아이디 (6~15자, 영문/숫자 조합) 입력" placeholder="아이디 (6~15자, 영문/숫자 조합)">
+												<a href="javascript:void(0)" class="btn form lineGray">중복확인</a>
+											</div>
+											<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>비밀번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="password" id="" value="" title="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합) 입력" placeholder="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합)">
+											<!-- <p class="inputError">비밀번호는 8~20자리, 영문/숫자를 조합해서 사용해주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>비밀번호 확인 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="password" id="" value="" title="비밀번호 입력" placeholder="비밀번호를 재입력해주세요">
+											<!-- <p class="inputError">비밀번호가 맞지 않습니다. 다시 입력해 주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>이름 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="홍길동" class="" title="이름" placeholder="" readonly>
+										<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>휴대폰 번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="010-000-0000" class="roboto" title="휴대폰번호" placeholder="" readonly>
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>이메일 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox nodata"><!--이메일 형식 맞지 않는 경우 : error class추가 / 데이터 X경우 : nodata class 추가-->
+											<input type="email" id="" value="" class="roboto" title="email" placeholder="">
+											<p class="inputError">이메일 형식을 확인해주세요.</p>
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>주소 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<div class="btnIn">
+												<input type="text" id="" value="" class="roboto no_bg" title="우편번호" readonly>
+												<a href="javascript:void(0)" class="btn form lineGray">우편번호 검색</a>
+											</div>
+										</div>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="" class="no_bg" title="주소" readonly>
+										</div>
+										<div class="fieldTxtBox">
+											<input type="text" id="" value="" class="" title="상세주소 입력" placeholder="상세 주소를 입력해 주세요">
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>연락처</dt>
+									<dd>
+										<div class="fieldTxtBox">
+											<input type="tel" id="" value="" class="roboto" title="연락처를 입력해주세요" placeholder="“-”를 제외하고 숫자만 입력해주세요">
+										</div>
+									</dd>
+								</dl>
+								<dl class="column1">
+									<dt>가입경로</dt>
+									<dd>
+										<div class="fieldSelect">
+											<select title="가입경로를 선택하세요">
+												<option value="">선택하세요</option>
+												<option value="">대리점/영업사원소개</option>
+												<option value="">협력사/고객소개</option>
+												<option value="">이전사용경험 있음</option>
+											</select>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+			<!--로그인만 사용-->
+			<section>
+				<h3>Login form</h3>
+				<p class="info_txt">로그인만 사용</p>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<div class="loginWrap">
+								<div class="formFieldset">
+									<div class="formRow">
+										<label for="bizID" class="formLabel">아이디</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizID" placeholder="아이디를 입력하세요" title="아이디를 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizComp" class="formLabel name">회사명</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizComp" placeholder="회사명을 입력하세요" title="회사명을 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizmail" class="formLabel">이메일</label>
+										<div class="fieldTxt error"><!--error class추가-->
+											<input type="email" id="bizmail" placeholder="이메일을 입력하세요" title="이메일을 입력하세요">
+											<!--error 메시지 추가-->
+											<div class="errorTxt">가입하지 않은 아이디이거나, 잘못된 비밀번호 입니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="loginWrap">
+								<div class="formFieldset">
+									<div class="formRow">
+										<label for="bizID" class="formLabel">아이디</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizID" placeholder="아이디를 입력하세요" title="아이디를 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizComp" class="formLabel name">회사명</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizComp" placeholder="회사명을 입력하세요" title="회사명을 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizmail" class="formLabel">이메일</label>
+										<div class="fieldTxt error"><!--error class추가-->
+											<input type="email" id="bizmail" placeholder="이메일을 입력하세요" title="이메일을 입력하세요">
+											<!--error 메시지 추가-->
+											<div class="errorTxt">가입하지 않은 아이디이거나, 잘못된 비밀번호 입니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+
+			</section>
+
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+</body>
+</html>

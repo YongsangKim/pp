@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/vendor/highlight.pack.js"></script>
+    <!-- <script src="../js/common.js"></script> -->
+
+    <link rel="stylesheet" href="../css/reset.css" />
+	<link rel="stylesheet" href="../js/vendor/editor.css">
+	<link rel="stylesheet" href="../js/vendor/contents.css">
+	<link rel="stylesheet" href="../js/vendor/codemirror.css">
+	<link rel="stylesheet" href="../js/vendor/github.min.css">
+	<link rel="stylesheet" href="../css/base.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/common.css" />
+	<link rel="stylesheet" href="../../../../common/mobile/_inc/css/contents.css" />
+	<link rel="stylesheet" href="../css/guide.css" />
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header>
+		<h1><a href="">U<sup>+</sup>비즈마켓 퍼블리싱 산출물</a></h1>
+		<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
+	</header>
+
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="../../모바일_비즈마켓_프론트_퍼블리싱가이드.html">기본정책</a></li>
+				<li class="on"><a href="button.html">UI</a>
+					<ul>
+						<li><a href="button.html">Button</a></li>
+						<li><a href="form.html">Form</a></li>
+						<li><a href="form_group.html">Form Group</a></li>
+						<li><a href="list.html">Title / List</a></li>
+						<li><a href="table.html">Tables</a></li>
+						<li><a href="tab.html">Tab</a></li>
+						<li><a href="accordion.html">Accordion</a></li>
+						<li><a href="dropdown.html">Dropdown</a></li>
+						<li class="on"><a href="popup.html">Popup</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="layout.html">레이아웃</a>
+                    <ul>
+						<li><a href="layout.html">header, footer</a></li>
+						<li><a href="main_banner.html">메인배너</a></li>
+					</ul>
+                </li>
+				<li><a href="../template/서비스카드.html">메인 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스카드.html">서비스카드</a></li>
+						<li><a href="../template/서비스특징.html">서비스특징</a></li>
+					</ul>
+				</li>
+				<li><a href="../template/서비스별_요금안내.html">서비스별 컨텐츠등록</a>
+					<ul>
+						<li><a href="../template/서비스별_요금안내.html">요금안내</a></li>
+						<li><a href="../template/서비스별_서비스특징.html">서비스특징</a></li>
+						<li><a href="../template/서비스별_주요기능.html">주요기능</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+
+		<main class="id="viewer" class="tui-editor-contents">
+			<h2>popup</h2>
+
+			<section>
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+							<section>
+
+								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#alert')">alert</a>
+								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#popup')">기본 popup</a>
+								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#popup_large')">내용 많은 popup</a>
+								<a href="../../subMain/MFO_GRP_001_1.html" target="_blank" class="btn sm line">새창팝업 (서브메인요금제)</a>
+								<!--alert-->
+								<div class="popWrapper" id="alert">
+									<div class="popup alert"><!--alert일 경우 alert class추가-->
+										<div class="popCont">
+										   <div class="inner">가상계좌 추가할 은행을<br>선택해주세요.</div> 
+										</div>
+										<div class="popBtnBox">
+											<button type="button" class="btn pink" onclick="modalPop.close(this)">확인</button><!--팝업 닫을때 onclick 적용-->
+										</div>
+									</div>
+								</div>
+								<!--기본-->
+								<div class="popWrapper" id="popup">
+									<div class="popup ">
+										<div class="popCont">
+											<div class="inner">
+												아이디 또는 비밀번호 입력 5회 오류로 <br>로그인이 차단되었습니다. <br>비밀번호를 재설정해주세요.
+											</div> 
+										</div>
+										<div class="popBtnBox">
+											<a href="" class="btn pop line">U<sup>+</sup>ID 찾기</a>
+											<a href="" class="btn pop pink">U<sup>+</sup>ID 비밀번호 찾기</a>
+										</div>
+										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
+									</div>
+								</div>
+								<!--large-->
+								<div class="popWrapper" id="popup_large">
+									<div class="popup large"><!--large  class추가-->
+										<div class="popCont">
+											<div class="inner">
+												<h3 class="tit_h3">요금 상세 내역</h3>
+												<!--2021.01.05 청구요금영역 수정-->
+												<div class="month_bill type02">
+													<dl class="grayBox ">
+														<dt>
+															<strong>2020년 12월 청구요금</strong>
+															<p class="subTxt">0000.00.00~0000.00.00</p>
+														</dt>
+														<dd>
+															<p class="subTxt">총 납부금액(A)+(B)</p>
+															<p class="priceTxt"><span class="roboto">10,062,700</span>원</p>
+														</dd>
+													</dl>
+												</div>
+												<!--2021.01.05 청구요금영역 수정 - e-->
+												<div class="tb_bill">
+													<table>
+														<caption>서비스 요금 목록</caption>
+														<colgroup>
+															<col style="width: 60%;">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr class="total">
+																<th scope="col ">서비스 요금</th>
+																<td class="tar">
+																	<span class="roboto">80,390</span>원
+																</td>
+															</tr>
+															<tr>
+																<th scope="col" class="item">기본요금</th>
+																<td><span class="roboto">60,500</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_01">U+그룹웨어</th>
+																<td><span class="roboto">6,600</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_02">세부내용</th>
+																<td><span class="roboto">3,300</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_01">U+얼마에요ERP</th>
+																<td><span class="roboto">53,900</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col">할인요금</th>
+																<td class="fcPink"><span class="roboto">- 2,110</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="item">부가서비스 요금</th>
+																<td><span class="roboto">22,000</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_01">SMS</th>
+																<td><span class="roboto">0</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_01">용량증설(10GB)</th>
+																<td><span class="roboto">22,000</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col" class="detail_02">세부내용</th>
+																<td><span class="roboto">3,300</span>원</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+					
+												<div class="tb_bill">
+													<table>
+														<caption>할인요금 목록</caption>
+														<colgroup>
+															<col style="width: 60%;">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr class="total">
+																<th scope="col ">할인요금</th>
+																<td class="tar">
+																	<span class="roboto">- 2,110</span>원
+																</td>
+															</tr>
+															<tr>
+																<th scope="col">약정할인</th>
+																<td class="fcPink"><span class="roboto">- 990</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col">결합할인</th>
+																<td class="fcPink"><span class="roboto">- 1,120</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col">패키지 할인</th>
+																<td class="fcPink"><span class="roboto">- 5,400</span>원</td>
+															</tr>
+															<tr>
+																<th scope="col">프로모션할인</th>
+																<td class="fcPink"><span class="roboto">- 0,000</span>원</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="total_bill">
+													<dl>
+														<dt>요금 합계(A)</dt>
+														<dd><span class="roboto">53,310</span>원</dd>
+													</dl>
+													<dl>
+														<dt>미납 요금 합계(B)</dt>
+														<dd><span class="roboto">1,000</span>원</dd>
+													</dl>
+												</div>
+											</div> 
+										</div>
+										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
+									</div>
+								</div>
+
+							</section>
+						<!--화면 입력영역-->
+						</div>
+
+						<!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+								<!--data-ui="tab" -->
+								<div class="popWrapper" id="alert">
+									<div class="popup alert"><!--alert일 경우 alert class추가-->
+										<div class="popCont">
+										   <div class="inner">가상계좌 추가할 은행을<br>선택해주세요.</div> 
+										</div>
+										<div class="popBtnBox">
+											<button type="button" class="btn pink" onclick="modalPop.close(this)">확인</button><!--팝업 닫을때 onclick 적용-->
+										</div>
+									</div>
+								</div>
+								<!--기본-->
+								<div class="popWrapper" id="popup">
+									<div class="popup ">
+										<div class="popCont">
+											<div class="inner">
+												요기에 컨텐츠를... 넣어주세요
+											</div> 
+										</div>
+										<div class="popBtnBox">
+											<a href="" class="btn pop line">버튼1</a>
+											<a href="" class="btn pop pink">버튼2</a>
+										</div>
+										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
+									</div>
+								</div>
+								<!--large-->
+								<div class="popWrapper" id="popup_large">
+									<div class="popup large"><!--large  class추가-->
+										<div class="popCont">
+											<div class="inner">
+												<h3 class="tit_h3">요금 상세 내역</h3>
+												내용이 요기로~~
+											</div> 
+										</div>
+										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
+									</div>
+								</div>
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+					</div>
+			</section>
+
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+</body>
+</html>
