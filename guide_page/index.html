@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
+    <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/vendor/highlight.pack.js"></script>
     <!-- <script src="../js/common.js"></script> -->
@@ -23,7 +23,7 @@
 
 <div class="wrapper guide">
 	<header>
-		<h1><a href="">U<sup>+</sup>비즈마켓 고도화 산출물</a></h1>
+		<h1><a href="">U<sup>+</sup>비즈마켓 파트너포털 퍼블리싱 가이드</a></h1>
 		<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>
 	</header>
 
@@ -85,197 +85,21 @@
 							</tr>
 							<tr>
 								<th scope="row">웹 유형</th>
-								<td>Mobile</td>
+								<td>PC</td>
 							</tr>
 							<tr>
 								<th scope="row">웹 접근성</th>
 								<td>none</td>
 							</tr>
-							<tr>
+							<!-- <tr>
 								<th scope="row">해상도 기준 / 디자인 너비	</th>
 								<td>최적화 : 375px (가로버전도 대응)</td>
-							</tr>
+							</tr> -->
 						</tbody>
 					</table>
 				</div>
 			</section>
 
-
-			<section>
-				<h3>CSS</h3>
-				<dl class="guide_dl">
-					<dt>기본규칙</dt>
-					<dd>테스트 용도를 제외한 운영 서비스에는 @import 방식은 사용하지 않음</dd>
-					<dd>폰트 단위 : rem 단위 사용 </dd>
-					<dd>레이아웃 단위 : px, % 기본적으로 사용 (vmin, vh, vw 필요 시 유동적으로 사용)</dd>
-				</dl>
-
-				<h4>Font</h4>
-				<div  class="table">
-					<table>
-						<caption>폰트 스타일</caption>
-						<colgroup>
-							<col style="width: 20%;">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row">폰트명</th>
-								<td>NotoSans (웹폰트사용 - 경량화폰트 사용) <br>
-									font-family: NotoSans,"Helvetica Neue","Apple SD Gothic Neo",sans-serif;<br>
-									굵기- 400, 700으로 적용, font.css에서 웹폰트 관리<br>
-									국문 : NotoSans / 영문,숫자 : Roboto (roboto class사용하면됨)
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">Font Size</th>
-								<td>1.5rem (15px적용) // px->rem으로 폰트사이즈 쉽게 변환하기 위해 html에 font-size: 62.5% 로 초기화 </td>
-							</tr>
-							<tr>
-								<th scope="row">Font Color</th>
-								<td>
-									기본 : <span style="padding:0 5px; background:#333; color:#fff">#333</span> / 서브컨텐츠 : <span style="padding:0 5px; background:#666; color:#fff">#666</span> / 설명컨텐츠 :  <span style="padding:0 5px; background:#898989; color:#fff">#898989</span><br>
-									메인 타이틀 : <span style="padding:0 5px; background:#000; color:#fff">#000</span>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">Font Weight</th>
-								<td>타이틀 : <span style="font-weight:700; color:#333">700</span> / 기본 : <span style="font-weight:400; color:#000">400</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-			</section>
-
-
-			<section>
-				<h3>폴더/파일 규칙</h3>
-				<div  class="table">
-					<table>
-						<caption>폴더/파일 규칙</caption>
-						<colgroup>
-							<col style="width: 150px;">
-							<col style="width: 100px;">
-							<col style="width: 160px;">
-							<col>
-						</colgroup>
-						<thead>
-							<tr>
-								<th colspan="2">폴더</th>
-								<th scope="col">파일명</th>
-								<th scope="col">설명</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row" rowspan="8">publish/mobile</th>
-								<th scope="row" colspan="2">member</th>
-								<td>로그인/회원가입</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">main</th>
-								<td>메인페이지</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">product</th>
-								<td>서브메인, 신청</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">event</th>
-								<td>이벤트</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">customer</th>
-								<td>고객센터</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">mypage</th>
-								<td>마이페이지</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">error</th>
-								<td>error페이지</td>
-							</tr>
-							<tr>
-								<th scope="row" colspan="2">etc</th>
-								<td>기타(개인정보처리방침 등)</td>
-							</tr>
-
-							<tr>
-								<th scope="row" rowspan="16">/common/mobile/</th>
-								<th scope="row" rowspan="6">_inc/css/</th>
-								<th scope="row">base.css</th>
-								<td>reset,기본 스타일적용</td>
-							</tr>
-							<tr>
-								<th scope="row">font.css</th>
-								<td>웹폰트 적용</td>
-							</tr>
-							<tr>
-								<th scope="row">common.css</th>
-								<td>공통가이드(레이아웃, 공통모듈)</td>
-							</tr>
-							<tr>
-								<th scope="row">swiper.min.css</th>
-								<td>* swiper (플러그인)</td>
-							</tr>
-							<tr>
-								<th scope="row">main.css</th>
-								<td>메인, 서브메인 페이지</td>
-							</tr>
-							<tr>
-								<th scope="row">sub.css</th>
-								<td>페이지별 css</td>
-							</tr>
-							<tr>
-								<th scope="row" rowspan="4">_inc/js/</th>
-								<th scope="row">jquery.min.js</th>
-								<td>* jquery (플러그인)</td>
-							</tr>
-							<tr>
-								<th scope="row">swiper.min.js</th>
-								<td>* swiper (플러그인)</td>
-							</tr>
-							<tr>
-								<th scope="row">flatpickr/flatpickr.js</th>
-								<td>* 달력 (플러그인)</td>
-							</tr>
-							<tr>
-								<th scope="row">common.js</th>
-								<td>ui (퍼블수정)</td>
-							</tr>
-							<tr>
-								<th scope="row" rowspan="6">imgs/</th>
-								<th scope="row">common/</th>
-								<td>공통 이미지(gnb, footer, 아이콘 공통 사용 이미지)</td>
-							</tr>
-							<tr>
-								<th scope="row">main/</th>
-								<td>메인 이미지</td>
-							</tr>
-							<tr>
-								<th scope="row">subMain/</th>
-								<td>서브메인 아이콘,배너 이미지</td>
-							</tr>
-							<tr>
-								<th scope="row">contents/</th>
-								<td>컨텐츠 이미지</td>
-							</tr>
-							<tr>
-								<th scope="row">err/</th>
-								<td>에러 이미지</td>
-							</tr>
-							<tr>
-								<th scope="row">event/</th>
-								<td>이벤트 이미지</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-
-				
-			</section>
 
 		</main>
 	</div><!--container-->
