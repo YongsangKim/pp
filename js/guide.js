@@ -24,17 +24,15 @@ nav.innerHTML = '<ul>' +
 '						<li><a href="main_banner.html">메인배너</a></li>' +
 '					</ul>' +
 '               </li>' +
-'				<li><a href="../template/서비스카드.html">메인 컨텐츠등록</a>' +
+'				<li><a href="service_card.html">메인 컨텐츠등록</a>' +
 '					<ul>' +
-'						<li><a href="../template/서비스카드.html">서비스카드</a></li>' +
-'						<li><a href="../template/서비스특징.html">서비스특징</a></li>' +
+'						<li><a href="service_card.html">서비스카드</a></li>' +
+'						<li><a href="service_feature.html">서비스특징</a></li>' +
 '					</ul>' +
 '				</li>' +
-'				<li><a href="../template/서비스별_요금안내.html">서비스별 컨텐츠등록</a>' +
+'				<li><a href="fee.html">서비스별 컨텐츠등록</a>' +
 '					<ul>' +
-'						<li><a href="../template/서비스별_요금안내.html">요금안내</a></li>' +
-'						<li><a href="../template/서비스별_서비스특징.html">서비스특징</a></li>' +
-'						<li><a href="../template/서비스별_주요기능.html">주요기능</a></li>' +
+'						<li><a href="fee.html">요금안내</a></li>' +
 '					</ul>' +
 '				</li>' +
 '			</ul>';
