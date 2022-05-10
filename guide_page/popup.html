@@ -2,19 +2,18 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+	<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/vendor/highlight.pack.js"></script>
+	<script src="../js/bootstrap.bundle.js"></script>
 
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/base.css">
 	<link rel="stylesheet" href="../js/vendor/editor.css">
 	<link rel="stylesheet" href="../css/guide.css">
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
 </head>
 <body>
 
@@ -32,161 +31,93 @@
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+								<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">Launch demo modal</button>
 
-								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#alert')">alert</a>
-								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#popup')">기본 popup</a>
-								<a href="javascript:void(0)" class="btn sm line" onclick="modalPop.open('#popup_large')">내용 많은 popup</a>
-								<a href="../../subMain/MFO_GRP_001_1.html" target="_blank" class="btn sm line">새창팝업 (서브메인요금제)</a>
-								<!--alert-->
-								<div class="popWrapper" id="alert">
-									<div class="popup alert"><!--alert일 경우 alert class추가-->
-										<div class="popCont">
-										   <div class="inner">가상계좌 추가할 은행을<br>선택해주세요.</div> 
-										</div>
-										<div class="popBtnBox">
-											<button type="button" class="btn pink" onclick="modalPop.close(this)">확인</button><!--팝업 닫을때 onclick 적용-->
+								<!-- Modal -->
+								<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<h4>Text in a modal</h4>
+												<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+									
+												<h4>Popover in a modal</h4>
+												<p>This <button type="button" class="btn btn-primary" data-bs-toggle="popover" data-bs-placement="left" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">button</button> should trigger a popover on click.</p>
+									
+									
+												<h4>Tooltips in a modal</h4>
+												<p><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">This link</a> and <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">that link</a> should have tooltips on hover.</p>
+									
+												<div id="accordion" role="tablist">
+													<div class="card" role="presentation">
+														<div class="card-header" role="tab" id="headingOne">
+															<h5 class="mb-0">
+															<a data-bs-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+																Collapsible Group Item #1
+															</a>
+															</h5>
+														</div>
+									
+														<div id="collapseOne" class="collapse show" data-bs-parent="#accordion" role="tabpanel" aria-labelledby="headingOne">
+															<div class="card-body">
+															Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+															</div>
+														</div>
+													</div>
+													<div class="card" role="presentation">
+														<div class="card-header" role="tab" id="headingTwo">
+															<h5 class="mb-0">
+															<a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+																Collapsible Group Item #2
+															</a>
+															</h5>
+														</div>
+														<div id="collapseTwo" class="collapse" data-bs-parent="#accordion" role="tabpanel" aria-labelledby="headingTwo">
+															<div class="card-body">
+															Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+															</div>
+														</div>
+													</div>
+													<div class="card" role="presentation">
+														<div class="card-header" role="tab" id="headingThree">
+															<h5 class="mb-0">
+															<a class="collapsed" data-bs-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+																Collapsible Group Item #3
+															</a>
+															</h5>
+														</div>
+														<div id="collapseThree" class="collapse" data-bs-parent="#accordion" role="tabpanel" aria-labelledby="headingThree">
+															<div class="card-body">
+															Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+															</div>
+														</div>
+													</div>
+												</div>
+								
+												<hr>
+									
+												<h4>Overflowing text to show scroll behavior</h4>
+												<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+												<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+												<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+												<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+												<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+												<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+												<button type="button" class="btn btn-primary">Save changes</button>
+											</div>
 										</div>
 									</div>
 								</div>
-								<!--기본-->
-								<div class="popWrapper" id="popup">
-									<div class="popup ">
-										<div class="popCont">
-											<div class="inner">
-												아이디 또는 비밀번호 입력 5회 오류로 <br>로그인이 차단되었습니다. <br>비밀번호를 재설정해주세요.
-											</div> 
-										</div>
-										<div class="popBtnBox">
-											<a href="" class="btn pop line">U<sup>+</sup>ID 찾기</a>
-											<a href="" class="btn pop pink">U<sup>+</sup>ID 비밀번호 찾기</a>
-										</div>
-										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
-									</div>
-								</div>
-								<!--large-->
-								<div class="popWrapper" id="popup_large">
-									<div class="popup large"><!--large  class추가-->
-										<div class="popCont">
-											<div class="inner">
-												<h3 class="tit_h3">요금 상세 내역</h3>
-												<!--2021.01.05 청구요금영역 수정-->
-												<div class="month_bill type02">
-													<dl class="grayBox ">
-														<dt>
-															<strong>2020년 12월 청구요금</strong>
-															<p class="subTxt">0000.00.00~0000.00.00</p>
-														</dt>
-														<dd>
-															<p class="subTxt">총 납부금액(A)+(B)</p>
-															<p class="priceTxt"><span class="roboto">10,062,700</span>원</p>
-														</dd>
-													</dl>
-												</div>
-												<!--2021.01.05 청구요금영역 수정 - e-->
-												<div class="tb_bill">
-													<table>
-														<caption>서비스 요금 목록</caption>
-														<colgroup>
-															<col style="width: 60%;">
-															<col>
-														</colgroup>
-														<tbody>
-															<tr class="total">
-																<th scope="col ">서비스 요금</th>
-																<td class="tar">
-																	<span class="roboto">80,390</span>원
-																</td>
-															</tr>
-															<tr>
-																<th scope="col" class="item">기본요금</th>
-																<td><span class="roboto">60,500</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_01">U+그룹웨어</th>
-																<td><span class="roboto">6,600</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_02">세부내용</th>
-																<td><span class="roboto">3,300</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_01">U+얼마에요ERP</th>
-																<td><span class="roboto">53,900</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col">할인요금</th>
-																<td class="fcPink"><span class="roboto">- 2,110</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="item">부가서비스 요금</th>
-																<td><span class="roboto">22,000</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_01">SMS</th>
-																<td><span class="roboto">0</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_01">용량증설(10GB)</th>
-																<td><span class="roboto">22,000</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col" class="detail_02">세부내용</th>
-																<td><span class="roboto">3,300</span>원</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-					
-												<div class="tb_bill">
-													<table>
-														<caption>할인요금 목록</caption>
-														<colgroup>
-															<col style="width: 60%;">
-															<col>
-														</colgroup>
-														<tbody>
-															<tr class="total">
-																<th scope="col ">할인요금</th>
-																<td class="tar">
-																	<span class="roboto">- 2,110</span>원
-																</td>
-															</tr>
-															<tr>
-																<th scope="col">약정할인</th>
-																<td class="fcPink"><span class="roboto">- 990</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col">결합할인</th>
-																<td class="fcPink"><span class="roboto">- 1,120</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col">패키지 할인</th>
-																<td class="fcPink"><span class="roboto">- 5,400</span>원</td>
-															</tr>
-															<tr>
-																<th scope="col">프로모션할인</th>
-																<td class="fcPink"><span class="roboto">- 0,000</span>원</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<div class="total_bill">
-													<dl>
-														<dt>요금 합계(A)</dt>
-														<dd><span class="roboto">53,310</span>원</dd>
-													</dl>
-													<dl>
-														<dt>미납 요금 합계(B)</dt>
-														<dd><span class="roboto">1,000</span>원</dd>
-													</dl>
-												</div>
-											</div> 
-										</div>
-										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
-									</div>
-								</div>
-
 							</section>
 						<!--화면 입력영역-->
 						</div>
@@ -194,42 +125,26 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<!--data-ui="tab" -->
-								<div class="popWrapper" id="alert">
-									<div class="popup alert"><!--alert일 경우 alert class추가-->
-										<div class="popCont">
-										   <div class="inner">가상계좌 추가할 은행을<br>선택해주세요.</div> 
+								<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+								<!-- Modal -->
+								<div class="modal fade" id="myModal" role="dialog">
+									<div class="modal-dialog">
+									
+									<!-- Modal content-->
+									<div class="modal-content">
+										<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Modal Header</h4>
 										</div>
-										<div class="popBtnBox">
-											<button type="button" class="btn pink" onclick="modalPop.close(this)">확인</button><!--팝업 닫을때 onclick 적용-->
+										<div class="modal-body">
+										<p>Some text in the modal.</p>
+										</div>
+										<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 										</div>
 									</div>
-								</div>
-								<!--기본-->
-								<div class="popWrapper" id="popup">
-									<div class="popup ">
-										<div class="popCont">
-											<div class="inner">
-												요기에 컨텐츠를... 넣어주세요
-											</div> 
-										</div>
-										<div class="popBtnBox">
-											<a href="" class="btn pop line">버튼1</a>
-											<a href="" class="btn pop pink">버튼2</a>
-										</div>
-										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
-									</div>
-								</div>
-								<!--large-->
-								<div class="popWrapper" id="popup_large">
-									<div class="popup large"><!--large  class추가-->
-										<div class="popCont">
-											<div class="inner">
-												<h3 class="tit_h3">요금 상세 내역</h3>
-												내용이 요기로~~
-											</div> 
-										</div>
-										<button type="button" class="btn pop_close" onclick="modalPop.close(this)">닫기</button><!--팝업 닫을때 onclick 적용-->
+									
 									</div>
 								</div>
 							</code></pre>
@@ -243,6 +158,8 @@
 		</main>
 	</div><!--container-->
 </div><!--wrapper-->
+
+
 
     <script src="../js/vendor/highlight_footer.js"></script>
 	<script src="../js/guide.js"></script>
