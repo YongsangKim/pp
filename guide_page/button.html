@@ -7,11 +7,32 @@
     <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 	<script src="../js/jquery.min.js"></script>
 	<script src="../js/vendor/highlight.pack.js"></script>
-
+	
     <link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/base.css">
+	
 	<link rel="stylesheet" href="../js/vendor/editor.css">
 	<link rel="stylesheet" href="../css/guide.css">
+	<style>
+		.btn{display:inline-flex;justify-content:center;align-items:center}
+		.btn.primary{background-color:#eb008b;color:#fff}
+		.btn.secondary{background-color:#fff;color:#eb008b;border:solid 1px #eb008b}
+		.btn.lg{height:48px;padding:0 24px;border-radius:24px;min-width:212px;font-size:14px}
+		.btn.md{height:40px;padding:0 16px;border-radius:20px;font-size:13px;line-height:20px}
+		.btn.arrow{min-width:0}
+		.btn.arrow::after{content:'';display:inline-block;width:7px;height:7px;border-top:solid 1px #fff;border-right:solid 1px #fff;transform:rotate(45deg);margin-left:6px}
+		.btn.arrow.secondary::after{border-color:#eb008b}
+		.btn.fixed{width:444px}
+		.btn:focus,
+		.btn:active{background-color:#ef3484}
+		.btn.secondary:focus,
+		.btn.secondary:active{background-color:#fff}
+		.btn.primary:disabled,
+		.btn.primary.disabled{background-color:#fafafa;color:#aeaeb2;outline:0}
+		.btn.secondary:disabled,
+		.btn.secondary.disabled{background-color:#fff;color:#aeaeb2;border-color:#fafafa;outline:0}
+		.btn.arrow.disabled::after{border-color:#aeaeb2}
+	</style>
 </head>
 <body>
 
@@ -22,31 +43,28 @@
 		<nav></nav>
 
 		<main id="viewer" class="tui-editor-contents">
-			<h2>BUTTON</h2>
+			<h2>Buttons</h2>
 			<p class="info_txt">버튼스타일 초기화, 모든 버튼에 btn class 기본적용</p>
-			<p class="info_txt">a Tag의 경우 링크가 없을시 href="javascript:void(0);" 로 적용 (개발요청) </p><br>
 			<section>
-				<h3>Color</h3>
+				<h3>Primary Large</h3>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<p class="guide_title">배경색 적용된 버튼</p>
+								<p class="guide_title">Text</p>
 								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn mid pink">Pink</a>
-									<a href="javascript:void(0)" class="btn mid disabled">disabled</a>
+									<a href="javascript:void(0)" class="btn primary lg">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn primary lg disabled">버튼텍스트</a>
 								</div>
-								<div class="formFieldset" style="margin-top: 10px;">
-									<div class="btnIn">
-										<a href="javascript:void(0)" class="btn form lineGray">인증하기</a>
-									</div>
-								</div>
-								<p class="guide_title">Line으로 이루어진 버튼</p>
+								<p class="guide_title">Icon Right</p>
 								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn xl line">Line</a><!--line-->
-									<a href="javascript:void(0)" class="btn mid line" style="margin-left: 10px;">Line</a>
-									<a href="javascript:void(0)" class="btn mid lineGray" style="margin-left: 10px;">lineGray</a>
-									<a href="javascript:void(0)" class="btn mid linePink" style="margin-left: 10px;">linePink</a>
+									<a href="javascript:void(0)" class="btn primary lg arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary lg arrow disabled">비즈마켓 바로가기</a>
+								</div>
+								<p class="guide_title">Fixed</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary lg fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary lg fixed disabled">비즈마켓 바로가기</a>
 								</div>
 							</section>
 						<!--화면 입력영역-->
@@ -55,119 +73,20 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<p class="guide_title">배경색 적용된 버튼</p>
+								<p class="guide_title">Text</p>
 								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn mid pink">Pink</a><!--pink-->
-									<a href="javascript:void(0)" class="btn mid disabled">disabled</a><!--disabled-->
+									<a href="javascript:void(0)" class="btn primary lg">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn primary lg disabled">버튼텍스트</a>
 								</div>
-								<!--.formFieldset .btnIn .btn : 일 경우만 적용되는 예외컬러 배경:#898989-->
-								<div class="formFieldset">
-									<div class="btnIn">
-										<a href="javascript:void(0)" class="btn form lineGray">인증하기</a>
-									</div>
+								<p class="guide_title">Icon Right</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary lg arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary lg arrow disabled">비즈마켓 바로가기</a>
 								</div>
-
-								<p class="guide_title">Line으로 이루어진 버튼</p>
+								<p class="guide_title">Fixed</p>
 								<div class="btnbox">
-									<!--같은 line class지만 버튼 크기에 따라 font-color 달라짐-->
-									<a href="javascript:void(0)" class="btn xl line">Line</a><!--line // xl 일 경우 font-color:#333-->
-									<a href="javascript:void(0)" class="btn mid line">Line</a><!--line // mid 일 경우 font-color:#666-->
-									<a href="javascript:void(0)" class="btn mid lineGray">lineGray</a><!--lineGray-->
-									<a href="javascript:void(0)" class="btn mid linePink">linePink</a><!--linePink-->
-								</div>
-							</code></pre>
-						</div>
-						<!--code 영역//-->
-
-					</div>
-			</section>
-			<section>
-				<h3>Full Size Button : .xl</h3>
-				<p class="info_txt">메인, 서브메인, 로그인 페이지에서 사용</p>
-                <div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-							<section>
-								<p class="guide_title">버튼 크기제일 큰 버튼 : .xl</p>
-								<p></p>
-								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn xl pink">NORMAL</a>
-								</div>
-								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn xl line">NORMAL_line</a>
-								</div>
-								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn xl disabled">disabled</a>
-								</div>
-								<div class="btnbox">
-									<a href="javascript:void(0)"  class="btn xl olineDark">전체서비스 보기</a>
-									</div>
-								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn telCheck_btn"><span>휴대폰 인증</span></a>
-								</div>
-							</section>
-							<a href="javascript:void(0)" class="btn xl pink">Floating Btn</a>
-						<!--화면 입력영역-->
-						</div>
-
-						<!--code 영역-->
-						<div class="code_html">
-							<pre><code class="hljs html">
-								<div class="btnbox">
-									<a href="javascript:void(0)" class="btn xl pink">NORMAL</a>
-									<a href="javascript:void(0)" class="btn xl line">NORMAL_line</a>
-									<a href="javascript:void(0)" class="btn xl disabled">disabled</a>
-									<a href="javascript:void(0)"  class="btn xl olineDark"><strong>전체서비스 보기<em>+</em></strong></a>
-									<a href="javascript:void(0)" class="btn telCheck_btn"><span>휴대폰 인증</span></a>
-								</div>
-								<!--플로팅버튼 : 스타일은 컨텐츠에서 사용하는 xl 버튼과 동일함. floatingCounselReq 추가시 플로팅 됨-->
-								<a href="javascript:void(0)" class="btn xl pink floatingCounselReq">Floating Btn</a>
-							</code></pre>
-						</div>
-						<!--code 영역//-->
-
-					</div>
-			</section>
-
-			<section>
-				<h3>Sub Button : .mid</h3>
-				<p class="info_txt">주로 sub page 하단에 사용</p>
-                <div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-							<section>
-								<p class="guide_title">sub page 하단 버튼 : 버튼 1개일때</p>
-								<div class="btnbox">
-									<a href="" class="btn mid pink">확인</a>
-								</div>
-
-								<p class="guide_title">sub page 하단 버튼 : 버튼 2개일때</p>
-								<div class="btnbox">
-									<a href="" class="btn mid line">취소</a>
-									<a href="" class="btn mid pink">확인</a>
-								</div>
-							</section>
-						<!--화면 입력영역-->
-						</div>
-
-						<!--code 영역-->
-						<div class="code_html">
-							<pre><code class="hljs html">
-								<p>sub page 하단 버튼 : 버튼 1개일때</p>
-								<!--하단버튼 1개일 경우 넓이 160px 고정-->
-								<div class="btnbox">
-									<a href="" class="btn mid pink">확인</a>
-								</div>
-								<div class="btnbox">
-									<a href="" class="btn mid line">확인</a>
-								</div>
-
-								<p>sub page 하단 버튼 : 버튼 2개일때</p>
-
-								<!--하단버튼 2개일 경우 넓이 50%-5px 로 넓이에 따라 유동적-->
-								<div class="btnbox">
-									<a href="" class="btn mid line">취소</a>
-									<a href="" class="btn mid pink">확인</a>
+									<a href="javascript:void(0)" class="btn primary lg fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary lg fixed disabled">비즈마켓 바로가기</a>
 								</div>
 							</code></pre>
 						</div>
@@ -177,28 +96,26 @@
 			</section>
 
 			<section>
-				<h3>form요소 내 Button : .form</h3>
-				<p class="info_txt">단독으로 사용하지 않고 form 요소 input과 함께 사용</p>
-				<p class="info_txt">가로사이즈 유동적이며 좌우 padding 10px로 적용</p>
+				<h3>Primary Medium</h3>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<p class="guide_title">form 버튼 단독</p>
+								<p class="guide_title">Text</p>
 								<div class="btnbox">
-									<a href="" class="btn form line">확인</a>
+									<a href="javascript:void(0)" class="btn primary md">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn primary md disabled">버튼텍스트</a>
 								</div>
-
-								<p class="guide_title">form 버튼 : form과 함께 사용시</p>
-								<div class="formFieldset">
-									<div class="fieldTxtBox">
-										<div class="btnIn">
-											<input type="number" id="" value="" class="roboto" title="사업자번호 입력" placeholder="“-”를 제외하고 숫자만 입력해주세요">
-											<a href="javascript:void(0)" class="btn form lineGray">인증하기</a>
-										</div>
-									</div>
+								<p class="guide_title">Icon Right</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary md arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary md arrow disabled">비즈마켓 바로가기</a>
 								</div>
-								
+								<p class="guide_title">Fixed</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary md fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary md fixed disabled">비즈마켓 바로가기</a>
+								</div>
 							</section>
 						<!--화면 입력영역-->
 						</div>
@@ -206,20 +123,20 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<p class="guide_title">form 버튼 단독</p>
+								<p class="guide_title">Text</p>
 								<div class="btnbox">
-									<a href="" class="btn form line">확인</a>
+									<a href="javascript:void(0)" class="btn primary md">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn primary md disabled">버튼텍스트</a>
 								</div>
-
-								<p class="guide_title">form 버튼 : form과 함께 사용시</p>
-								<!--btnIn class안에 인풋창과 함게 사용 시 버튼컬러 배경색 gray로 들어감-->
-								<div class="formFieldset">
-									<div class="fieldTxtBox">
-										<div class="btnIn">
-											<input type="number" id="" value="" class="roboto" title="사업자번호 입력" placeholder="“-”를 제외하고 숫자만 입력해주세요">
-											<a href="javascript:void(0)" class="btn form lineGray">인증하기</a>
-										</div>
-									</div>
+								<p class="guide_title">Icon Right</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary md arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary md arrow disabled">비즈마켓 바로가기</a>
+								</div>
+								<p class="guide_title">Fixed</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn primary md fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn primary md fixed disabled">비즈마켓 바로가기</a>
 								</div>
 							</code></pre>
 						</div>
@@ -229,48 +146,25 @@
 			</section>
 
 			<section>
-				<h3>Table 내 Button : .sm</h3>
+				<h3>Secondary Large</h3>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<p class="guide_title">테이블 내 버튼</p>
-								<a href="" class="btn sm linePink">납부하기</a>
-								<a href="" class="btn sm lineGray">요금상세보기</a>
-								<a href="" class="btn sm lineGray">자세히 보기</a>
-							</section>
-						<!--화면 입력영역-->
-						</div>
-
-						<!--code 영역-->
-						<div class="code_html">
-							<pre><code class="hljs html">
-								<p class="mb10">테이블 내 버튼</p>
-								<a href="" class="btn sm linePink">납부하기</a>
-								<a href="" class="btn sm lineGray">요금상세보기</a>
-								<a href="" class="btn sm lineGray">자세히 보기</a>
-							</code></pre>
-						</div>
-						<!--code 영역//-->
- 
-					</div>
-			</section>
-
-			<section>
-				<h3>popup Button : .pop</h3>
-                <div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-							<section>
-								<p class="guide_title">popup 하단 버튼 : 버튼 1개일때</p>
-								<div class="btnbox mid">
-									<a href="" class="btn pop pink">확인</a>
+								<p class="guide_title">Text</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn secondary lg">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn secondary lg disabled">버튼텍스트</a>
 								</div>
-
-								<p class="guide_title">popup 하단 버튼 : 버튼 2개일때</p>
-								<div class="btnbox mid">
-									<a href="" class="btn pop line">취소</a>
-									<a href="" class="btn pop pink">확인</a>
+								<p class="guide_title">Icon Right</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn secondary lg arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn secondary lg arrow disabled">비즈마켓 바로가기</a>
+								</div>
+								<p class="guide_title">Fixed</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn secondary lg fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn secondary lg fixed disabled">비즈마켓 바로가기</a>
 								</div>
 							</section>
 						<!--화면 입력영역-->
@@ -279,16 +173,20 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<!--form 버튼의 경우 버튼의 개수가 1개, 2개 상관없이 50%-5px 로 넓이에 따라 유동적-->
-								<p>sub page 하단 버튼 : 버튼 1개일때</p>
+								<p class="guide_title">Text</p>
 								<div class="btnbox">
-									<a href="" class="btn mid pink">확인</a>
+									<a href="javascript:void(0)" class="btn secondary lg">버튼텍스트</a>
+									<a href="javascript:void(0)" class="btn secondary lg disabled">버튼텍스트</a>
 								</div>
-
-								<p>sub page 하단 버튼 : 버튼 2개일때</p>
+								<p class="guide_title">Icon Right</p>
 								<div class="btnbox">
-									<a href="" class="btn mid line">취소</a>
-									<a href="" class="btn mid pink">확인</a>
+									<a href="javascript:void(0)" class="btn secondary lg arrow">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn secondary lg arrow disabled">비즈마켓 바로가기</a>
+								</div>
+								<p class="guide_title">Fixed</p>
+								<div class="btnbox">
+									<a href="javascript:void(0)" class="btn secondary lg fixed">비즈마켓 바로가기</a>
+									<a href="javascript:void(0)" class="btn secondary lg fixed disabled">비즈마켓 바로가기</a>
 								</div>
 							</code></pre>
 						</div>

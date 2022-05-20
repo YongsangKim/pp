@@ -29,34 +29,36 @@
 				<div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
+						<style>
+							.inpTxt{position:relative;display:flex;flex-wrap:wrap;flex:1;flex-direction:column;text-align:left}
+							.inpTxt input{height:48px;border:solid 1px #b2b2b2;border-radius:4px;font-size:14px;color:#1a1d1d;padding:0 16px}
+							.inpTxt input::placeholder{color:#aeaeb2}
+							.inpTxt input:focus{border-color:#7f7f7f}
+							.inpTxt input:read-only{background-color:#f3f3f3;color:#999}
+							.inpTxt.error input{border-color:#dc354a}
+							.inpTxt.error .msg{font-size:11px;color:#dc354a}
+						</style>
 						<section>
 							<p class="guide_title">Default</p>
-							<div class="fieldTxtBox">
+							<div class="inpTxt">
 								<input type="text" title="" value="" placeholder="placeholder" >
 							</div>
-							<div class="fieldTxtBox" style="margin-top: 10px;">
+							<div class="inpTxt" style="margin-top: 10px;">
 								<input type="text" title="" value="value" placeholder="placeholder" >
 							</div>
 
 							<p class="guide_title">Readonly / Disabled</p>
-							<div class="fieldTxtBox">
-								<input type="text" title="" value="readonly, 우편번호에만 사용" class="no_bg" readonly>
-							</div>
-							<div class="fieldTxtBox" style="margin-top: 10px;">
+							<div class="inpTxt" style="margin-top: 10px;">
 								<input type="text" title="" value="readonly" readonly >
 							</div>
-							<div class="fieldTxtBox" style="margin-top: 10px;">
+							<div class="inpTxt" style="margin-top: 10px;">
 								<input type="text" title="" value="disabled" disabled >
 							</div>
 
 							<p class="guide_title">Error</p>
-							<div class="fieldTxtBox error">
-								<input type="text" title="" value="error" >
-								<p class="inputError">error 텍스트</p>
-							</div>
-							<div class="fieldTxtBox nodata" style="margin-top: 10px;">
-								<input type="text" title="" value="필수값 미입력" >
-								<p class="inputError">error 텍스트</p>
+							<div class="inpTxt error">
+								<input type="text" title="" value="error">
+								<p class="msg">error 텍스트</p>
 							</div>
 						</section>
 					</div>
@@ -64,37 +66,25 @@
 					<div class="code_html">
 						<pre><code class="hljs html">
 							<!--Default-->
-							<div class="fieldTxtBox">
+							<div class="inpTxt">
 								<input type="text" title="" value="" placeholder="placeholder" >
 							</div>
-							<div class="fieldTxtBox" style="margin-top: 10px;">
+							<div class="inpTxt">
 								<input type="text" title="" value="value" placeholder="placeholder" >
 							</div>
 
-							<!--readonly-->
-							<div class="fieldTxtBox">
-								<input type="text" title="" value="readonly, 우편번호에만 사용" class="no_bg" readonly>
-							</div>
-							<!--readonly, disabled : 스타일 동일-->
-							<!--readonly-->
-							<div class="fieldTxtBox">
+							<!--Readonly / Disabled-->
+							<div class="inpTxt">
 								<input type="text" title="" value="readonly" readonly >
 							</div>
-
-							<!--disabled-->
-							<div class="fieldTxtBox">
+							<div class="inpTxt">
 								<input type="text" title="" value="disabled" disabled >
 							</div>
 
-							<!--error-->
-							<div class="fieldTxtBox error">
-								<input type="text" title="" value="error" >
-								<p class="inputError">error 텍스트</p>
-							</div>
-							<!--필수값 미입력-->
-							<div class="fieldTxtBox nodata" style="margin-top: 10px;">
-								<input type="text" title="" value="필수값 미입력" >
-								<p class="inputError">error 텍스트</p>
+							<!--Error-->
+							<div class="inpTxt error">
+								<input type="text" title="" value="error">
+								<p class="msg">error 텍스트</p>
 							</div>
 						</code></pre>
 					</div>
@@ -119,12 +109,6 @@
 									<option value="">목록4</option>
 									<option value="">목록5</option>
 								</select>
-							</div>
-
-							<p class="guide_title">Readonly</p>
-							<div class="fieldSelect">
-								<input type="text" title="" value="선택" readonly >
-								<p style="font-size:12px; color:#898989">Select box는 readonly 기능이 없으므로 input박스에 select 스타일로 적용후 readonly 처리함 / 접근성 이슈로 readonly 필요</p>
 							</div>
 
 							<p class="guide_title">Disabled</p>
@@ -154,10 +138,7 @@
 									<option value="">목록5</option>
 								</select>
 							</div>
-							<!--readonly-->
-							<div class="fieldSelect">
-								<input type="text" title="" value="선택" readonly >
-							</div>
+
 							<!--disabled-->
 							<div class="fieldSelect">
 								<select id="" title="선택" disabled>
@@ -177,54 +158,88 @@
 			</section>
 
 			<section>
+				<style>
+					.radio{position:relative;display:inline-block}
+					.radio + .radio{margin-left:20px}
+					.radio label{padding-left:26px;font-size:14px;color:#16171d}
+					.radio .ico{position:absolute;left:0;top:0;border:solid 2px #8e8e93;width:20px;height:20px;border-radius:10px}
+					.radio input:checked + label .ico{border-color:#eb008b}
+					.radio input:checked + label .ico::before{content:'';position:absolute;left:3px;top:3px;width:10px;height:10px;background-color:#eb008b;border-radius:5px}
+
+					.checkbox{position:relative;display:inline-block}
+					.checkbox + .checkbox{margin-left:20px}
+					.checkbox label{padding-left:26px;font-size:14px;color:#16171d}
+					.checkbox .ico{position:absolute;left:0;top:0;border:solid 2px #d9d9d9;width:20px;height:20px;border-radius:10px}
+					.checkbox input + label .ico::before{content:'';position:absolute;left:3px;top:4px;width:8px;height:4px;border-left:solid 2px #d9d9d9;border-bottom:solid 2px #d9d9d9;transform:rotate(-45deg)}
+					.checkbox input:checked + label .ico{border-color:#eb008b}
+					.checkbox input:checked + label .ico::before{border-color:#eb008b}
+				</style>
 				<h3>RADIO / CHECKBOX</h3>
 				<div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 						<section>
-							<p class="guide_title">Radio</p>
+							<p class="guide_title">Radio Icon</p>
 							<div>
-								<span class="fieldRadio">
-									<input type="radio" id="radio01_1" name="radio01" checked="">
-									<label for="radio01_1">예</label>
+								<span class="radio">
+									<input id="radio01_1" name="radio01" type="radio" checked="">
+									<label for="radio01_1">
+										<i class="ico"></i>
+									</label>
 								</span>
-								<span class="fieldRadio">
-									<input type="radio" id="radio01_2" name="radio01">
-									<label for="radio01_2">아니오</label>
-								</span>
-							</div>
-
-							<div style="margin-top: 10px;">
-								<span class="fieldRadio">
-									<input type="radio" id="radio02_1" name="radio02" checked="" disabled>
-									<label for="radio02_1">예</label>
-								</span>
-								<span class="fieldRadio">
-									<input type="radio" id="radio02_1" name="radio02" disabled>
-									<label for="radio02_1">아니오</label>
+								<span class="radio">
+									<input id="radio01_2" name="radio01" type="radio">
+									<label for="radio01_2">
+										<i class="ico"></i>
+									</label>
 								</span>
 							</div>
 
-							<p class="guide_title">Checkbox</p>
+							<p class="guide_title">Radio Text</p>
 							<div>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check01_1" name="check01" checked="">
-									<label for="check01_1">예</label>
+								<span class="radio">
+									<input id="radio02_1" name="radio02" type="radio" checked="">
+									<label for="radio02_1">
+										<i class="ico"></i> 라디오1
+									</label>
 								</span>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check01_2" name="check01">
-									<label for="check01_2">아니오</label>
+								<span class="radio">
+									<input id="radio02_2" name="radio02" type="radio">
+									<label for="radio02_2">
+										<i class="ico"></i> 라디오2
+									</label>
 								</span>
 							</div>
 
-							<div style="margin-top: 10px;">
-								<span class="fieldCheck">
-									<input type="checkbox" id="check02_1" name="check02" checked="" disabled>
-									<label for="check02_1">예</label>
+							<p class="guide_title">Checkbox Icon</p>
+							<div>
+								<span class="checkbox">
+									<input id="check01_1" name="check01" type="checkbox" checked="">
+									<label for="check01_1">
+										<i class="ico"></i>
+									</label>
 								</span>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check02_2" name="check02" disabled>
-									<label for="check02_2">아니오</label>
+								<span class="checkbox">
+									<input id="check01_2" name="check01" type="checkbox">
+									<label for="check01_2">
+										<i class="ico"></i>
+									</label>
+								</span>
+							</div>
+
+							<p class="guide_title">Radio Text</p>
+							<div>
+								<span class="checkbox">
+									<input id="check02_1" name="check02" type="checkbox" checked="">
+									<label for="check02_1">
+										<i class="ico"></i> 체크박스1
+									</label>
+								</span>
+								<span class="checkbox">
+									<input id="check02_2" name="check02" type="checkbox">
+									<label for="check02_2">
+										<i class="ico"></i> 체크박스2
+									</label>
 								</span>
 							</div>
 						</section>
@@ -232,51 +247,35 @@
 					<!--code 영역-->
 					<div class="code_html">
 						<pre><code class="hljs html">
-							<!--rario-->
-							<!--Default-->
+							<!--Radio Icon-->
 							<div>
-								<span class="fieldRadio">
-									<input type="radio" id="radio01_1" name="radio01" checked="">
-									<label for="radio01_1">예</label>
+								<span class="radio">
+									<input id="radio01_1" name="radio01" type="radio" checked="">
+									<label for="radio01_1">
+										<i class="ico"></i>
+									</label>
 								</span>
-								<span class="fieldRadio">
-									<input type="radio" id="radio01_2" name="radio01">
-									<label for="radio01_2">아니오</label>
-								</span>
-							</div>
-							<!--disabled-->
-							<div style="margin-top: 10px;">
-								<span class="fieldRadio">
-									<input type="radio" id="radio02_1" name="radio02" checked="" disabled>
-									<label for="radio02_1">예</label>
-								</span>
-								<span class="fieldRadio">
-									<input type="radio" id="radio02_1" name="radio02" disabled>
-									<label for="radio02_1">아니오</label>
+								<span class="radio">
+									<input id="radio01_2" name="radio01" type="radio">
+									<label for="radio01_2">
+										<i class="ico"></i>
+									</label>
 								</span>
 							</div>
 
-							<!--checkbox-->
-							<!--Default-->
+							<!--Radio Text-->
 							<div>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check01_1" name="check01" checked="">
-									<label for="check01_1">예</label>
+								<span class="radio">
+									<input id="radio02_1" name="radio02" type="radio" checked="">
+									<label for="radio02_1">
+										<i class="ico"></i> 라디오1
+									</label>
 								</span>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check01_2" name="check01">
-									<label for="check01_2">아니오</label>
-								</span>
-							</div>
-							<!--disabled-->
-							<div style="margin-top: 10px;">
-								<span class="fieldCheck">
-									<input type="checkbox" id="check02_1" name="check02" checked="" disabled>
-									<label for="check02_1">예</label>
-								</span>
-								<span class="fieldCheck">
-									<input type="checkbox" id="check02_2" name="check02" disabled>
-									<label for="check02_2">아니오</label>
+								<span class="radio">
+									<input id="radio02_2" name="radio02" type="radio">
+									<label for="radio02_2">
+										<i class="ico"></i> 라디오2
+									</label>
 								</span>
 							</div>
 

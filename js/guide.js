@@ -1,6 +1,6 @@
 const header = document.getElementsByTagName('header')[0];
 header.innerHTML = '<h1><a>U<sup>+</sup>비즈마켓 파트너포털 퍼블리싱 가이드</a></h1>' +
-'<a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a>';
+'<!--a href="../../모바일_비즈마켓_프론트_화면목록.html" target="_blank">퍼블리싱화면목록</a-->';
 
 const nav = document.getElementsByTagName('nav')[0];
 nav.innerHTML = '<ul>' +
