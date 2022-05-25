@@ -78,7 +78,7 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .formFieldset dl dt {padding: 0;}
 .formFieldset dl dd + dd {margin-top: 10px;}
 
-.code_html {display: inline-block; width: calc(100% - 395px - 80px);}
+.code_html {display: inline-block; width: calc(100% - 395px - 80px); margin-left:10px}
 .code_html pre,
 .code_html .hljs {height: 100%;}
 /*-------------------------------------------------------------------
@@ -86,5 +86,5 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 -------------------------------------------------------------------*/
 @media screen and (max-width: 1300px) {
     .code_wrap {flex-wrap: wrap; }
-    .code_html {width: 100%; }
+    .code_html {width: 100%; margin-left:0}
 }

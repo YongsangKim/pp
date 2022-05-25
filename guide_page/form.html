@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
-    <script src="../js/jquery.min.js"></script>
-	<script src="../js/vendor/highlight.pack.js"></script>
-
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../js/vendor/editor.css">
-	<link rel="stylesheet" href="../css/guide.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+<link rel="stylesheet" href="../css/guide.css">
+	
 </head>
 <body>
 
@@ -30,13 +32,7 @@
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 						<style>
-							.inpTxt{position:relative;display:flex;flex-wrap:wrap;flex:1;flex-direction:column;text-align:left}
-							.inpTxt input{height:48px;border:solid 1px #b2b2b2;border-radius:4px;font-size:14px;color:#1a1d1d;padding:0 16px}
-							.inpTxt input::placeholder{color:#aeaeb2}
-							.inpTxt input:focus{border-color:#7f7f7f}
-							.inpTxt input:read-only{background-color:#f3f3f3;color:#999}
-							.inpTxt.error input{border-color:#dc354a}
-							.inpTxt.error .msg{font-size:11px;color:#dc354a}
+
 						</style>
 						<section>
 							<p class="guide_title">Default</p>
@@ -100,27 +96,28 @@
 						<!--화면 입력영역-->
 						<section>
 							<p class="guide_title">Default</p>
-							<div class="fieldSelect">
-								<select id="" title="선택">
-									<option value="">선택</option>
-									<option value="">목록1</option>
-									<option value="">목록2</option>
-									<option value="">목록3</option>
-									<option value="">목록4</option>
-									<option value="">목록5</option>
+							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
 								</select>
+								<button type="button" id="sel01" class="select-btn">010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
 							</div>
-
 							<p class="guide_title">Disabled</p>
-							<div class="fieldSelect">
-								<select id="" title="선택" disabled>
-									<option value="">선택</option>
-									<option value="">목록1</option>
-									<option value="">목록2</option>
-									<option value="">목록3</option>
-									<option value="">목록4</option>
-									<option value="">목록5</option>
+							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
 								</select>
+								<button type="button" id="sel02" class="select-btn" disabled>010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
 							</div>
 						</section>
 					</div>
@@ -128,27 +125,29 @@
 					<div class="code_html">
 						<pre><code class="hljs html">
 							<!--Default-->
-							<div class="fieldSelect">
-								<select id="" title="선택">
-									<option value="">선택</option>
-									<option value="">목록1</option>
-									<option value="">목록2</option>
-									<option value="">목록3</option>
-									<option value="">목록4</option>
-									<option value="">목록5</option>
+							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
 								</select>
+								<button type="button" id="sel01" class="select-btn">010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
 							</div>
 
-							<!--disabled-->
-							<div class="fieldSelect">
-								<select id="" title="선택" disabled>
-									<option value="">선택</option>
-									<option value="">목록1</option>
-									<option value="">목록2</option>
-									<option value="">목록3</option>
-									<option value="">목록4</option>
-									<option value="">목록5</option>
+							<!--Disabled-->
+							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
 								</select>
+								<button type="button" id="sel02" class="select-btn" disabled>010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
 							</div>
 						</code></pre>
 					</div>
