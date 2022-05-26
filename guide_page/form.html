@@ -8,6 +8,7 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/vendor/highlight.pack.js"></script>
+
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/common.css">
@@ -24,7 +25,7 @@
 		<nav></nav>
 	
 		<main id="viewer" class="tui-editor-contents">
-			<h2>FORM</h2>
+			<h2>Form</h2>
 
 			<section>
 				<h3>INPUT</h3>
@@ -95,7 +96,7 @@
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 						<section>
-							<p class="guide_title">Default</p>
+							<p class="guide_title">Large(H48)</p>
 							<div class="select-box">
 								<select class="select" tabindex="-1">
 									<option>010</option>
@@ -105,9 +106,11 @@
 								<div class="select-layer">
 									<button type="button" class="option on" idx='0'>010</button>
 									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
 								</div>
 							</div>
-							<p class="guide_title">Disabled</p>
 							<div class="select-box">
 								<select class="select" tabindex="-1">
 									<option>010</option>
@@ -119,6 +122,33 @@
 									<button type="button" class="option" idx='1'>02</button>
 								</div>
 							</div>
+							<p class="guide_title">Small(H40)</p>
+							<div class="select-box sm">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
+								</select>
+								<button type="button" id="sel01" class="select-btn">010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
+								</div>
+							</div>
+							<div class="select-box sm">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
+								</select>
+								<button type="button" id="sel02" class="select-btn" disabled>010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
+							</div>
+							
 						</section>
 					</div>
 					<!--code 영역-->

@@ -6,15 +6,17 @@ body {font-size: 1.4rem; line-height: 1.4em;}
 body * {box-sizing: border-box;}
 a,
 button {display: inline-block; background: transparent; font-weight: 400; color: inherit; text-decoration: none; border:0; cursor: pointer;}
-.guide header {position: fixed; top: 0; left: 0; width: 100%; min-width: 960px;  padding:13px 20px 12px; background-color: #fff; border-bottom: 1px solid #ddd; z-index: 999; background: #35353d;}
+.guide header {position: fixed; top: 0; left: 0; width: 100%; min-width: 960px;  height:50px; padding:14px 40px 12px; border-bottom: 1px solid #ddd; z-index: 999; background: #1a1d1d;}
 .guide header h1 {display: inline-block;  }
 .guide header h1 a {color: #fff; font-size:18px;}
 .guide header h1 a sup {position: relative; top: -0.8rem;}
 .guide header > a {display: inline-block; float: right; background: #ff3f90; padding: 2px 10px; border-radius: 5px; color: #fff;}
 
-.container {min-width: 960px; padding-top:47px; padding-left: 230px;}
+.container {min-width: 960px; padding-top:50px; /*padding-left: 230px;*/}
 .wrapper section {padding: 0 !important;}
-.guide nav {position: fixed; left: 0; top: 47px; bottom: 0; width: 230px; padding: 30px; font-size: 15px;  line-height: 1.5; overflow-y: auto; color: #333; background:#f0f0f0}
+.guide nav {position: fixed; left: -230px; top: 47px; bottom: 0; width: 230px; padding: 30px; font-size: 15px;  line-height: 1.5; color: #333; background:#f2f3f4; z-index:1;transition:left .3s}
+.guide nav::after{content:'MENU';position:absolute;right:-60px;top:100px;width:90px;height:30px;line-height:32px;background:#1a1d1d;color:#fff;transform:rotate(90deg);text-align:center;border-top-left-radius:15px;border-top-right-radius:15px}
+.guide nav:hover{left:0;box-shadow:10px 0px 5px rgba(0,0,0,0.1);}
 .guide nav a {display: block; }
 .guide nav a:hover { text-decoration: underline;}
 .guide nav > ul > li + li {padding-top: 20px;}
@@ -23,9 +25,9 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .guide nav > ul > li > ul li a {position: relative; padding: 5px 5px 5px 10px; font-size: 12px; color: #555;}
 .guide nav > ul > li > ul li a:after {position: absolute; width: 3px; height: 3px; left: 0; top: 15px; background: #999; content: ""; border-radius: 50%;}
 
-.guide main {padding: 40px 30px;}
+.guide main {padding: 40px}
 .guide section {margin-bottom: 50px;}
-.guide h2:not(.tit_h2,.aTit) {padding-bottom: 30px;  font-size: 24px; font-weight: 700; color: #222;text-transform: uppercase; }
+.guide h2:not(.tit_h2,.aTit) {padding-bottom: 30px;  font-size: 40px; font-weight: 700; color: #222/*;text-transform: uppercase; */}
 .guide h3:not(.tit_h3) {padding: 10px 0; margin-bottom: 10px; font-size: 18px;color: #222; font-weight: 700; }
 .guide h4 {padding-bottom: 5px; color: #222;}
 

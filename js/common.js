@@ -17,6 +17,7 @@ function selectWrap(){
 		if($selBox.hasClass('active')){
 			$selBox.removeClass('active').find('.select-layer').slideUp(100);
 		}else{
+            $('.select-box').removeClass('active').find('.select-layer').slideUp(100);
 			$selBox.addClass('active').find('.select-layer').slideDown(100);
 			$selBox.find('.option.on').trigger('focus');
 		}

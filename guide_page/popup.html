@@ -11,9 +11,10 @@
 
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../js/vendor/editor.css">
 	<link rel="stylesheet" href="../css/guide.css">
 	<link rel="stylesheet" href="../css/bootstrap.css">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../js/vendor/editor.css">
 </head>
 <body>
 
@@ -24,13 +25,34 @@
 		<nav></nav>
 
 		<main id="viewer" class="tui-editor-contents">
-			<h2>popup</h2>
+			<h2>Popup</h2>
 
 			<section>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
+								<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal2">Launch demo modal</button>
+								<!-- Modal -->
+								<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac">해당 사업자번호로 기 등록된 대표아이디가 존재합니다.<br>
+													아이디를 모르실 경우 아이디 찾기를 이용하시거나<br>
+													새롭게 가입하는 것도 가능합니다.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
 								<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">Launch demo modal</button>
 
 								<!-- Modal -->
@@ -38,11 +60,11 @@
 									<div class="modal-dialog">
 										<div class="modal-content">
 											<div class="modal-header">
-												<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+												<h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
 												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 											</div>
 											<div class="modal-body">
-												<h4>Text in a modal</h4>
+												<!--h4>Text in a modal</h4>
 												<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
 									
 												<h4>Popover in a modal</h4>
@@ -52,7 +74,7 @@
 												<h4>Tooltips in a modal</h4>
 												<p><a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">This link</a> and <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">that link</a> should have tooltips on hover.</p>
 									
-												<div id="accordion" role="tablist">
+												<div id="accordion" role="tablist" style="display:none">
 													<div class="card" role="presentation">
 														<div class="card-header" role="tab" id="headingOne">
 															<h5 class="mb-0">
@@ -109,7 +131,7 @@
 												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
 												<p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 												<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+												<p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p-->
 											</div>
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -125,26 +147,24 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
+								<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal2">Launch demo modal</button>
 								<!-- Modal -->
-								<div class="modal fade" id="myModal" role="dialog">
-									<div class="modal-dialog">
-									
-									<!-- Modal content-->
-									<div class="modal-content">
-										<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title">Modal Header</h4>
+								<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac">해당 사업자번호로 기 등록된 대표아이디가 존재합니다.<br>
+													아이디를 모르실 경우 아이디 찾기를 이용하시거나<br>
+													새롭게 가입하는 것도 가능합니다.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+											</div>
 										</div>
-										<div class="modal-body">
-										<p>Some text in the modal.</p>
-										</div>
-										<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										</div>
-									</div>
-									
 									</div>
 								</div>
 							</code></pre>

@@ -1,18 +1,20 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>비즈마켓 모바일 퍼블리싱 산출물</title>
-	<script src="../js/jquery.min.js"></script>
-	<script src="../js/vendor/highlight.pack.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
 
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../js/vendor/editor.css">
-	<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+<link rel="stylesheet" href="../css/guide.css">
+
 </head>
 <body>
 
@@ -23,49 +25,65 @@
 		<nav></nav>
 
 		<main id="viewer" class="tui-editor-contents">
-			<h2>table</h2>
+			<h2>Table</h2>
 
 			<section>
-				<h3>thead없는 가로스타일 table</h3>
+				<h3>Vertical</h3>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<div class="tb_row">
+								<div class="tb_stl1">
 									<table>
 										<caption>개인사업자 회원가입인증</caption>
 										<colgroup>
-											<col style="width: 110px;">
+											<col style="width: 328px;">
 											<col>
 										</colgroup>
 										<tbody>
 											<tr>
-												<th scope="col">사용자아이디</th>
-												<td>dalnim03</td>
+												<th scope="col">아이디</th>
+												<td>Kim001</td>
 											</tr>
 											<tr>
-												<th scope="col">개인사업자번호</th>
-												<td>103-5-54129</td>
-											</tr>
-											<tr>
-												<th scope="col">회사명</th>
-												<td>달님나라</td>
-											</tr>
-											<tr>
-												<th scope="col">대표자 이름</th>
-												<td>이몽룡</td>
-											</tr>
-											<tr>
-												<th scope="col">대행 대리점</th>
-												<td>청성</td>
-											</tr>
-											<tr>
-												<th scope="col">대행 영업사원명</th>
+												<th scope="col">이름</th>
 												<td>홍길동</td>
 											</tr>
 											<tr>
-												<th scope="col">회원가입 상태</th>
-												<td><span class="fcPink">대기</span></td>
+												<th scope="col">생년월일</th>
+												<td>810215</td>
+											</tr>
+											<tr>
+												<th scope="col">휴대폰 번호</th>
+												<td>
+													<div class="phone">
+														<div class="inpTxt">
+															<input type="text" title="" value="010" placeholder="" >
+														</div>
+														<span class="bar">-</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="1234" placeholder="" >
+														</div>
+														<span class="bar">-</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="5678" placeholder="" >
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">이메일</th>
+												<td>
+													<div class="email">
+														<div class="inpTxt">
+															<input type="text" title="" value="user_email" placeholder="" >
+														</div>
+														<span class="bar">@</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="gmail.com" placeholder="" >
+														</div>
+													</div>
+												</td>
 											</tr>
 										</tbody>
 									</table>
@@ -77,41 +95,57 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<div class="tb_row">
+								<div class="tb_stl1">
 									<table>
 										<caption>개인사업자 회원가입인증</caption>
 										<colgroup>
-											<col style="width: 110px;">
+											<col style="width: 328px;">
 											<col>
 										</colgroup>
 										<tbody>
 											<tr>
-												<th scope="col">사용자아이디</th>
-												<td>dalnim03</td>
+												<th scope="col">아이디</th>
+												<td>Kim001</td>
 											</tr>
 											<tr>
-												<th scope="col">개인사업자번호</th>
-												<td>103-5-54129</td>
-											</tr>
-											<tr>
-												<th scope="col">회사명</th>
-												<td>달님나라</td>
-											</tr>
-											<tr>
-												<th scope="col">대표자 이름</th>
-												<td>이몽룡</td>
-											</tr>
-											<tr>
-												<th scope="col">대행 대리점</th>
-												<td>청성</td>
-											</tr>
-											<tr>
-												<th scope="col">대행 영업사원명</th>
+												<th scope="col">이름</th>
 												<td>홍길동</td>
 											</tr>
 											<tr>
-												<th scope="col">회원가입 상태</th>
-												<td><span class="fcPink">대기</span></td>
+												<th scope="col">생년월일</th>
+												<td>810215</td>
+											</tr>
+											<tr>
+												<th scope="col">휴대폰 번호</th>
+												<td>
+													<div class="phone">
+														<div class="inpTxt">
+															<input type="text" title="" value="010" placeholder="" >
+														</div>
+														<span class="bar">-</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="1234" placeholder="" >
+														</div>
+														<span class="bar">-</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="5678" placeholder="" >
+														</div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col">이메일</th>
+												<td>
+													<div class="email">
+														<div class="inpTxt">
+															<input type="text" title="" value="user_email" placeholder="" >
+														</div>
+														<span class="bar">@</span>
+														<div class="inpTxt">
+															<input type="text" title="" value="gmail.com" placeholder="" >
+														</div>
+													</div>
+												</td>
 											</tr>
 										</tbody>
 									</table>
@@ -124,38 +158,51 @@
 			</section>
 
 			<section>
-				<h3>thead 있는 table</h3>
+				<h3>Horizontal</h3>
+				<style>
+.tb_stl2{border-top:solid 2px #1a1d1d}
+.tb_stl2 table{width:100%}
+.tb_stl2 th{background-color:#f5f5f5;font-size:17px;font-weight:700;line-height:26px;padding:27px 16px;border-bottom:solid 1px #e5e5e5}
+.tb_stl2 th + th{border-left:solid 1px #e5e5e5}
+.tb_stl2 td{line-height:22px;font-size:15px;color:#636366;text-align:center;padding:21px 16px;border-bottom:solid 1px #e5e5e5}
+.tb_stl2 td + td{border-left:solid 1px #e5e5e5}
+.tb_stl2 .nodata{height:300px;vertical-align:middle}
+				</style>
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
 							<section>
-								<div class="tb_col">
+								<div class="tb_stl2">
 									<table>
 										<caption>부가서비스 정보</caption>
 										<colgroup>
-											<col>
-											<col style="width: 33%;">
-											<col style="width: 27%;">
+											<col width="230">
+											<col width="170">
+											<col width="248">
+											<col width="308">
+											<col width="268">
+											<col width="163">
 										</colgroup>
 										<thead>
 											<tr>
-												<th scope="col">부가서비스</th>
-												<th scope="col">이용요금</th>
-												<th scope="col">신청일</th>
+												<th scope="col">사용자 ID</th>
+												<th scope="col">담당자명</th>
+												<th scope="col">담당자 휴대폰번호</th>
+												<th scope="col">담당자 이메일</th>
+												<th scope="col">ID 생성 일시</th>
+												<th scope="col">휴면 상태</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>멀티도메인</td>
-												<td class="tar">5,500원</td>
-												<td class="roboto tac">2020.07.06</td>
+												<td>Kim001</td>
+												<td>홍길동</td>
+												<td>010-1234-5678</td>
+												<td>elstid467@naver.com</td>
+												<td>2020-09-08 16:23</td>
+												<td>정상</td>
 											</tr>
-											<tr>
-												<td>용량증설</td>
-												<td class="tar">22,000원</td>
-												<td class="roboto tac">2020.07.06</td>
-											</tr>
-											<tr><td class="nodata" colspan="3">부가서비스 신청 내역이 없습니다.</td>
+											<tr><td class="nodata" colspan="6">조회 내역이 없습니다.</td>
 										</tr></tbody>
 									</table>
 								</div>
@@ -166,33 +213,37 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<div class="tb_col">
+								<div class="tb_stl2">
 									<table>
 										<caption>부가서비스 정보</caption>
 										<colgroup>
-											<col>
-											<col style="width: 33%;">
-											<col style="width: 27%;">
+											<col width="230">
+											<col width="170">
+											<col width="248">
+											<col width="308">
+											<col width="268">
+											<col width="163">
 										</colgroup>
 										<thead>
 											<tr>
-												<th scope="col">부가서비스</th>
-												<th scope="col">이용요금</th>
-												<th scope="col">신청일</th>
+												<th scope="col">사용자 ID</th>
+												<th scope="col">담당자명</th>
+												<th scope="col">담당자 휴대폰번호</th>
+												<th scope="col">담당자 이메일</th>
+												<th scope="col">ID 생성 일시</th>
+												<th scope="col">휴면 상태</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td>멀티도메인</td>
-												<td class="tar">5,500원</td>
-												<td class="roboto tac">2020.07.06</td>
+												<td>Kim001</td>
+												<td>홍길동</td>
+												<td>010-1234-5678</td>
+												<td>elstid467@naver.com</td>
+												<td>2020-09-08 16:23</td>
+												<td>정상</td>
 											</tr>
-											<tr>
-												<td>용량증설</td>
-												<td class="tar">22,000원</td>
-												<td class="roboto tac">2020.07.06</td>
-											</tr>
-											<tr><td class="nodata" colspan="3">부가서비스 신청 내역이 없습니다.</td>
+											<tr><td class="nodata" colspan="6">조회 내역이 없습니다.</td>
 										</tr></tbody>
 									</table>
 								</div>
@@ -202,163 +253,6 @@
 
 					</div>
 			</section>
-
-
-			<section>
-				<h3>서브메인 > 주요기능 내 팝업 (전자문서, 영상회의)</h3>
-                <div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-							<section>
-								<div class="tb_line">
-									<table>
-										<caption>사용가능한 인증서 종류</caption>
-										<colgroup>
-											<col style="width: 32%;">
-											<col>
-											<col style="width: 25%;">
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col">인증서명</th>
-												<th scope="col">내용</th>
-												<th scope="col">발급비용</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">U<sup>+</sup>전용인증서</th>
-												<td>전자세금계산서/<br>전자계약서 발행 가능</td>
-												<td>연 <br><span class="roboto">11,000</span>원</td>
-											</tr>
-											<tr>
-												<th scope="row">전자세금용<br>인증서</th>
-												<td>전자세금계산서만 <br>발행 가능</td>
-												<td>연 <br><span class="roboto">4,400</span>원</td>
-											</tr>
-											<tr>
-												<th scope="row">사업자용 <br>범용 공동인증서</th>
-												<td>전자세금계산서/ <br>전자계약서 발행 가능</td>
-												<td>연 <br><span class="roboto">110,000</span>원</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
-						<!--화면 입력영역-->
-						</div>
-
-						<!--code 영역-->
-						<div class="code_html">
-							<pre><code class="hljs html">
-								<div class="tb_line">
-									<table>
-										<caption>사용가능한 인증서 종류</caption>
-										<colgroup>
-											<col style="width: 32%;">
-											<col>
-											<col style="width: 25%;">
-										</colgroup>
-										<thead>
-											<tr>
-												<th scope="col">인증서명</th>
-												<th scope="col">내용</th>
-												<th scope="col">발급비용</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<th scope="row">U<sup>+</sup>전용인증서</th>
-												<td>전자세금계산서/<br>전자계약서 발행 가능</td>
-												<td>연 <br><span class="roboto">11,000</span>원</td>
-											</tr>
-											<tr>
-												<th scope="row">전자세금용<br>인증서</th>
-												<td>전자세금계산서만 <br>발행 가능</td>
-												<td>연 <br><span class="roboto">4,400</span>원</td>
-											</tr>
-											<tr>
-												<th scope="row">사업자용 <br>범용 공동인증서</th>
-												<td>전자세금계산서/ <br>전자계약서 발행 가능</td>
-												<td>연 <br><span class="roboto">110,000</span>원</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</code></pre>
-						</div>
-						<!--code 영역//-->
-
-					</div>
-			</section>
-
-			<section>
-				<h3>서브메인 > 이용요금페이지 테이블 공통</h3>
-                <div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-							<section>
-								<div class="tb_payPlan">
-									<table>
-										<caption>공동인증서 발급 비용</caption>
-										<colgroup>
-											<col style="width:25%;">
-											<col>
-											<col style="width:25%">
-										</colgroup>
-										<tbody><tr>
-											<th scope="col">인증서명</th>
-											<th scope="col">내용</th>
-											<th scope="col">이용요금</th>
-										</tr>
-										</tbody><tbody>
-											<tr>
-												<td>U<sup>+</sup>전용인증서</td>
-												<td>전자세금계산서/<span class="inlineb">전자계약서 발행 시 모두 사용 가능</span></td>
-												<td>연 <span class="roboto">11,000</span>원</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</section>
-						<!--화면 입력영역-->
-						</div>
-
-						<!--code 영역-->
-						<div class="code_html">
-							<pre><code class="hljs html">
-								<!--요금제 페이지에서만 사용함. 폰트사이즈 10px, 가로스크롤X 
-								대신 확대 가능하게 처리함. 처음 로딩시 확대가능 핑거아이콘 노출됨-->
-								<div class="tb_payPlan">
-									<table>
-										<caption>공동인증서 발급 비용</caption>
-										<colgroup>
-											<col style="width:25%;">
-											<col>
-											<col style="width:25%">
-										</colgroup>
-										<tbody><tr>
-											<th scope="col">인증서명</th>
-											<th scope="col">내용</th>
-											<th scope="col">이용요금</th>
-										</tr>
-										</tbody><tbody>
-											<tr>
-												<td>U<sup>+</sup>전용인증서</td>
-												<td>전자세금계산서/<span class="inlineb">전자계약서 발행 시 모두 사용 가능</span></td>
-												<td>연 <span class="roboto">11,000</span>원</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</code></pre>
-						</div>
-						<!--code 영역//-->
-
-					</div>
-			</section>
-
-
 
 
 		</main>
