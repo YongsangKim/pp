@@ -130,3 +130,27 @@ function selectWrap(){
         }
     });
 }		
+
+$(document).ready(function(){
+    //footer family site
+    $('.family-site .btn-toggle').each(function(e){
+        var $box = $(this).closest('.family-site');
+
+        $(this).click(function(){
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+                $box.find('ul').slideUp(100);
+            }else{
+                $(this).addClass('on');
+                $box.find('ul').slideDown(100);
+            }
+        });
+
+        $(document).mouseup(function(e){
+            if (!$box.is(e.target) && $box.has(e.target).length === 0){
+                $box.find('.btn-toggle').removeClass('on');
+                $box.find('ul').slideUp(100);
+            }
+        });
+    });
+});

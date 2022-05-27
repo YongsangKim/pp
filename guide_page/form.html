@@ -8,13 +8,17 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/vendor/highlight.pack.js"></script>
-
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker.ko.min.js"></script>
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
 <link rel="stylesheet" href="../css/common.css">
 <link rel="stylesheet" href="../js/vendor/editor.css">
-<link rel="stylesheet" href="../css/guide.css">
-	
+
 </head>
 <body>
 
@@ -36,50 +40,65 @@
 
 						</style>
 						<section>
-							<p class="guide_title">Default</p>
-							<div class="inpTxt">
+							<p class="guide_title">Large(H48)</p>
+							<div class="input-txt">
 								<input type="text" title="" value="" placeholder="placeholder" >
 							</div>
-							<div class="inpTxt" style="margin-top: 10px;">
+							<div class="input-txt">
 								<input type="text" title="" value="value" placeholder="placeholder" >
 							</div>
-
-							<p class="guide_title">Readonly / Disabled</p>
-							<div class="inpTxt" style="margin-top: 10px;">
+							<div class="input-txt">
 								<input type="text" title="" value="readonly" readonly >
 							</div>
-							<div class="inpTxt" style="margin-top: 10px;">
+							<div class="input-txt">
 								<input type="text" title="" value="disabled" disabled >
 							</div>
-
-							<p class="guide_title">Error</p>
-							<div class="inpTxt error">
+							<div class="input-txt error">
 								<input type="text" title="" value="error">
 								<p class="msg">error 텍스트</p>
 							</div>
+
+							<p class="guide_title">Small(H40)</p>
+							<div class="input-txt sm">
+								<input type="text" title="" value="" placeholder="placeholder" >
+							</div>
+							<div class="input-txt sm">
+								<input type="text" title="" value="value" placeholder="placeholder" >
+							</div>
+							<div class="input-txt sm">
+								<input type="text" title="" value="readonly" readonly >
+							</div>
+							<div class="input-txt sm">
+								<input type="text" title="" value="disabled" disabled >
+							</div>
+							<div class="input-txt sm error">
+								<input type="text" title="" value="error">
+								<p class="msg">error 텍스트</p>
+							</div>
+
 						</section>
 					</div>
 					<!--code 영역-->
 					<div class="code_html">
 						<pre><code class="hljs html">
 							<!--Default-->
-							<div class="inpTxt">
+							<div class="input-txt">
 								<input type="text" title="" value="" placeholder="placeholder" >
 							</div>
-							<div class="inpTxt">
+							<div class="input-txt">
 								<input type="text" title="" value="value" placeholder="placeholder" >
 							</div>
 
 							<!--Readonly / Disabled-->
-							<div class="inpTxt">
+							<div class="input-txt">
 								<input type="text" title="" value="readonly" readonly >
 							</div>
-							<div class="inpTxt">
+							<div class="input-txt">
 								<input type="text" title="" value="disabled" disabled >
 							</div>
 
 							<!--Error-->
-							<div class="inpTxt error">
+							<div class="input-txt error">
 								<input type="text" title="" value="error">
 								<p class="msg">error 텍스트</p>
 							</div>
@@ -87,6 +106,25 @@
 					</div>
 					<!--code 영역//-->
 
+				</div>
+			</section>
+
+			<section>
+				<h3>Datepicker</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<section id="sandbox-container">
+							<div class="input-txt sm datepicker">
+								<input type="text">
+							</div>
+							<script>
+								$('.datepicker input').datepicker({
+									format: "yyyy-mm-dd",
+									language: "ko"
+								});
+							</script>
+						</section>
+					</div>
 				</div>
 			</section>
 
@@ -101,6 +139,9 @@
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
 								</select>
 								<button type="button" id="sel01" class="select-btn">010</button>
 								<div class="select-layer">
@@ -115,6 +156,9 @@
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
 								</select>
 								<button type="button" id="sel02" class="select-btn" disabled>010</button>
 								<div class="select-layer">
@@ -148,14 +192,45 @@
 									<button type="button" class="option" idx='1'>02</button>
 								</div>
 							</div>
-							
 						</section>
 					</div>
 					<!--code 영역-->
 					<div class="code_html">
 						<pre><code class="hljs html">
-							<!--Default-->
+							<!--Large(H48)-->
 							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
+								</select>
+								<button type="button" id="sel01" class="select-btn">010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
+								</div>
+							</div>
+							<div class="select-box">
+								<select class="select" tabindex="-1">
+									<option>010</option>
+									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
+								</select>
+								<button type="button" id="sel02" class="select-btn" disabled>010</button>
+								<div class="select-layer">
+									<button type="button" class="option on" idx='0'>010</button>
+									<button type="button" class="option" idx='1'>02</button>
+								</div>
+							</div>
+							<!--Small(H40)-->
+							<div class="select-box sm">
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>
@@ -164,11 +239,12 @@
 								<div class="select-layer">
 									<button type="button" class="option on" idx='0'>010</button>
 									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
 								</div>
 							</div>
-
-							<!--Disabled-->
-							<div class="select-box">
+							<div class="select-box sm">
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>

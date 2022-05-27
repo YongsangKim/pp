@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header></header>
+
+	<div class="container">
+		<nav></nav>
+
+		<main id="viewer" class="tui-editor-contents">			
+			<h2>퍼블리싱 화면목록</h2>
+
+			<section>
+                <h3>로그인/회원가입</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col width="50">
+                            <col width="500">
+                            <col width="200">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>화면명</th>
+                                <th>화면ID</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>로그인</td>
+                                <td>IA_PP_P-L</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>로그인 >로그인 SMS 인증</td>
+                                <td>IA_PP_P-L-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>로그인 > 안내 레이어 팝업</td>
+                                <td>IA_PP_P-L-2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>로그인 > 아이디 찾기</td>
+                                <td>IA_PP_P-L-3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>로그인 > 비밀번호 찾기</td>
+                                <td>IA_PP_P-L-4</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>로그인 > 비밀번호 재설정</td>
+                                <td>IA_PP_P-L-5</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>로그인 > 휴면계정 해제 안내</td>
+                                <td>IA_PP_P-L-6</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>회원가입 > 약관 및 개인정보 수집 동의</td>
+                                <td>IA_PP_P-J-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>회원가입 > 회원정보 입력 및 서류 업로드 > 법인사업자</td>
+                                <td>IA_PP_P-J-2-001</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>회원가입 > 회원정보 입력 및 서류 업로드 > 개인사업자</td>
+                                <td>IA_PP_P-J-2-002</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <td>회원가입 > 회원정보 입력 및 서류 업로드 > 비영리법인</td>
+                                <td>IA_PP_P-J-2-003</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td>회원가입 > 심사대기</td>
+                                <td>IA_PP_P-J-3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <td>회원가입 > 반려 재심사 로그인</td>
+                                <td>IA_PP_P-J-4</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <td>회원가입 > 반려 재심사 로그인 > 준회원 아이디 찾기</td>
+                                <td>IA_PP_P-J-4-001</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td>회원가입 > 반려 재심사 로그인 > 준회원 아이디 찾기 > 준회원 아이디 찾기 결과 페이지</td>
+                                <td>IA_PP_P-J-4-001-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>회원가입 > 반려 재심사 로그인 > 준회원 비밀번호 찾기</td>
+                                <td>IA_PP_P-J-4-002</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>17</th>
+                                <td>회원가입 > 반려 재심사 로그인 > 준회원 비밀번호 찾기 > 준회원 비밀번호 재설정</td>
+                                <td>IA_PP_P-J-4-002-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>18</th>
+                                <td>회원가입 > 반려 재심사 수정 페이지</td>
+                                <td>IA_PP_P-J-5</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>19</th>
+                                <td>회원가입 > 반려 재심사 심사대기</td>
+                                <td>IA_PP_P-J-6</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <h3>마이페이지</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col width="50">
+                            <col width="500">
+                            <col width="200">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>화면명</th>
+                                <th>화면ID</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>마이페이지</td>
+                                <td>IA_PP_P-M</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>마이페이지 > 회원정보변경</td>
+                                <td>IA_PP_P-M-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>마이페이지 > 광고성 정보 수신변경</td>
+                                <td>IA_PP_P-M-2	</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>마이페이지 > 회사정보변경 > 법인사업자</td>
+                                <td>IA_PP_P-M-3-001	</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>마이페이지 > 회사정보변경 > 개인사업자</td>
+                                <td>IA_PP_P-M-3-002	</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>마이페이지 > 회사정보변경 > 비영리법인</td>
+                                <td>IA_PP_P-M-3-003</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>서비스관리</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col width="50">
+                            <col width="500">
+                            <col width="200">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>화면명</th>
+                                <th>화면ID</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>서비스관리 > 서비스목록</td>
+                                <td>IA_PP_P1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 서비스개요</td>
+                                <td>IA_PP_P1-1-001-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>서비스관리 >  서비스 목록 >  기존 데이터 불러오기 팝업</td>
+                                <td>IA_PP_P1-1-001-1-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 서비스소개 >서비스소개</td>
+                                <td>IA_PP_P1-1-001-2-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 서비스소개 >요금정보</td>
+                                <td>IA_PP_P1-1-001-2-2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 연동정보관리</td>
+                                <td>IA_PP_P1-1-001-3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 요금제관리</td>
+                                <td>IA_PP_P1-1-001-4</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td>서비스관리 >  서비스 목록 > 판매형 신규등록 > 검수요청 팝업</td>
+                                <td>IA_PP_P1-1-001-5</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td>서비스관리 > 공통 레이어 팝업</td>
+                                <td>IA_PP_P1-1-001-6</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td>서비스관리 >  서비스 목록 > 소개형신규등록 > 서비스개요</td>
+                                <td>IA_PP_P1-1-002-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <td>서비스관리 >  서비스 목록 > 소개형 신규등록 > 서비스 소개 > 서비스 소개</td>
+                                <td>IA_PP_P1-1-002-2-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td>서비스관리 >  서비스 목록 > 소개형 신규등록 > 서비스 소개 > 요금 정보</td>
+                                <td>IA_PP_P1-1-002-2-2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <td>서비스관리 >  서비스 목록 > 소개형 신규등록 > 검수요청 팝업</td>
+                                <td>IA_PP_P1-1-002-3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭</td>
+                                <td>IA_PP_P1-1-003</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세</td>
+                                <td>IA_PP_P1-1-003-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 이력확인 버튼 팝업(공통)</td>
+                                <td>IA_PP_P1-1-003-1-1</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>17</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 변경검수 상세</td>
+                                <td>IA_PP_P1-1-003-1-2</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>18</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 일시중지 팝업</td>
+                                <td>IA_PP_P1-1-003-1-3</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>19</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 서비스소개</td>
+                                <td>IA_PP_P1-1-003-1-4</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>20</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 연동정보관리</td>
+                                <td>IA_PP_P1-1-003-1-5</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>21</th>
+                                <td>서비스관리 > 서비스 목록 >  승인완료서비스 탭 > 판매중 상세 > 요금제관리</td>
+                                <td>IA_PP_P1-1-003-1-6</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>22</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>영업활동관리</h3>
+                <div class="table">
+                    <table>
+                        <colgroup>
+                            <col width="50">
+                            <col width="500">
+                            <col width="200">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>화면명</th>
+                                <th>화면ID</th>
+                                <th>상태</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <td>마이페이지</td>
+                                <td>IA_PP_P-M</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>6</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>7</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>8</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>9</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>10</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>11</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>12</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>13</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>14</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>15</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>16</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+			</section>
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+	<script src="../js/vendor/highlight_footer.js"></script>
+	<script src="../js/guide.js"></script>
+</body>
+</html>

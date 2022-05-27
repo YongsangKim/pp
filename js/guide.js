@@ -21,7 +21,7 @@ nav.innerHTML = '<ul>' +
 '				<li><a href="layout.html">레이아웃</a>' +
 '                   <ul>' +
 '						<li><a href="layout.html">header, footer</a></li>' +
-'						<li><a href="main_banner.html">메인배너</a></li>' +
+'						<li><a href="publish_list.html">퍼블리싱 화면목록</a></li>' +
 '					</ul>' +
 '               </li>' +
 '				<li><a href="service_card.html">메인 컨텐츠등록</a>' +
