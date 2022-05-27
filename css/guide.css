@@ -54,7 +54,7 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .tit_h3 {border-bottom: 0; color: #000;}
 
 /*code 영역*/
-.code_wrap {display: flex; flex-wrap: nowrap; justify-content: space-between; margin-top: 10px; margin-bottom: 50px;  overflow: hidden; }
+.code_wrap {display: flex; flex-wrap: nowrap; justify-content: space-between; margin-top: 10px; margin-bottom: 50px}
 .code_wrap .code_header {padding: 5px 15px; font-size: 1.2rem; background: #aaa;}
 .code_wrap .code_header h5 {display: inline-block; font-size: 1.1rem; color: #fff;}
 .code_wrap .code_header .btn_box {float: right;}

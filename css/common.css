@@ -2,9 +2,12 @@
     button
 /---------------------------------------*/
 .btn{display:inline-flex;justify-content:center;align-items:center}
+button.btn{vertical-align:top}
 .btn.primary{background-color:#eb008b;color:#fff}
 .btn.secondary{background-color:#fff;color:#eb008b;border:solid 1px #eb008b}
-.btn.lg{height:48px;padding:0 24px;border-radius:24px;min-width:212px;font-size:14px}
+.btn.teritary{background-color:#eb008b;color:#fff}
+.btn.teritary.lg{border-radius:4px}
+.btn.lg{height:48px;padding:0 16px;border-radius:24px;min-width:212px;font-size:14px;min-width:0}
 .btn.md{height:40px;padding:0 16px;border-radius:20px;font-size:13px;line-height:20px}
 .btn.arrow{min-width:0}
 .btn.arrow::after{content:'';display:inline-block;width:7px;height:7px;border-top:solid 1px #fff;border-right:solid 1px #fff;transform:rotate(45deg);margin-left:6px}
@@ -12,15 +15,18 @@
 .btn.fixed{width:444px}
 .btn.primary:hover{background-color:#ef3484}
 .btn.secondary:hover{border-color:#ef3484;color:#ef3484}
+.btn.teritary:hover{background-color:#ef3484}
 .btn.primary:disabled,
-.btn.primary.disabled{background-color:#f5f5f5;color:#aeaeb2;outline:0}
+.btn.primary.disabled{background-color:#f5f5f5;color:#aeaeb2;outline:0;opacity:1}
 .btn.secondary:disabled,
-.btn.secondary.disabled{background-color:#fff;color:#aeaeb2;border-color:#fafafa;outline:0}
+.btn.secondary.disabled{background-color:#fff;color:#aeaeb2;border-color:#bfbfbf;outline:0;opacity:1}
+.btn.teritary:disabled,
+.btn.teritary.disabled{background-color:#f5f5f5;color:#aeaeb2;outline:0;opacity:1}
 .btn.arrow.disabled::after{border-color:#aeaeb2}
 /*---------------------------------------/
     input
 /---------------------------------------*/
-.inpTxt{position:relative;display:flex;flex-wrap:wrap;flex:1;flex-direction:column;text-align:left}
+.inpTxt{position:relative;display:inline-flex;flex-wrap:wrap;flex:1;flex-direction:column;text-align:left}
 .inpTxt input{height:48px;border:solid 1px #b2b2b2;border-radius:4px;font-size:14px;color:#1a1d1d;padding:0 16px}
 .inpTxt input::placeholder{color:#aeaeb2}
 .inpTxt input:hover,
@@ -28,6 +34,24 @@
 .inpTxt input:read-only{background-color:#f3f3f3;color:#999}
 .inpTxt.error input{border-color:#dc354a}
 .inpTxt.error .msg{font-size:11px;color:#dc354a}
+/*---------------------------------------/
+    radio / checkbox
+/---------------------------------------*/
+.radio{position:relative;display:inline-block}
+.radio + .radio{margin-left:20px}
+.radio label{padding-left:26px;font-size:14px;color:#16171d}
+.radio .ico{position:absolute;left:0;top:0;border:solid 2px #8e8e93;width:20px;height:20px;border-radius:10px}
+.radio input:checked + label .ico{border-color:#eb008b}
+.radio input + label .ico::before{content:'';position:absolute;left:3px;top:3px;width:10px;height:10px;background-color:#eb008b;border-radius:5px;opacity:0;transform:scale(.5);transition:all .2s}
+.radio input:checked + label .ico::before{opacity:1;transform:scale(1)}
+
+.checkbox{position:relative;display:inline-block}
+.checkbox + .checkbox{margin-left:20px}
+.checkbox label{padding-left:26px;font-size:14px;color:#16171d}
+.checkbox .ico{position:absolute;left:0;top:0;border:solid 2px #d9d9d9;width:20px;height:20px;border-radius:10px;background-color:#fff;transition:all .2s}
+.checkbox input + label .ico::before{content:'';position:absolute;left:3px;top:4px;width:8px;height:4px;border-left:solid 2px #d9d9d9;border-bottom:solid 2px #d9d9d9;transform:rotate(-45deg)}
+.checkbox input:checked + label .ico{border-color:#eb008b;background-color:#eb008b}
+.checkbox input:checked + label .ico::before{border-color:#fff}
 /*---------------------------------------/
     select
 /---------------------------------------*/
@@ -144,6 +168,28 @@
 .tb_stl1 .phone .bar{display:inline-flex;width:22px;justify-content:center;margin:0 -3px;font-size:18px}
 .tb_stl1 .email .inpTxt{display:inline-flex;width:282px}
 .tb_stl1 .email .bar{display:inline-flex;width:32px;justify-content:center;margin:0 -3px;font-size:18px}
+.tb_stl2{border-top:solid 2px #1a1d1d}
+.tb_stl2 table{width:100%}
+.tb_stl2 th{background-color:#f5f5f5;font-size:17px;font-weight:700;line-height:26px;padding:27px 16px;border-bottom:solid 1px #e5e5e5}
+.tb_stl2 th + th{border-left:solid 1px #e5e5e5}
+.tb_stl2 td{line-height:22px;font-size:15px;color:#636366;text-align:center;padding:21px 16px;border-bottom:solid 1px #e5e5e5}
+.tb_stl2 td + td{border-left:solid 1px #e5e5e5}
+.tb_stl2 .nodata{height:300px;vertical-align:middle}
+/*---------------------------------------/
+    pagination
+/---------------------------------------*/
+.pagination {margin-top: 60px; text-align: center; font-size: 0;}
+.pagination strong,
+.pagination a {display: inline-block; width: 48px; height: 48px; margin: 0 2px; vertical-align: top; line-height: 44px; font-size: 16px; color:#636366}
+.pagination a:hover {text-decoration: none; color:#ef3484}
+.pagination strong {color: #eb008b; font-weight: normal; text-decoration:underline; font-weight:700}
+.pagination a[class^="ico"]{position:relative;margin: 0 4px;border:solid 1px #e5e5e5;border-radius:4px;transition:border .2s}
+.pagination a[class^="ico"]:hover{border-color:#ef3484}
+.pagination a[class^="ico"]::before {content:'';display:inline-block;width:14px;height:14px;background: url(../images/sp_page.png) 0 0 no-repeat;vertical-align:middle}
+.pagination a.ico-first::before {background-position: 0 0}
+.pagination a.ico-prev::before {background-position: -20px 0}
+.pagination a.ico-next::before {background-position: -40px 0}
+.pagination a.ico-last::before {background-position: -60px 0}
 /*---------------------------------------/
     modal
 /---------------------------------------*/

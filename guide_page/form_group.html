@@ -26,6 +26,136 @@
 		<main id="viewer" class="tui-editor-contents">
 			<h2>Form group</h2>
 			<!--기본 스타일-->
+			<style>
+				.search-box{position:relative;background-color:#f5f5f5;padding:40px}
+				.search-box th{text-align:left;font-size:14px;color:#1a1d1d;line-height:20px;font-weight:500}
+				.search-box th span{display:inline-block;padding:10px 0}
+				.search-box th span::before{content:'';display:inline-block;width:4px;height:4px;background-color:#1a1d1d;vertical-align:3px;margin-right:8px;border-radius:2px}
+				.search-box .aside{position:absolute;right:40px;bottom:40px}
+				.search-box tr + tr th,
+				.search-box tr + tr td{padding-top:12px}
+				.checkbox-group{display:inline-block}
+			</style>
+			<section>
+				<h3>공통영역</h3>
+				<div class="search-box">
+					<table>
+						<caption>공통영역</caption>
+						<colgroup>
+							<col style="width:130px">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th><span>서비스 명</span></th>
+								<td>
+									<div class="select-box sm" style="width:190px">
+										<select class="select" tabindex="-1">
+											<option>전체</option>
+											<option>02</option>
+											<option>031</option>
+											<option>032</option>
+											<option>041</option>
+										</select>
+										<button type="button" id="sel01" class="select-btn">전체</button>
+										<div class="select-layer">
+											<button type="button" class="option on" idx='0'>전체</button>
+											<button type="button" class="option" idx='1'>02</button>
+											<button type="button" class="option" idx='2'>031</button>
+											<button type="button" class="option" idx='3'>032</button>
+											<button type="button" class="option" idx='4'>041</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span>문의경로</span></th>
+								<td>
+									<div class="select-box sm" style="width:190px">
+										<select class="select" tabindex="-1">
+											<option>전체</option>
+											<option>02</option>
+											<option>031</option>
+											<option>032</option>
+											<option>041</option>
+										</select>
+										<button type="button" id="sel01" class="select-btn">전체</button>
+										<div class="select-layer">
+											<button type="button" class="option on" idx='0'>전체</button>
+											<button type="button" class="option" idx='1'>02</button>
+											<button type="button" class="option" idx='2'>031</button>
+											<button type="button" class="option" idx='3'>032</button>
+											<button type="button" class="option" idx='4'>041</button>
+										</div>
+									</div>
+									<div class="checkbox-group ml10">
+										<span class="checkbox">
+											<input id="check02_1" name="check02" type="checkbox" checked="">
+											<label for="check02_1">
+												<i class="ico"></i> 온라인신청
+											</label>
+										</span>
+										<span class="checkbox">
+											<input id="check02_2" name="check02" type="checkbox">
+											<label for="check02_2">
+												<i class="ico"></i> 대리점대행
+											</label>
+										</span>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span>검색어</span></th>
+								<td>
+									<div class="select-box sm" style="width:190px">
+										<select class="select" tabindex="-1">
+											<option>전체</option>
+											<option>02</option>
+											<option>031</option>
+											<option>032</option>
+											<option>041</option>
+										</select>
+										<button type="button" id="sel01" class="select-btn">전체</button>
+										<div class="select-layer">
+											<button type="button" class="option on" idx='0'>전체</button>
+											<button type="button" class="option" idx='1'>02</button>
+											<button type="button" class="option" idx='2'>031</button>
+											<button type="button" class="option" idx='3'>032</button>
+											<button type="button" class="option" idx='4'>041</button>
+										</div>
+									</div>
+									<div class="inpTxt">
+										<input type="text" title="" value="" placeholder="placeholder" >
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th><span>접수일</span></th>
+								<td>
+									<div class="select-box sm" style="width:190px">
+										<select class="select" tabindex="-1">
+											<option>전체</option>
+											<option>02</option>
+											<option>031</option>
+											<option>032</option>
+											<option>041</option>
+										</select>
+										<button type="button" id="sel01" class="select-btn">전체</button>
+										<div class="select-layer">
+											<button type="button" class="option on" idx='0'>전체</button>
+											<button type="button" class="option" idx='1'>02</button>
+											<button type="button" class="option" idx='2'>031</button>
+											<button type="button" class="option" idx='3'>032</button>
+											<button type="button" class="option" idx='4'>041</button>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<button type="button" class="btn teritary lg aside">검색</button>
+				</div>
+			</section>
 			<section>
 				<h3>기본 form</h3>
 				<p class="info_txt" >input의 경우 입력 내용에 맞춰 type 적용함</p>
