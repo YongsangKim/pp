@@ -18,6 +18,12 @@
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
 <link rel="stylesheet" href="../css/common.css">
+<style>
+    .table thead th{background-color:#fff}
+    .table tbody tr:hover th,
+    .table tbody tr:hover td{background-color:#fafafa;cursor:pointer}
+    .table tbody tr td:nth-child(4){text-align:center}
+</style>
 </head>
 <body>
 
@@ -37,8 +43,8 @@
                         <colgroup>
                             <col width="50">
                             <col width="500">
-                            <col width="200">
-                            <col>
+                            <col width="300">
+                            <col width="100">
                             <col>
                         </colgroup>
                         <thead>
@@ -62,7 +68,7 @@
                                 <th>2</th>
                                 <td>로그인 >로그인 SMS 인증</td>
                                 <td>IA_PP_P-L-1</td>
-                                <td></td>
+                                <td>진행중</td>
                                 <td></td>
                             </tr>
                             <tr>
@@ -589,5 +595,19 @@
 
 	<script src="../js/vendor/highlight_footer.js"></script>
 	<script src="../js/guide.js"></script>
+    <script>
+        $(function(){
+            $('.table td').on('click', function() {
+                var txt = $(this).parent().children('td:eq(1)').text();
+                var txt2 = $(this).parent().children('td:eq(2)').text();
+                var lnk = '../html/' + txt + '.html';
+                if(txt2 == '진행중' || txt2 == '완료') {
+                    window.location.href=lnk;
+                } else {
+                    alert('준비중');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -13,8 +13,8 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .guide > header > a {display: inline-block; float: right; background: #ff3f90; padding: 2px 10px; border-radius: 5px; color: #fff;}
 
 .container {min-width: 960px; padding-top:50px; /*padding-left: 230px;*/}
-.wrapper section {padding: 0 !important;}
-.guide nav {position: fixed; left: -230px; top: 47px; bottom: 0; width: 230px; padding: 30px; font-size: 15px;  line-height: 1.5; color: #333; background:#f2f3f4; z-index:2;transition:left .3s}
+.wrapper section {padding: 0}
+.guide nav {position: fixed; left: -230px; top: 47px; bottom: 0; width: 230px; padding: 30px; font-size: 15px;  line-height: 1.5; color: #333; background:#f2f3f4; z-index:4;transition:left .3s}
 .guide nav::after{content:'MENU';position:absolute;right:-60px;top:100px;width:90px;height:30px;line-height:32px;background:#1a1d1d;color:#fff;transform:rotate(90deg);text-align:center;border-top-left-radius:15px;border-top-right-radius:15px}
 .guide nav:hover{left:0;box-shadow:5px 0px 20px 5px rgba(0,0,0,0.2);}
 .guide nav a {display: block; }
@@ -38,9 +38,10 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .table table {width: 100%; line-height: 1.6; font-size: 13px; }
 .guide caption {font-size: 1rem; position: absolute; left: 0; right: 0; width: 0; height: 0; overflow: hidden; }
 .table table th, table.guide td {padding:10px 15px; border-bottom: 1px solid #ddd;}
-.table table th {background: #fafafa; vertical-align: middle; font-weight: 500;;text-align:center}
+.table table th {/*background: #fafafa; */vertical-align: middle; font-weight: 500;;text-align:center}
 .table table th + th {border-left: 1px solid #ddd;}
 .table table tbody td  {padding: 10px 15px; border-left: 1px solid #ddd; border-bottom: 1px solid #ddd; font-weight:400}
+.table table tbody td a{font-size:13px}
 
 .guide .guide_dl { margin: 20px 0; padding: 20px; background: #f7f7f7; }
 .guide .guide_dl dt {padding-bottom: 5px; color: #222; font-weight: bold;}
@@ -66,14 +67,14 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .code_view {padding: 20px 15px;}
 .hljs {line-height: 1.6em; font-size: 1.2rem; background: transparent; font-family: sans-serif;}
 
-.guide_title {padding: 10px; margin: 30px 0 10px; background: #eaeaea; font-weight: bold ;}
+.guide_title {padding: 10px; margin: 30px 0 10px; background: #aeaeb2; color:#fff; font-weight: bold ;}
 .guide_title:first-child {margin-top: 0;}
 
  
 /* .mobileWrap {position: relative; width: 395px; min-height: 630px;display: inline-block; border-color:#000; border-radius:40px 40px 20px 20px; border-style: solid; border-width: 50px 10px 30px; background: #fff; } */
 .mobileWrap {position: relative; width:100%}
 /* .mobileWrap section { padding:40px 20px 50px !important; } */
-.mobileWrap section { padding:0}
+.mobileWrap section { padding:20px; background-color:#fff}
 /* .mobileWrap:before {position: absolute; top: -30px; left: 50%; margin-left: -35px; width: 70px; height: 10px; background: #fff; border-radius: 5px; content: "";} */
 .dl_dotList {margin-top: 0;}
 .formFieldset dl {margin: 0; padding: 0;}

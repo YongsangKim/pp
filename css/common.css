@@ -413,3 +413,15 @@ ul.gnb-list > li{position:static}
 .gnb-list > li.m3 .sub-menu-wrap .sub-menu-list{padding-left:607px}
 .gnb-list > li.m4 .sub-menu-wrap .sub-menu-list{padding-left:684px}
 .gnb-list > li.m5 .sub-menu-wrap .sub-menu-list{padding-left:596px}
+/*---------------------------------------/
+    layout
+/---------------------------------------*/
+body{background-color:#f0f0f7}
+#wrap{min-height:100%}
+#container{min-height:calc(100vh - 419px)}
+.key-visual{height:162px}
+.key-visual.v1{background:url(../images/img_visual1.png) 50% no-repeat}
+.key-visual.v2{background:url(../images/img_visual2.png) 50% no-repeat}
+.key-visual.v3{background:url(../images/img_visual3.png) 50% no-repeat}
+.key-visual.v4{background:url(../images/img_visual4.png) 50% no-repeat}
+.key-visual.v5{background:url(../images/img_visual5.png) 50% no-repeat}
