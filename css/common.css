@@ -382,3 +382,34 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
     color: #aeaeb2;
     line-height: 20px;
 }
+/*---------------------------------------/
+    header
+/---------------------------------------*/
+.header-util{height:52px;background-color:#2a2d3e}
+.header-util .util{width:1440px;height:100%;margin:0 auto;display:flex;justify-content:flex-end;align-items:center;font-size:13px;color:#fff}
+.header-util .util li + li::before{content:'';display:inline-block;width:1px;height:10px;background-color:#b2b2b2;margin:0 12px}
+.header-util .util a{font-size:13px}
+.header-util .badge{display:inline-block;font-size:11px;color:#fff;background-color:#eb008b;height:20px;border-radius:4px;font-weight:400;margin-right:10px}
+.header-gnb{position:relative;height:80px;background-color:#fff}
+.header-gnb .inner{height:100%;width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.header-gnb .logo{width:148px;height:31px;background:url(../images/header_logo.png) no-repeat;text-indent:-999em}
+.header-gnb .logo a{display:block;height:100%}
+.header-gnb .aside a{font-size:13px;color:#eb008b}
+.header-gnb .aside a::after{content:'';display:inline-block;width:16px;height:16px;background:url(../images/arrow_pink.png) no-repeat;vertical-align:-3px}
+.gnb-list{display:flex}
+ul.gnb-list > li{position:static}
+.gnb-list > li + li{margin-left:80px}
+.gnb-list > li > a{font-size:18px;font-weight:500;color:#1a1d1d}
+.gnb-list > li > a:hover{color:#eb008b}
+.gnb-list > li.active > a{color:#eb008b}
+.sub-menu-wrap{position:absolute;left:0;top:80px;width:100%;height:0;background-color:rgba(255,255,255,.4);overflow:hidden}
+.gnb-list > li.active .sub-menu-wrap{height:49px;border-top:solid 1px #c1c1c1;transition:height .5s}
+.sub-menu-wrap .sub-menu-list{display:flex;height:48px;width:1440px;margin:0 auto;align-items:center}
+.sub-menu-wrap .sub-menu-list a{font-size:16px;color:#8e8e93}
+.sub-menu-wrap .sub-menu-list li + li::before{content:'';display:inline-block;width:1px;height:16px;background-color:#bfbfbf;margin:0 30px;vertical-align:-2px}
+.sub-menu-wrap .sub-menu-list li a:hover{font-weight:700;color:#1a1d1d}
+.gnb-list > li.m1 .sub-menu-wrap .sub-menu-list{padding-left:382px}
+.gnb-list > li.m2 .sub-menu-wrap .sub-menu-list{padding-left:382px}
+.gnb-list > li.m3 .sub-menu-wrap .sub-menu-list{padding-left:607px}
+.gnb-list > li.m4 .sub-menu-wrap .sub-menu-list{padding-left:684px}
+.gnb-list > li.m5 .sub-menu-wrap .sub-menu-list{padding-left:596px}

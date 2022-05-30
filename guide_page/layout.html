@@ -7,6 +7,7 @@
 <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/common.js"></script>
+<script src="../js/gnb.js"></script>
 <script src="../js/vendor/highlight.pack.js"></script>
 <script src="../js/bootstrap.bundle.js"></script>
 <script src="../js/bootstrap-datepicker.js"></script>
@@ -14,10 +15,10 @@
 <link rel="stylesheet" href="../css/reset.css">
 <link rel="stylesheet" href="../css/base.css">
 <link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
 <link rel="stylesheet" href="../css/common.css">
-<link rel="stylesheet" href="../js/vendor/editor.css">
 </head>
 <body>
 
@@ -30,29 +31,7 @@
         <main id="viewer" class="tui-editor-contents">
 			<h2>Header</h2>
             <style>
-                .header-util{height:52px;background-color:#2a2d3e}
-                .header-util .util{width:1440px;height:100%;margin:0 auto;display:flex;justify-content:flex-end;align-items:center;font-size:13px;color:#fff}
-                .header-util .util li + li::before{content:'';display:inline-block;width:1px;height:10px;background-color:#b2b2b2;margin:0 12px}
-                .header-util .util a{font-size:13px}
-                .header-util .badge{display:inline-block;font-size:11px;color:#fff;background-color:#eb008b;height:20px;border-radius:4px;font-weight:400;margin-right:10px}
-                .header-gnb{position:relative;height:80px;background-color:#fff}
-                .header-gnb .inner{height:100%;width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-                .header-gnb .logo{width:148px;height:31px;background:url(../images/header_logo.png) no-repeat;text-indent:-999em}
-                .header-gnb .logo a{display:block;height:100%}
-                .header-gnb .aside a{font-size:13px;color:#eb008b}
-                .header-gnb .aside a::after{content:'';display:inline-block;width:16px;height:16px;background:url(../images/arrow_pink.png) no-repeat;vertical-align:-3px}
-                .gnb-list{display:flex}
-                ul.gnb-list > li{position:static}
-                .gnb-list > li + li{margin-left:80px}
-                .gnb-list > li > a{font-size:18px;font-weight:500;color:#1a1d1d}
-                .gnb-list > li > a:hover{color:#eb008b}
-                .gnb-list > li.active > a{color:#eb008b}
-                .sub-menu-wrap{position:absolute;left:0;top:80px;;width:100%;height:49px;background-color:rgba(255,255,255,.4);border-top:solid 1px #c1c1c1}
-                .sub-menu-wrap .sub-menu-list{display:flex;height:100%;width:1440px;margin:0 auto;align-items:center}
-                .sub-menu-wrap .sub-menu-list a{font-size:16px;color:#8e8e93}
-                .sub-menu-wrap .sub-menu-list li + li::before{content:'';display:inline-block;width:1px;height:16px;background-color:#bfbfbf;margin:0 30px;vertical-align:-2px}
-                .sub-menu-wrap .sub-menu-list li a:hover{font-weight:700;color:#1a1d1d}
-                .gnb-list > li.m1 .sub-menu-wrap .sub-menu-list{padding-left:380px}
+
                 
             </style>
             <section>
@@ -95,7 +74,7 @@
                                                 <li class="m1"><a href="">서비스관리</a>
                                                     <div class="sub-menu-wrap">
                                                         <ul class="sub-menu-list">
-                                                            <li class="active"><a href="">서비스 관리</a></li>
+                                                            <li><a href="">서비스 관리</a></li>
                                                             <li><a href="">서비스 목록</a></li>
                                                             <li><a href="">별점 및 이용후기</a></li>
                                                             <li><a href="">자주하는 질문</a></li>
@@ -103,16 +82,65 @@
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class="m2"><a href="">영업활동관리</a></li>
-                                                <li class="m3"><a href="">판매관리</a></li>
-                                                <li class="m4"><a href="">일반관리</a></li>
-                                                <li class="m5"><a href="">파트너지원</a></li>
+                                                <li class="m2"><a href="">영업활동관리</a>
+                                                    <div class="sub-menu-wrap">
+                                                        <ul class="sub-menu-list">
+                                                            <li><a href="">견적문의관리</a></li>
+                                                            <li><a href="">무료체험관리</a></li>
+                                                            <li><a href="">체험신청관리</a></li>
+                                                            <li><a href="">고객문의상담</a></li>
+                                                            <li><a href="">영상상담관리</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="m3"><a href="">판매관리</a>
+                                                    <div class="sub-menu-wrap">
+                                                        <ul class="sub-menu-list">
+                                                            <li><a href="">진행현황</a></li>
+                                                            <li><a href="">판매현황</a></li>
+                                                            <li><a href="">정산관리</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="m4"><a href="">일반관리</a>
+                                                    <div class="sub-menu-wrap">
+                                                        <ul class="sub-menu-list">
+                                                            <li><a href="">계정관리</a></li>
+                                                            <li><a href="">권한관리</a></li>
+                                                            <li><a href="">API관리</a></li>
+                                                            <li><a href="">알림설정</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="m5"><a href="">파트너지원</a>
+                                                    <div class="sub-menu-wrap">
+                                                        <ul class="sub-menu-list">
+                                                            <li><a href="">판매자가이드</a></li>
+                                                            <li><a href="">공지사항</a></li>
+                                                            <li><a href="">자주하는 질문</a></li>
+                                                            <li><a href="">1:1문의하기</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
                                             </ul>
                                         </div>
                                         <div class="aside"><a href="">비즈마켓 바로가기</a></div>
                                     </div>
                                 </div>
                             </header>
+                            <style>
+                                .key-visual{height:162px}
+                                .key-visual.v1{background:url(../images/img_visual1.png) 50% no-repeat}
+                                .key-visual.v2{background:url(../images/img_visual2.png) 50% no-repeat}
+                                .key-visual.v3{background:url(../images/img_visual3.png) 50% no-repeat}
+                                .key-visual.v4{background:url(../images/img_visual4.png) 50% no-repeat}
+                                .key-visual.v5{background:url(../images/img_visual5.png) 50% no-repeat}
+                            </style>
+                            <div class="key-visual v1"></div>
+                            <div class="key-visual v2"></div>
+                            <div class="key-visual v3"></div>
+                            <div class="key-visual v4"></div>
+                            <div class="key-visual v5"></div>
                         </section>
                     </div>
                 </div>
