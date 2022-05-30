@@ -29,23 +29,95 @@
 
         <main id="viewer" class="tui-editor-contents">
 			<h2>Header</h2>
-
-			<section>
-                <h3>기본 Type</h3>
-                <p class="info_txt">공통 : 스크롤 내리면 헤더 비노출, 올리면 헤더 노출되게 적용함 : .wrapper 에 .header_hide class로 제어</p>
-                <p class="info_txt">메인 헤더 색 : .header 에 .scroll 클래스로.. 스크롤발생시 배경색 들어가게 적용</p>
-                <p class="info_txt">기본 헤더 (서브메인, 마이페이지-서비스이용현황 제외한 전체 페이지 적용)</p>
-                <p class="info_txt">U+비즈마켓 > 홈버튼, 가입상담신청(팝업오픈), 메뉴 버튼으로 구성</p>
-                <img src="../img/header_main.jpg" alt="">
+            <style>
+                .header-util{height:52px;background-color:#2a2d3e}
+                .header-util .util{width:1440px;height:100%;margin:0 auto;display:flex;justify-content:flex-end;align-items:center;font-size:13px;color:#fff}
+                .header-util .util li + li::before{content:'';display:inline-block;width:1px;height:10px;background-color:#b2b2b2;margin:0 12px}
+                .header-util .util a{font-size:13px}
+                .header-util .badge{display:inline-block;font-size:11px;color:#fff;background-color:#eb008b;height:20px;border-radius:4px;font-weight:400;margin-right:10px}
+                .header-gnb{position:relative;height:80px;background-color:#fff}
+                .header-gnb .inner{height:100%;width:1440px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+                .header-gnb .logo{width:148px;height:31px;background:url(../images/header_logo.png) no-repeat;text-indent:-999em}
+                .header-gnb .logo a{display:block;height:100%}
+                .header-gnb .aside a{font-size:13px;color:#eb008b}
+                .header-gnb .aside a::after{content:'';display:inline-block;width:16px;height:16px;background:url(../images/arrow_pink.png) no-repeat;vertical-align:-3px}
+                .gnb-list{display:flex}
+                ul.gnb-list > li{position:static}
+                .gnb-list > li + li{margin-left:80px}
+                .gnb-list > li > a{font-size:18px;font-weight:500;color:#1a1d1d}
+                .gnb-list > li > a:hover{color:#eb008b}
+                .gnb-list > li.active > a{color:#eb008b}
+                .sub-menu-wrap{position:absolute;left:0;top:80px;;width:100%;height:49px;background-color:rgba(255,255,255,.4);border-top:solid 1px #c1c1c1}
+                .sub-menu-wrap .sub-menu-list{display:flex;height:100%;width:1440px;margin:0 auto;align-items:center}
+                .sub-menu-wrap .sub-menu-list a{font-size:16px;color:#8e8e93}
+                .sub-menu-wrap .sub-menu-list li + li::before{content:'';display:inline-block;width:1px;height:16px;background-color:#bfbfbf;margin:0 30px;vertical-align:-2px}
+                .sub-menu-wrap .sub-menu-list li a:hover{font-weight:700;color:#1a1d1d}
+                .gnb-list > li.m1 .sub-menu-wrap .sub-menu-list{padding-left:380px}
                 
-			</section>
-
+            </style>
             <section>
-                <h3>Sub Type (서브메인, 마이페이지 > 서비스이용현황에만 적용)</h3>
-                <p class="info_txt">홈버튼, 서비스명, 메뉴 버튼으로 적용되어있음</p><br>
-                <img src="../img/header_submain.jpg" alt="">
-                
-			</section>
+                <h3>로그인전</h3>
+                <div class="code_wrap">
+					<div class="mobileWrap" style="box-shadow: 0 0 0px 50px #f0f0f7;background:#f0f0f7">
+                        <!--화면 입력영역-->
+                        
+                        <section>
+                            <header>
+                                <div class="header-gnb">
+                                    <div class="inner">
+                                        <div class="logo"><a href="">U+ 파트너포털</a></div>
+                                        <div class="gnb"></div>
+                                        <div class="aside"><a href="">비즈마켓 바로가기</a></div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+
+                <h3>로그인후</h3>
+                <div class="code_wrap">
+					<div class="mobileWrap" style="box-shadow: 0 0 0px 50px #f0f0f7;background:#f0f0f7">
+                        <!--화면 입력영역-->
+                        <section>
+                            <header>
+                                <div class="header-util">
+                                    <ul class="util">
+                                        <li><span class="badge rep">대표 ID</span>홍길동 님</li>
+                                        <li><a href="">로그아웃</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-gnb">
+                                    <div class="inner">
+                                        <div class="logo"><a href="">U+ 파트너포털</a></div>
+                                        <div class="gnb">
+                                            <ul class="gnb-list">
+                                                <li class="m1"><a href="">서비스관리</a>
+                                                    <div class="sub-menu-wrap">
+                                                        <ul class="sub-menu-list">
+                                                            <li class="active"><a href="">서비스 관리</a></li>
+                                                            <li><a href="">서비스 목록</a></li>
+                                                            <li><a href="">별점 및 이용후기</a></li>
+                                                            <li><a href="">자주하는 질문</a></li>
+                                                            <li><a href="">추가정보</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="m2"><a href="">영업활동관리</a></li>
+                                                <li class="m3"><a href="">판매관리</a></li>
+                                                <li class="m4"><a href="">일반관리</a></li>
+                                                <li class="m5"><a href="">파트너지원</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="aside"><a href="">비즈마켓 바로가기</a></div>
+                                    </div>
+                                </div>
+                            </header>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
             <h2>Footer</h2>
 
 			<section>
@@ -116,42 +188,60 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-                                <footer class="footer">
-
-                                    <dl class="FooterCenterWrap">
-                                        <dt>U<sup>+</sup>비즈마켓 고객센터</dt>
-                                        <dd><a href="tel:1544-7003">1544-7003</a></dd>
-                                        <dd>상담가능시간 : 평일 오전9시~오후6시, 주말 및 공휴일 휴무</dd>
-                                    </dl>
-        
-                                    <div class="floatingTelWrap floating_js">
-                                        <a href="tel:1544-7003" class="btn floatingTel floatingCont_js"><span class="blind">전화걸기</span></a>
-                                    </div><!--전화걸기 버튼-->
-                                    <button type="button" class="btn floatingTop"><span>위로 이동</span></button><!--top버튼-->
-                        
-                                    <ul data-ui="accordion" class="footerAcco"> 
-                                       
-                                        <li>
-                                            <a href="javascript:void(0);" class="js_tit acco_tit" role="button">서비스별 홈페이지 바로가기 <i class="ico_arrow"></i></a>
-                                            <div class="js_cont acco_cont">
-                                                <ul class="serviceNameList">
-                                                    <li><a href="http://lguplus.co.kr/biz/bzma/RetrieveMain.hpi?mid=10001&tmid=m2&WEB_BNNR_ID=TOP_03" target="_blank" title="새창" class="service_name">LG U<sup>+</sup>(기업)</a></li>
-                                                    <li><a href="https://webfax.uplus.co.kr/main" target="_blank" title="새창" class="service_name">U<sup>+</sup>웹팩스</a></li>
-                                                    <li><a href="https://edocu.uplus.co.kr/w20/main.Main.do" target="_blank" title="새창" class="service_name">U<sup>+</sup>전자문서</a></li>
-                                                    <li><a href="https://support.uplus.co.kr/html/main.php" target="_blank" title="새창" class="service_name">U<sup>+</sup>원격지원</a></li>
+                                <footer id="footer">
+                                    <div class="foot">
+                                        <div class="footer-logo">LG U+</div>
+                                        <div class="footer-menu">
+                                            <ul>
+                                                <li><a href="javascript:;">이용약관</a></li>
+                                                <li><a href="javascript:;">개인정보처리방침</a></li>
+                                                <li><a href="javascript:;">이메일주소무단수집거부</a></li>
+                                            </ul>
+                                            <div class="footer-link">
+                                                <div class="family-site">
+                                                    <a href="javascript:;" class="btn-toggle">Family Site</a>
+                                                    <ul style="display: none;">
+                                                        <li>
+                                                            <a href="http://lguplus.co.kr/biz/bzma/RetrieveMain.hpi?mid=10001&amp;tmid=m2&amp;WEB_BNNR_ID=TOP_03" target="_blank" title="새창열림">LG U+ (기업)</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://webfax.uplus.co.kr" target="_blank" title="새창열림">U+웹팩스</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://edocu.uplus.co.kr" target="_blank" title="새창열림">U+전자문서</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://support.uplus.co.kr" target="_blank" title="새창열림">U+원격지원</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://only.webhard.co.kr" target="_blank" title="새창열림">웹하드</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <ul class="sns-share">
+                                                    <li>
+                                                        <a href="javascript:;" class="sns-youtube"></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="javascript:;" class="sns-blog"></a>
+                                                    </li>
                                                 </ul>
                                             </div>
-                                        </li>
-                                    </ul>
-                        
-                                    <ul class="footerLink">
-                                        <li><a href="">PC버전</a></li>
-                                        <li><a href="">이용약관</a></li>
-                                        <li><a href=""><strong>개인정보처리방침</strong></a></li>
-                                        <li><a href="">이메일주소무단수집 거부</a></li>
-                                    </ul>
-                        
-                                    <p class="footerCopy">ⓒ LG Uplus Corp.</p>
+                                        </div>
+                                        <div class="foot-info">
+                                            <ul class="cp-info">
+                                                <li>㈜엘지유플러스</li>
+                                                <li>서울특별시 용산구 한강대로32</li>
+                                                <li>대표이사 황현식</li>
+                                                <li>사업자등록번호 220-81-39938</li>
+                                                <li>통신판매업신고 제 2015-서울용산00481호</li>
+                                                <li>사업자정보확인</li>
+                                                <li>고객센터 <a href="tel:000-000-0000">000-000-0000</a></li>
+                                                <li><a href="mailTo:abc@lguplus.co.kr">abc@lguplus.co.kr</a></li>
+                                            </ul>
+                                            <div class="copyright">Copyright ⓒ LG Uplus Corp. All right reserved.</div>
+                                        </div>
+                                    </div>
                                 </footer>
 							</code></pre>
 						</div>

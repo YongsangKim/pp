@@ -21,18 +21,8 @@ nav.innerHTML = '<ul>' +
 '				<li><a href="layout.html">레이아웃</a>' +
 '                   <ul>' +
 '						<li><a href="layout.html">header, footer</a></li>' +
-'						<li><a href="publish_list.html">퍼블리싱 화면목록</a></li>' +
 '					</ul>' +
 '               </li>' +
-'				<li><a href="service_card.html">메인 컨텐츠등록</a>' +
-'					<ul>' +
-'						<li><a href="service_card.html">서비스카드</a></li>' +
-'						<li><a href="service_feature.html">서비스특징</a></li>' +
-'					</ul>' +
-'				</li>' +
-'				<li><a href="fee.html">서비스별 컨텐츠등록</a>' +
-'					<ul>' +
-'						<li><a href="fee.html">요금안내</a></li>' +
-'					</ul>' +
-'				</li>' +
+'               <li><a href="publish_list.html">퍼블리싱 화면목록</a>' +
+'               </li>' +
 '			</ul>';
