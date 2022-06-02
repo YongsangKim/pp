@@ -220,6 +220,7 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
     padding:12px 48px 12px 20px;
     font-size:16px;
     color:#aeaeb2;
+    outline:0;
 }
 .family-site .btn-toggle:after{
     content:'';
@@ -232,6 +233,7 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
     background:url(../images/ico_up.png) center center no-repeat;
     background-size:16px 16px;
 }
+.family-site .btn-toggle.on{background-color:#373949;border-radius:6px;color:#fff}
 .family-site .btn-toggle.on:after{
     transform:rotateZ(-180deg)
 }
@@ -240,8 +242,8 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
     position:absolute;
     left:-1px;
     right:-1px;
-    bottom:49px;
-    background-color:#fafafa;
+    bottom:44px;
+    background-color:#373949;
     border:1px solid #aeaeb2;
     border-bottom:0;
     border-radius:4px 4px 0 0;
@@ -250,6 +252,7 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
     display:block;
     padding:12px 20px;
     font-size:16px;
+    color:#fff;
 }
 .footer-link .sns-share{
     display:flex;
