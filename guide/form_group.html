@@ -32,6 +32,156 @@
 			<!--기본 스타일-->
 
 			<section>
+				<h3>기본 form</h3>
+				<p class="info_txt" >input의 경우 입력 내용에 맞춰 type 적용함</p>
+				<div class="table" style="margin: 10px 0 20px;">
+					<table>
+						<caption>input</caption>
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름, 기업명 등 text입력영역</th>
+								<td>text</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처, 휴대폰번호 등 전화번호 입력영역 </th>
+								<td>tel</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일 입력영역</th>
+								<td>email</td>
+							</tr>
+							<tr>
+								<th scope="row">사업자등록번호, 법인번호, 기업수 등 숫자 입력영역</th>
+								<td>number</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section style="width:448px">
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blankline ml8">인증번호 재발송</button>
+								<p class="error-txt">남은시간 03:00</p>
+							</div>
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blankline ml8">인증하기</button>
+								<p class="info-txt">인증되었습니다</p>
+							</div>
+							<div class="form-column">
+								<div class="label">이름</div>
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="이름을 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+							<div class="form-column">
+								<div class="label">휴대폰번호</div>
+								<div class="select-box">
+									<select class="select" tabindex="-1">
+										<option>010</option>
+										<option>02</option>
+										<option>031</option>
+										<option>032</option>
+										<option>041</option>
+									</select>
+									<button type="button" id="sel01" class="select-btn">010</button>
+									<div class="select-layer">
+										<button type="button" class="option on" idx='0'>010</button>
+										<button type="button" class="option" idx='1'>02</button>
+										<button type="button" class="option" idx='2'>031</button>
+										<button type="button" class="option" idx='3'>032</button>
+										<button type="button" class="option" idx='4'>041</button>
+									</div>
+								</div>
+								<div class="input-txt ml8">
+									<input type="tel" title="" value="" placeholder="휴대폰번호를 입력해주세요">
+								</div>
+								<p class="info-txt ico">휴대폰 번호는 숫자로만 입력해 주세요</p>
+							</div>
+							<div class="form-column">
+								<div class="label">새 비밀번호</div>
+								<div class="input-txt">
+									<input type="password" title="" value="" placeholder="새 비밀번호를 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blankline ml8">인증번호 재발송</button>
+								<p class="error-txt">남은시간 03:00</p>
+							</div>
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blankline ml8">인증하기</button>
+								<p class="info-txt">인증되었습니다</p>
+							</div>
+							<div class="form-column">
+								<div class="label">이름</div>
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="이름을 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+							<div class="form-column">
+								<div class="label">휴대폰번호</div>
+								<div class="select-box">
+									<select class="select" tabindex="-1">
+										<option>010</option>
+										<option>02</option>
+										<option>031</option>
+										<option>032</option>
+										<option>041</option>
+									</select>
+									<button type="button" id="sel01" class="select-btn">010</button>
+									<div class="select-layer">
+										<button type="button" class="option on" idx='0'>010</button>
+										<button type="button" class="option" idx='1'>02</button>
+										<button type="button" class="option" idx='2'>031</button>
+										<button type="button" class="option" idx='3'>032</button>
+										<button type="button" class="option" idx='4'>041</button>
+									</div>
+								</div>
+								<div class="input-txt ml8">
+									<input type="tel" title="" value="" placeholder="휴대폰번호를 입력해주세요">
+								</div>
+								<p class="info-txt ico">휴대폰 번호는 숫자로만 입력해 주세요</p>
+							</div>
+							<div class="form-column">
+								<div class="label">새 비밀번호</div>
+								<div class="input-txt">
+									<input type="password" title="" value="" placeholder="새 비밀번호를 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+
+			<section>
 				<h3>공통영역</h3>
 				<div class="code_wrap">
 					<div class="mobileWrap">
@@ -367,246 +517,7 @@
 					<!--code 영역//-->
 				</div>
 			</section>
-			<section>
-				<h3>기본 form</h3>
-				<p class="info_txt" >input의 경우 입력 내용에 맞춰 type 적용함</p>
-				<div class="table" style="margin: 10px 0 20px;">
-					<table>
-						<caption>input</caption>
-						<colgroup>
-							<col style="width: 30%;">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row">이름, 기업명 등 text입력영역</th>
-								<td>text</td>
-							</tr>
-							<tr>
-								<th scope="row">연락처, 휴대폰번호 등 전화번호 입력영역 </th>
-								<td>tel</td>
-							</tr>
-							<tr>
-								<th scope="row">이메일 입력영역</th>
-								<td>email</td>
-							</tr>
-							<tr>
-								<th scope="row">사업자등록번호, 법인번호, 기업수 등 숫자 입력영역</th>
-								<td>number</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="code_wrap">
-					<div class="mobileWrap">
-						<!--화면 입력영역-->
-						<section>
-							<div class="formFieldset">
-								<dl class="column1">
-									<dt>사용자 아이디 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<div class="btnIn">
-												<input type="text" id="" value="" class="roboto" title="아이디 (6~15자, 영문/숫자 조합) 입력" placeholder="아이디 (6~15자, 영문/숫자 조합)">
-												<a href="javascript:void(0)" class="btn form lineGray">중복확인</a>
-											</div>
-											<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>비밀번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="password" id="" value="" title="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합) 입력" placeholder="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합)">
-											<!-- <p class="inputError">비밀번호는 8~20자리, 영문/숫자를 조합해서 사용해주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>비밀번호 확인 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="password" id="" value="" title="비밀번호 입력" placeholder="비밀번호를 재입력해주세요">
-											<!-- <p class="inputError">비밀번호가 맞지 않습니다. 다시 입력해 주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>이름 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="input-txt">
-											<input type="text" title="" value="" placeholder="placeholder" >
-										</div>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="홍길동" class="" title="이름" placeholder="" readonly>
-										<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>휴대폰 번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="010-000-0000" class="roboto" title="휴대폰번호" placeholder="" readonly>
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>이메일 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox nodata"><!--이메일 형식 맞지 않는 경우 : error class추가 / 데이터 X경우 : nodata class 추가-->
-											<input type="email" id="" value="" class="roboto" title="email" placeholder="">
-											<p class="inputError">이메일 형식을 확인해주세요.</p>
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>주소 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<div class="btnIn">
-												<input type="text" id="" value="" class="roboto no_bg" title="우편번호" readonly>
-												<a href="javascript:void(0)" class="btn form lineGray">우편번호 검색</a>
-											</div>
-										</div>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="" class="no_bg" title="주소" readonly>
-										</div>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="" class="" title="상세주소 입력" placeholder="상세 주소를 입력해 주세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>연락처</dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="tel" id="" value="" class="roboto" title="연락처를 입력해주세요" placeholder="“-”를 제외하고 숫자만 입력해주세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>가입경로</dt>
-									<dd>
-										<div class="fieldSelect">
-											<select title="가입경로를 선택하세요">
-												<option value="">선택하세요</option>
-												<option value="">대리점/영업사원소개</option>
-												<option value="">협력사/고객소개</option>
-												<option value="">이전사용경험 있음</option>
-											</select>
-										</div>
-									</dd>
-								</dl>
-							</div>
-						</section>
-					</div>
-					<!--code 영역-->
-					<div class="code_html">
-						<pre><code class="hljs html">
-							<div class="formFieldset">
-								<dl class="column1">
-									<dt>사용자 아이디 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<div class="btnIn">
-												<input type="text" id="" value="" class="roboto" title="아이디 (6~15자, 영문/숫자 조합) 입력" placeholder="아이디 (6~15자, 영문/숫자 조합)">
-												<a href="javascript:void(0)" class="btn form lineGray">중복확인</a>
-											</div>
-											<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>비밀번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="password" id="" value="" title="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합) 입력" placeholder="비밀번호 (8~20자, 영문대/소문자/숫자/특수문자조합)">
-											<!-- <p class="inputError">비밀번호는 8~20자리, 영문/숫자를 조합해서 사용해주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>비밀번호 확인 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="password" id="" value="" title="비밀번호 입력" placeholder="비밀번호를 재입력해주세요">
-											<!-- <p class="inputError">비밀번호가 맞지 않습니다. 다시 입력해 주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>이름 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="홍길동" class="" title="이름" placeholder="" readonly>
-										<!-- <p class="inputError">아이디는 영문과 숫자 조합으로 6~15자리로 만들어주세요.</p> -->
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>휴대폰 번호 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="010-000-0000" class="roboto" title="휴대폰번호" placeholder="" readonly>
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>이메일 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox nodata"><!--이메일 형식 맞지 않는 경우 : error class추가 / 데이터 X경우 : nodata class 추가-->
-											<input type="email" id="" value="" class="roboto" title="email" placeholder="">
-											<p class="inputError">이메일 형식을 확인해주세요.</p>
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>주소 <em class="important">*<span class="blind">필수입력 항목</span></em></dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<div class="btnIn">
-												<input type="text" id="" value="" class="roboto no_bg" title="우편번호" readonly>
-												<a href="javascript:void(0)" class="btn form lineGray">우편번호 검색</a>
-											</div>
-										</div>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="" class="no_bg" title="주소" readonly>
-										</div>
-										<div class="fieldTxtBox">
-											<input type="text" id="" value="" class="" title="상세주소 입력" placeholder="상세 주소를 입력해 주세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>연락처</dt>
-									<dd>
-										<div class="fieldTxtBox">
-											<input type="tel" id="" value="" class="roboto" title="연락처를 입력해주세요" placeholder="“-”를 제외하고 숫자만 입력해주세요">
-										</div>
-									</dd>
-								</dl>
-								<dl class="column1">
-									<dt>가입경로</dt>
-									<dd>
-										<div class="fieldSelect">
-											<select title="가입경로를 선택하세요">
-												<option value="">선택하세요</option>
-												<option value="">대리점/영업사원소개</option>
-												<option value="">협력사/고객소개</option>
-												<option value="">이전사용경험 있음</option>
-											</select>
-										</div>
-									</dd>
-								</dl>
-							</div>
-						</code></pre>
-					</div>
-					<!--code 영역//-->
-
-				</div>
-			</section>
+			
 			<!--로그인만 사용-->
 			<section>
 				<h3>Login form</h3>
