@@ -74,7 +74,7 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 /* .mobileWrap {position: relative; width: 395px; min-height: 630px;display: inline-block; border-color:#000; border-radius:40px 40px 20px 20px; border-style: solid; border-width: 50px 10px 30px; background: #fff; } */
 .mobileWrap {position: relative; width:100%}
 /* .mobileWrap section { padding:40px 20px 50px !important; } */
-.mobileWrap section { padding:20px; background-color:#fff}
+.mobileWrap section { background-color:#fff}
 /* .mobileWrap:before {position: absolute; top: -30px; left: 50%; margin-left: -35px; width: 70px; height: 10px; background: #fff; border-radius: 5px; content: "";} */
 .dl_dotList {margin-top: 0;}
 .formFieldset dl {margin: 0; padding: 0;}
@@ -85,3 +85,5 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .code_html pre,
 .code_html .hljs {height: 100%;}
 .code_html {width: 100%; margin-left:0}
+.tab-content{background:#eee}
+.tab-pane{padding:40px}

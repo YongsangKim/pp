@@ -5,6 +5,12 @@ header.innerHTML = '<h1><a>U<sup>+</sup>비즈마켓 파트너포털 퍼블리�
 const nav = document.getElementsByTagName('nav')[0];
 nav.innerHTML = '<ul>' +
 '				<li><a href="index.html">기본정책</a></li>' +
+'               <li><a href="publish_list.html">퍼블리싱 화면목록</a></li>' +
+'				<li><a href="layout.html">레이아웃</a>' +
+'                   <ul>' +
+'						<li><a href="layout.html">header, footer</a></li>' +
+'					</ul>' +
+'               </li>' +
 '				<li><a href="button.html">UI</a>' +
 '					<ul>' +
 '						<li><a href="button.html">Button</a></li>' +
@@ -18,11 +24,4 @@ nav.innerHTML = '<ul>' +
 '						<li><a href="popup.html">Popup</a></li>' +
 '					</ul>' +
 '				</li>' +
-'				<li><a href="layout.html">레이아웃</a>' +
-'                   <ul>' +
-'						<li><a href="layout.html">header, footer</a></li>' +
-'					</ul>' +
-'               </li>' +
-'               <li><a href="publish_list.html">퍼블리싱 화면목록</a>' +
-'               </li>' +
 '			</ul>';

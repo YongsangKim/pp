@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
-    <script src="../js/jquery.min.js"></script>
-	<script src="../js/vendor/highlight.pack.js"></script>
-
-	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/base.css">
-	<link rel="stylesheet" href="../js/vendor/editor.css">
-	<link rel="stylesheet" href="../css/guide.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/gnb.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+<link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
 
@@ -22,23 +29,41 @@
 		<nav></nav>
 
 		<main id="viewer" class="tui-editor-contents">
-			<h2>tab</h2>
+			<h2>Tab</h2>
 
 			<section>
-				<p class="info_txt">탭 기능 : data-ui="tab"</p>
-				<p class="info_txt">로그인 탭 스타일 적용함 : .tabBox</p>
                 <div class="code_wrap">
 					<div class="mobileWrap">
+						<style>
+
+							
+						</style>
 						<!--화면 입력영역-->
 							<section>
-
-								<div class="tabWrap">
-									<div class="tabBox" data-ui="tab">
-										<a href="#tab01" class="active" aria-expanded="false">tab01</a>
-										<a href="#tab02" aria-expanded="false">tab02</a>
+								<ul class="nav tab-box justify-content-center" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true" href="#home">회원정보 변경</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false" href="#profile">광고성 정보 수신 변경</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" data-bs-toggle="tab" data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false" href="#contact">회사정보 변경</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+										<strong>This is some placeholder content the Home tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
 									</div>
-									<div class="tabContent" id="tab01" style="padding: 40px 0; background:#eee; text-align:center">tab01 내용</div>
-									<div class="tabContent" id="tab02" style="display:none; padding: 40px 0; background:#e1e5fb; text-align:center">tab02 내용</div>
+									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+										<strong>This is some placeholder content the Profile tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+									</div>
+									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+										<strong>This is some placeholder content the Contact tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+									</div>
 								</div>
 								
 							</section>
@@ -48,17 +73,30 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
-								<!--data-ui="tab" -->
-								<div class="tabWrap">
-									<!--탭영역-->
-									<div class="tabBox" data-ui="tab">
-										<a href="#tab01" class="active" aria-expanded="false">tab01</a>
-										<a href="#tab02" aria-expanded="false">tab02</a>
+								<ul class="nav tab-box justify-content-center" role="tablist">
+									<li class="nav-item" role="presentation">
+										<a class="nav-link active" data-bs-toggle="tab" data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true" href="#home">회원정보 변경</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false" href="#profile">광고성 정보 수신 변경</a>
+									</li>
+									<li class="nav-item" role="presentation">
+										<a class="nav-link" data-bs-toggle="tab" data-bs-target="#contact" role="tab" aria-controls="contact" aria-selected="false" href="#contact">회사정보 변경</a>
+									</li>
+								</ul>
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+										<strong>This is some placeholder content the Home tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
 									</div>
-									<!--탭컨텐츠-->
-									<div class="tabContent" id="tab01">tab01 내용</div>
-									<!--비활성화 탭의 경우 style:display:none처리 필요-->
-									<div class="tabContent" id="tab02" style="display:none;">tab02 내용</div>
+									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+										<strong>This is some placeholder content the Profile tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+									</div>
+									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+										<strong>This is some placeholder content the Contact tab's associated content.</strong><br>
+										Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling. You can use it with tabs, pills, and any other .nav-powered navigation.
+									</div>
 								</div>
 							</code></pre>
 						</div>

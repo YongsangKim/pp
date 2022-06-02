@@ -18,74 +18,38 @@
     <link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
-    <div id="wrap">
-        <header>
-            <div class="header-gnb">
-                <div class="inner">
-                    <div class="logo"><a href="">U+ 파트너포털</a></div>
-                    <div class="gnb"></div>
-                    <div class="aside"><a href="">비즈마켓 바로가기</a></div>
-                </div>
-            </div>
-        </header>
+    <div id="wrap" class="login">
+        <header id="header"></header>
         <div id="container">
-            <div class="content">content</div>
-        </div>
-        <footer id="footer">
-            <div class="foot">
-                <div class="footer-logo">LG U+</div>
-                <div class="footer-menu">
-                    <ul>
-                        <li><a href="javascript:;">이용약관</a></li>
-                        <li><a href="javascript:;">개인정보처리방침</a></li>
-                        <li><a href="javascript:;">이메일주소무단수집거부</a></li>
-                    </ul>
-                    <div class="footer-link">
-                        <div class="family-site">
-                            <a href="javascript:;" class="btn-toggle">Family Site</a>
-                            <ul style="display: none;">
-                                <li>
-                                    <a href="http://lguplus.co.kr/biz/bzma/RetrieveMain.hpi?mid=10001&amp;tmid=m2&amp;WEB_BNNR_ID=TOP_03" target="_blank" title="새창열림">LG U+ (기업)</a>
-                                </li>
-                                <li>
-                                    <a href="https://webfax.uplus.co.kr" target="_blank" title="새창열림">U+웹팩스</a>
-                                </li>
-                                <li>
-                                    <a href="https://edocu.uplus.co.kr" target="_blank" title="새창열림">U+전자문서</a>
-                                </li>
-                                <li>
-                                    <a href="https://support.uplus.co.kr" target="_blank" title="새창열림">U+원격지원</a>
-                                </li>
-                                <li>
-                                    <a href="https://only.webhard.co.kr" target="_blank" title="새창열림">웹하드</a>
-                                </li>
-                            </ul>
+            <div class="content">
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="tac">해당 사업자번호로 기 등록된 대표아이디가 존재합니다.<br>
+                                    아이디를 모르실 경우 아이디 찾기를 이용하시거나<br>
+                                    새롭게 가입하는 것도 가능합니다.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                            </div>
                         </div>
-                        <ul class="sns-share">
-                            <li>
-                                <a href="javascript:;" class="sns-youtube"></a>
-                            </li>
-                            <li>
-                                <a href="javascript:;" class="sns-blog"></a>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-                <div class="foot-info">
-                    <ul class="cp-info">
-                        <li>㈜엘지유플러스</li>
-                        <li>서울특별시 용산구 한강대로32</li>
-                        <li>대표이사 황현식</li>
-                        <li>사업자등록번호 220-81-39938</li>
-                        <li>통신판매업신고 제 2015-서울용산00481호</li>
-                        <li>사업자정보확인</li>
-                        <li>고객센터 <a href="tel:000-000-0000">000-000-0000</a></li>
-                        <li><a href="mailTo:abc@lguplus.co.kr">abc@lguplus.co.kr</a></li>
-                    </ul>
-                    <div class="copyright">Copyright ⓒ LG Uplus Corp. All right reserved.</div>
-                </div>
+                <!-- //Modal -->
             </div>
-        </footer>
+        </div>
+        <footer id="footer"></footer>
     </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal2 = new bootstrap.Modal(document.getElementById('myModal2'));
+        myModal2.show();
+    </script>
 </body>
 </html>
