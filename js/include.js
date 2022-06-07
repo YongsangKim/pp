@@ -86,7 +86,6 @@ footer.innerHTML = '<div class="foot">' +
 '        <ul>' +
 '            <li><a href="javascript:;">이용약관</a></li>' +
 '            <li><a href="javascript:;">개인정보처리방침</a></li>' +
-'            <li><a href="javascript:;">이메일주소무단수집거부</a></li>' +
 '        </ul>' +
 '        <div class="footer-link">' +
 '            <div class="family-site">' +
@@ -96,16 +95,7 @@ footer.innerHTML = '<div class="foot">' +
 '                        <a href="http://lguplus.co.kr/biz/bzma/RetrieveMain.hpi?mid=10001&amp;tmid=m2&amp;WEB_BNNR_ID=TOP_03" target="_blank" title="새창열림">LG U+ (기업)</a>' +
 '                    </li>' +
 '                    <li>' +
-'                        <a href="https://webfax.uplus.co.kr" target="_blank" title="새창열림">U+웹팩스</a>' +
-'                    </li>' +
-'                    <li>' +
-'                        <a href="https://edocu.uplus.co.kr" target="_blank" title="새창열림">U+전자문서</a>' +
-'                    </li>' +
-'                    <li>' +
-'                        <a href="https://support.uplus.co.kr" target="_blank" title="새창열림">U+원격지원</a>' +
-'                    </li>' +
-'                    <li>' +
-'                        <a href="https://only.webhard.co.kr" target="_blank" title="새창열림">웹하드</a>' +
+'                        <a href="https://bizmarket.uplus.co.kr/" target="_blank" title="새창열림">U+비즈마켓</a>' +
 '                    </li>' +
 '                </ul>' +
 '            </div>' +
