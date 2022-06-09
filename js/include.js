@@ -116,9 +116,8 @@ footer.innerHTML = '<div class="foot">' +
 '            <li>대표이사 황현식</li>' +
 '            <li>사업자등록번호 220-81-39938</li>' +
 '            <li>통신판매업신고 제 2015-서울용산00481호</li>' +
-'            <li>사업자정보확인</li>' +
-'            <li>고객센터 <a href="tel:000-000-0000">000-000-0000</a></li>' +
-'            <li><a href="mailTo:abc@lguplus.co.kr">abc@lguplus.co.kr</a></li>' +
+'            <li><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208139938" target="_blank" title="새창열림">사업자정보확인</a></li>' +
+'            <li>고객센터 <a href="tel:1544-7003">1544-7003</a></li>' +
 '        </ul>' +
 '        <div class="copyright">Copyright ⓒ LG Uplus Corp. All right reserved.</div>' +
 '    </div>' +
