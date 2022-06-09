@@ -1,5 +1,7 @@
 $(window).on('load', function(){
 	selectWrap(); //select
+    textareaFunc();
+    datepickerFunc();
 });		
 /* --------------------
 	select
@@ -130,6 +132,30 @@ function selectWrap(){
         }
     });
 }		
+
+function textareaFunc(){
+    $('.txt-length').keyup(function (e) {
+        let content = $(this).val();
+        if (content.length == 0 || content == '') {
+            $('.txt-count').text('0');
+        } else {
+            $('.txt-count').text(content.length + '');
+        }
+    });
+    $('.txt-area').focusin(function() {
+        $(this).addClass('focus');
+    });
+    $('.txt-area').focusout(function() {
+        $(this).removeClass('focus');
+    });
+}
+
+function datepickerFunc() {
+    $('.datepicker input').datepicker({
+        format: "yyyy-mm-dd",
+        language: "ko"
+    });
+}
 
 $(document).ready(function(){
     //footer family site
