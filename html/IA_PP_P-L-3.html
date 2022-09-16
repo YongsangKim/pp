@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="login">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <div class="inquiry">
+                    <h2 class="tit_h2">아이디 찾기</h2>   
+                    <!-- [START] 220726 수정  -->
+                    <p class="txt-bd3 hr">가입할 때 등록한 이름, 이메일, 휴대폰 번호를 입력하고<br class="mo-hide"> 인증을 완료하면 아이디를 확인할 수 있습니다</p>
+                    <!-- [END] //220726 수정  -->
+                    <div class="form_box">
+                        <div class="form-column">
+                            <div class="label">이름</div>
+                            <div class="input-txt">
+                                <input type="text" title="" value="" placeholder="이름을 입력해주세요">
+                            </div>
+                            <!-- <p class="error-txt">에러텍스트</p> -->
+                        </div>                 
+                        <div class="form-column">
+                            <div class="label">이메일</div>
+                            <div class="input-txt">
+                                <input type="text" title="" value="" placeholder="이메일을 입력해주세요">
+                            </div>
+                            <!-- <p class="error-txt">에러텍스트</p> -->
+                        </div>      
+                        <div class="form-column">
+                            <div class="label">휴대폰번호</div>
+                            <!-- 220729 삭제 <div class="select-box">
+                                <select class="select" tabindex="-1">
+                                    <option>010</option>
+                                    <option>02</option>
+                                    <option>031</option>
+                                    <option>032</option>
+                                    <option>041</option>
+                                </select>
+                                <button type="button" id="sel01" class="select-btn">010</button>
+                                <div class="select-layer">
+                                    <button type="button" class="option on" idx="0">010</button>
+                                    <button type="button" class="option" idx="1">02</button>
+                                    <button type="button" class="option" idx="2">031</button>
+                                    <button type="button" class="option" idx="3">032</button>
+                                    <button type="button" class="option" idx="4">041</button>
+                                </div>
+                            </div> -->
+                            <!-- [START] 220729 수정 -->
+                            <div class="input-txt">
+                                <input type="tel" title="" value="" placeholder="휴대폰번호를 입력해주세요">
+                            </div>
+                            <!-- [END] //220729 수정 -->
+                            <p class="info-txt ico">휴대폰 번호는 숫자로만 입력해 주세요</p>
+                        </div>
+                        <div class="form-column mt05">
+                            <!-- [START] 220726 수정  -->
+                            <!-- 인증 전 -->
+                            <a href="javascript:void(0)" class="btn lg w100p ath_btn">인증번호 받기</a>
+                            <!-- //인증 전 -->
+                            <!-- 인증 후 -->
+                            <a href="javascript:void(0)" class="btn lg w100p ath_btn on">인증번호 받기</a>
+                            <!-- // 인증 후 -->
+                            <!-- [END] //220726 수정  -->
+                        </div>
+                        <div class="form-column mt06">
+                            <!-- 인증 전 -->
+                            <div class="input-txt">
+                                <input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+                            </div>
+                            <button type="button" class="btn teritary lg blackline ml8">인증하기</button>
+                            <p class="error-txt">남은시간 03:00</p>
+                            <!-- //인증 전 -->
+                            <!-- 인증 후 -->
+                            <div class="input-txt">
+                                <input type="text" title="" value="12345" placeholder="인증번호를 입력해주세요">
+                            </div>
+                            <button type="button" class="btn teritary lg blackline ml8">인증하기</button>
+                            <p class="info-txt">인증되었습니다</p>
+                            <!-- //인증 후 -->
+                        </div>
+                        <div class="form-column mt05">
+                            <a href="javascript:void(0)" class="btn lg w100p primary">아이디 찾기</a>
+                        </div>
+                    </div>
+                    <!-- [START] 220712 mt07추가 -->
+                    <div class="btnbox mt07">
+                        <a href="javascript:void(0)" class="btn arrow">비밀번호 찾기</a>
+                        <a href="javascript:void(0)" class="btn arrow">로그인</a>
+                    </div>
+                    <!-- [END] //220712 mt07추가 -->
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">입력하신 내용과 일치하는 정보가 없습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>    
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

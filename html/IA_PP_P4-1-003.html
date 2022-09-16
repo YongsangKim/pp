@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="acnt_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v4"><div class="slogan">계정관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">계정관리</h2>
+                <div class="txt-cp1 tar"><span class="ast">* </span>표시는 필수 입력 항목입니다</div>
+                <div class="tb_stl1">
+                    <table>
+                        <caption>신규 관리자 정보 입력</caption>
+                        <colgroup>
+                            <col style="width: 328px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">관리자 아이디 생성 일시</th>
+                                <td class="date">2020-01-12  13:11</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">휴면 상태</th>
+                                <td>정상</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">관리자 아이디</th>
+                                <td>AAA</td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자명</span></th>
+                                <td>
+                                    <!-- [D]220812 placehoder 수정 -->
+                                    <div class="input-txt flex_cont">
+                                        <input type="text" title="" value="홍길동" placeholder="담당자명을 입력해 주세요">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자 휴대폰번호</span></th>
+                                <td>
+                                    <div class="flex_cont">
+                                        <!-- 220729 삭제 <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>010</option>
+                                                <option>02</option>
+                                                <option>031</option>
+                                                <option>032</option>
+                                                <option>041</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">010</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">010</button>
+                                                <button type="button" class="option" idx="1">02</button>
+                                                <button type="button" class="option" idx="2">031</button>
+                                                <button type="button" class="option" idx="3">032</button>
+                                                <button type="button" class="option" idx="4">041</button>
+                                            </div>
+                                        </div> -->
+                                        <!-- [D]220812 placehoder 수정 -->
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="01012341234" placeholder="휴대폰번호를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자 이메일</span></th>
+                                <td>
+                                    <div class="email">
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="kimsid111" placeholder="이메일주소를 입력해주세요">
+                                        </div>
+                                        <span class="bar">@</span>
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="" placeholder="">
+                                        </div>
+                                        <div class="select-box" style="width:200px">
+                                            <select class="select" tabindex="-1">
+                                                <option>직접입력</option>
+                                                <option>gmail.com</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>naver.com</option>
+                                                <option>chol.com</option>
+                                                <option>nate.com</option>
+                                                <option>yahoo.co.kr</option>
+                                                <option>hanmail.net</option>
+                                                <option>hotmail.com</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">gmail.com</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">직접입력</button>
+                                                <button type="button" class="option" idx="1">gmail.com</button>
+                                                <button type="button" class="option" idx="2">dreamwiz.com</button>
+                                                <button type="button" class="option" idx="3">naver.com</button>
+                                                <button type="button" class="option" idx="4">chol.com</button>
+                                                <button type="button" class="option" idx="5">nate.com</button>
+                                                <button type="button" class="option" idx="6">yahoo.co.kr</button>
+                                                <button type="button" class="option" idx="7">hanmail.net</button>
+                                                <button type="button" class="option" idx="8">hotmail.com</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- [D]220822 수정 -->
+                            <tr>
+                                <th scope="col"><span class="ast">필수 약관 동의</span></th>
+                                <td>
+                                    <div class="txt-cp1 point-pink"><span class="ast"></span>아래 관리자아이디 필수 약관 동의는 대표 아이디의 동의로 갈음합니다. </div>
+                                    <div class="agr01">
+                                        <i class="chk"></i>
+                                        <span>파트너포털 이용약관에 동의함</span>                                                   
+                                    </div>
+                                    <div class="agr01">
+                                        <i class="chk"></i>
+                                        <span>개인정보 제3자 제공 안내에 동의함</span>                                                   
+                                    </div>
+                                    <div class="agr01">
+                                        <i class="chk"></i>
+                                        <span>개인정보 수집 및 이용 안내에 동의함</span>                                                   
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed">취소</a>
+                    <a href="javascript:void(0)" class="btn primary lg fixed">저장</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

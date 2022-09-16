@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <!-- [D]220829 class변경 -->
+    <div id="wrap" class="asso">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <div class="inner_wrap">      
+                    <!-- [START] 220712 mo-hide클래스 추가 -->              
+                    <div class="hr mo-hide">
+                    <!-- [END] //220712 mo-hide클래스 추가 --> 
+                        <div class="between_end">
+                            <!-- [START] 220712 tal클래스 삭제 버튼에 mt04추가 -->
+                            <div>
+                                <h2 class="tit_h2"><span class="point-pink">U+</span>파트너포털<br>회원 가입 반려 재심사</h2>
+                                <!-- [START] 220726 삭제 -->              
+                                <!-- <p class="txt-bd3">우측 반려 사유를 보시고 정보 수정 후<br>재심사 요청을 해주세요.</p> -->
+                                <!-- [END] //220726 삭제 -->
+                            </div>       
+                            <!-- [START] 220726 삭제 -->                                 
+                            <!-- <a href="javascript:void(0)" class="btn lg ath_btn on fixed mt04" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">반려 사유 보기</a> -->
+                            <!-- [END] //220726 삭제 -->  
+                            <!-- [END] //220712 tal클래스 삭제 버튼에 mt04추가 -->
+                        </div>
+                    </div>
+                    <!-- [START] 220712 br추가 br에 mo-hide, pc-hide 클래스, 띄어쓰기 추가 -->
+                    <ol class="step">
+                        <li class="cmplt"><span>1</span>약관 및 개인정보<br class="mo-hide"> 수집동의</li>
+                        <li class="cmplt"><span>2</span>회원정보 입력 및<br class="mo-hide"> 서류 업로드</li>
+                        <li class="on"><span>3</span>심사 대기</li>
+                    </ol>
+                    <div class="wait">
+                        <!-- [START] 20726 수정 -->
+                        <div class="tit_h4">심사 요청을 완료했습니다.</div>
+                        <p>최종 결과는 평일 기준으로 2일 안에<br> 이메일과 문자메시지로 안내 드립니다.</p>
+                        <!-- [END] //20726 수정 -->
+                        <!-- [START] 220713 div추가 -->
+                        <div class="btn-area">
+                            <a href="javascript:void(0)" class="btn primary lg fixed2">확인</a>
+                        </div>
+                        <!-- [END] //220713 div추가 -->
+                    </div>
+                    <!-- [END] //220712 br에 mo-hide클래스, 띄어쓰기 추가 -->
+                </div>
+            </div>
+             <!-- Modal -->            
+             <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">심사 반려사유</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <!-- [START] 220712 mo-hide클래스 추가 -->
+                            <div class="txt-cp1 fz14 mo-hide"><span class="ast">*</span>반려 사유보기</div>
+                            <!-- [END] //220712 mo-hide클래스 추가 -->
+                            <div class="txt-area">
+                                <textarea name="" id="" cols="30" rows="7" maxlength="3000" class="txt-length" placeholder="내용을 입력해 주세요" disabled>
+유플러스 비즈마켓 운영 담당자입니다.
+
+심사 반려 사유는 아래와 같습니다.
+
+1. 첨부된 사업자등록증이 흐려서 식별이 불가능합니다. 사업자 등록증을 재등록해주세요.
+2. 회사 주소의 상세 주소가 명확하지 않습니다. 상세 주소를 다시 기재해주세요.
+
+위 사항 확인하시고 수정 후 재요청하시기 바랍니다.
+감사합니다.
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <!-- [D]220829 삭제 -->
+        <!-- <footer id="footer"></footer> -->
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

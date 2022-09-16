@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- [START] 220726 수정 -->                
+                <h2 class="tit_h2">서비스 등록</h2>
+                <!-- [END] //220726 수정 -->
+                <div class="between_end">
+                    <!-- [START] 220803 문구 수정 -->
+                    <span class="txt-bd4 fz14">임시저장은 1년간 저장되며, 그 이후로는 삭제 처리됩니다.</span>
+                    <!-- [END] //220803 문구 수정 -->
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 hover_tooltip disabled">검수요청<span class="tooltip_txt">모든 항목 임시 저장 후에 검수 요청이 가능합니다.</span></button>
+                    </div>
+                </div>
+                <!-- [START] 20220729 문구수정 -->
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">서비스 개요 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (작성필요)</a>
+                    </li>
+                </ul>    
+                <!-- [END] //20220729 문구수정-->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="between_end">
+                            <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                            <!-- [START] 220803 lg클래스 삭제 -->
+                            <a href="javascript:void(0)" class="btn teritary blackline md fz14">기존 데이터 가져오기</a>
+                            <!-- [END] 220803 lg클래스 삭제 -->
+                        </div>
+                        <div class="tb_stl1">
+                            <table>
+                                <caption>서비스 등록 양식</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"><span class="ast">서비스명</span></th>
+                                        <td>                       
+                                            <div class="input-txt w456">
+                                                <input type="text" title="" value="" placeholder="서비스명을 입력해 주세요">
+                                            </div>                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"><span class="ast">카테고리</span></th>
+                                        <td>
+                                            <div class="add_wrap">
+                                                <div class="add_contents">
+                                                    <div class="select-box w_st1">
+                                                        <select class="select" tabindex="-1">
+                                                            <option>선택하세요</option>
+                                                            <option>02</option>
+                                                            <option>031</option>
+                                                            <option>032</option>
+                                                            <option>041</option>
+                                                        </select>
+                                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                                        <div class="select-layer">
+                                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                                            <button type="button" class="option" idx="1">02</button>
+                                                            <button type="button" class="option" idx="2">031</button>
+                                                            <button type="button" class="option" idx="3">032</button>
+                                                            <button type="button" class="option" idx="4">041</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="select-box ml5 w_st1">
+                                                        <select class="select" tabindex="-1">
+                                                            <option>선택하세요</option>
+                                                            <option>02</option>
+                                                            <option>031</option>
+                                                            <option>032</option>
+                                                            <option>041</option>
+                                                        </select>
+                                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                                        <div class="select-layer">
+                                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                                            <button type="button" class="option" idx="1">02</button>
+                                                            <button type="button" class="option" idx="2">031</button>
+                                                            <button type="button" class="option" idx="3">032</button>
+                                                            <button type="button" class="option" idx="4">041</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add_btn fz0 len3">항목추가</button>
+                                                <span class="txt-bd4 ml30">3개 까지 추가 가능합니다.</span>
+                                            </div>
+                                            <div class="add_area"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <!-- [START] 220726 수정 -->
+                                            <span class="ast">서비스 대표 이미지</span>
+                                            <!-- [END] //220726 수정 -->
+                                            <span>(2개 필수 등록)</span>
+                                        </th>
+                                        <td class="grow">  
+                                            <div class="form-column input-upload data_room">                          
+                                                <div class="input-txt">
+                                                    <input type="file" title="" value="" placeholder="">
+                                                </div>
+                                                <!-- [START] 220726 수정 -->
+                                                <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                <!-- [END] //220726 수정 -->
+                                                <div class="input-upload loadList">
+                                                    <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                </div>
+                                            </div>
+                                            <!-- [D]220824 수정 -->
+                                            <span class="txt-bd4 be_none">1) 메인용 아이콘  -  형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지 사이즈 : 164x200</span>
+                                            <div class="form-column input-upload data_room mt04">                          
+                                                <div class="input-txt">
+                                                    <input type="file" title="" value="" placeholder="">
+                                                </div>
+                                                <!-- [START] 220726 수정 -->
+                                                <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                <!-- [END] //220726 수정 -->
+                                                <div class="input-upload loadList">
+                                                    <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                </div>
+                                            </div>
+                                            <!-- [D]220824 수정 -->
+                                            <span class="txt-bd4 be_none">2) 추천용 아이콘  -  형식 : jpg, jpeg, png, gif  /  용량 : 파일당 5MB 이하  /  이미지 사이즈 : 564x362</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">서비스 한줄 소개</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                     <!-- [START] 220726 수정 -->
+                                                     서비스를 알릴 수 있는 간단한 소개말을 입력해 주세요
+                                                     <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>              
+                                            <div class="input-txt w456">
+                                                <input type="text" title="" value="" placeholder="서비스 소개를 입력해 주세요">
+                                            </div>    
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">서비스 태그</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    고객이 원하는 서비스를 검색할 때 노출될 수 있도록 태그를 입력해 주세요. 태그는 3개까지 입력할 수 있습니다<br>예시) 그룹웨어, 메일, 메신저 등 
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>       
+                                            <div class="add_wrap">
+                                                <div class="add_contents">       
+                                                    <div class="input-txt w456">
+                                                        <input type="text" title="" value="" placeholder="태그를 입력해 주세요">
+                                                    </div>  
+                                                </div>  
+                                                <button class="add_btn fz0 len3">항목추가</button>
+                                                <span class="txt-bd4 ml30">3개 까지 추가 가능합니다.</span>
+                                            </div>
+                                            <div class="add_area"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!-- [START] 220726 수정 -->
+                                        <th scope="col" class="tooltip_area">서비스 인터넷 주소
+                                        <!-- [END] //220726 수정 -->
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    서비스를 소개하는 웹이나 앱이 있다면 인터넷 주소를 입력해 주세요
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="link_area">        
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check01" name="check01" type="checkbox">
+                                                    <label for="check01">
+                                                        <!-- [START] 220726 수정 -->
+                                                        <i class="ico"></i> <span>웹</span>
+                                                        <!-- [END] //220726 수정 -->
+                                                    </label>
+                                                </span>
+                                                <div class="input-txt">
+                                                    <input type="text" title="" value="" placeholder="WEB 링크를 입력해 주세요">
+                                                </div>    
+                                            </div>
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check02" name="check02" type="checkbox">
+                                                    <label for="check02">
+                                                        <!-- [START] 220726 수정 -->
+                                                        <i class="ico"></i> <span>앱(AOS)</span>
+                                                        <!-- [END] //220726 수정 -->
+                                                    </label>
+                                                </span>
+                                                <div class="input-txt">
+                                                    <input type="text" title="" value="" placeholder="안드로이드 APP 링크를 입력해 주세요">
+                                                </div>    
+                                            </div>
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check03" name="check03" type="checkbox">
+                                                    <label for="check03">
+                                                        <!-- [START] 220726 수정 -->
+                                                        <i class="ico"></i> <span>앱(IOS)</span>
+                                                        <!-- [END] //220726 수정 -->
+                                                    </label>
+                                                </span>
+                                                <div class="input-txt">
+                                                    <input type="text" title="" value="" placeholder="IOS APP 링크를 입력해 주세요">
+                                                </div>    
+                                            </div>
+                                        </td>
+                                    </tr>                                    
+                                    <!-- [START] 220726 삭제 -->
+                                    <!-- <tr>
+                                        <th scope="col" class="tooltip_area">수수료율
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    툴팁 내용
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="flex-row">              
+                                            <div class="input-txt">
+                                                <input type="text" title="" value="" placeholder="숫자만 입력해 주세요">
+                                                <span>%</span>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                    <!-- [END] //220726 삭제 -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">무료체험 설정상태</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    고객에게 해당 서비스 무료 체험을 제공할 것인지를 선택해 주세요<br>‘사용’ 선택 시 [체험 신청 관리] 메뉴로 고객 요청 입인 시 답변해 주셔야 합니다.
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td> 
+                                            <span class="radio">
+                                                <input id="radio01_1" name="radio01" type="radio" checked="">
+                                                <label for="radio01_1">
+                                                    <i class="ico"></i> <span>사용</span>
+                                                </label>
+                                            </span>
+                                            <span class="radio">
+                                                <input id="radio01_2" name="radio01" type="radio">
+                                                <label for="radio01_2">
+                                                    <i class="ico"></i> <span>미사용</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <!-- [D]220916 수정 -->
+                                            <span class="ast">기본요금(부가세 포함)</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    U+비즈마켓 서비스 소개 화면에서 안내할 기본요금을 입력해 주세요
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="flex-row"> 
+                                            <div class="input-txt">
+                                                <input type="text" title="" value="" placeholder="숫자만 입력해 주세요"> 
+                                                <span>원</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">바우처 지원 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    정부가 지원하는 바우처 상품에 해당되는지 여부를 선택해 주세요
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td> 
+                                            <span class="radio">
+                                                <input id="radio02_1" name="radio02" type="radio" checked="">
+                                                <label for="radio02_1">
+                                                    <i class="ico"></i> <span>지원없음</span>
+                                                </label>
+                                            </span>
+                                            <span class="radio">
+                                                <input id="radio02_2" name="radio02" type="radio">
+                                                <label for="radio02_2">
+                                                    <i class="ico"></i> <span>지원있음</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <!-- [D]220916 수정 -->
+                                            <div>서비스 이용약관</div>
+                                            <span>(1개만 등록 가능)</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <!-- [D]220812 수정 -->
+                                                <div class="tooltip_txt">
+                                                    고객에게 보여질 서비스 이용약관을 등록해 주세요<br>등록하지 않을 경우 U+비즈마켓 공통 약관으로 안내합니다
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="grow">  
+                                            <div class="form-column input-upload data_room">                          
+                                                <div class="input-txt">
+                                                    <input type="file" title="" value="" placeholder="">
+                                                </div>
+                                                <!-- [START] 220726 수정 -->
+                                                <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                <!-- [END] //220726 수정 -->
+                                                <div class="input-upload loadList">
+                                                    <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                </div>
+                                            </div>
+                                            <p class="txt-bd4">형식 : txt, doc, hwp / 용량 : 5MB 이하</p>                   
+                                        </td>
+                                    </tr>
+                                    <!-- [START] 220729 삭제
+                                        <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">구매자 일시 정지 가능 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    구매자가 서비스 구매 후 서비스 일시 정지 신청을 가능하게 할 것인지 여부
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td> 
+                                            <span class="radio">
+                                                <input id="radio03_1" name="radio03" type="radio" checked="">
+                                                <label for="radio03_1">
+                                                    <i class="ico"></i><span>불가능</span>
+                                                </label>
+                                            </span>
+                                            <span class="radio">
+                                                <input id="radio03_2" name="radio03" type="radio">
+                                                <label for="radio03_2">
+                                                    <i class="ico"></i><span>가능</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr> -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">가입 가능 유형</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <!-- [D]220812 수정 -->
+                                                <div class="tooltip_txt">
+                                                    해당 서비스 구매가 가능한 유형 선택
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td> 
+                                            <span class="checkbox">
+                                                <input id="check01_1" name="check01_1" type="checkbox" checked="">
+                                                <label for="check01_1">
+                                                    <i class="ico"></i> <span>법인</span>
+                                                </label>
+                                            </span>
+                                            <span class="checkbox">
+                                                <input id="check01_2" name="check01_2" type="checkbox">
+                                                <label for="check01_2">
+                                                    <i class="ico"></i> <span>개인사업자</span>
+                                                </label>
+                                            </span>
+                                            <span class="checkbox">
+                                                <input id="check01_3" name="check01_3" type="checkbox">
+                                                <label for="check01_3">
+                                                    <i class="ico"></i> <span>비영리법인</span>
+                                                </label>
+                                            </span>
+                                            <span class="checkbox">
+                                                <input id="check01_4" name="check01_4" type="checkbox">
+                                                <label for="check01_4">
+                                                    <i class="ico"></i> <span>개인</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">중복 가입 가능 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <!-- [D]220812 수정 -->
+                                                <div class="tooltip_txt">
+                                                    사업자번호 기준으로 서비스 중복 가입 가능한지 여부
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td> 
+                                            <span class="radio">
+                                                <input id="radio04_1" name="radio04" type="radio" checked="">
+                                                <label for="radio04_1">
+                                                    <i class="ico"></i> <span>가능</span>
+                                                </label>
+                                            </span>
+                                            <span class="radio">
+                                                <input id="radio04_2" name="radio04" type="radio">
+                                                <label for="radio04_2">
+                                                    <i class="ico"></i> <span>불가능</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <!-- [START] 220727 추가 -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">판매기간</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <!-- [D]220812 수정 -->
+                                                <div class="tooltip_txt">
+                                                    해당 서비스 판매할 기간을 선택
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="calendar flex_cont">
+                                                <div class="input-txt datepicker">
+                                                    <input type="text">
+                                                </div>
+                                                <div class="select-box ml8">
+                                                    <select class="select" tabindex="-1">
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                    </select>
+                                                    <button type="button" id="sel01" class="select-btn">5</button>
+                                                    <div class="select-layer">
+                                                        <button type="button" class="option on" idx="0">5</button>
+                                                        <button type="button" class="option" idx="0">6</button>
+                                                        <button type="button" class="option" idx="0">7</button>
+                                                    </div>
+                                                </div>
+                                                <span class="fz14 ml8">시</span>
+                                                <div class="select-box ml12">
+                                                    <select class="select" tabindex="-1">
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                    </select>
+                                                    <button type="button" id="sel01" class="select-btn">11</button>
+                                                    <div class="select-layer">
+                                                        <button type="button" class="option on" idx="0">11</button>
+                                                        <button type="button" class="option" idx="0">12</button>
+                                                        <button type="button" class="option" idx="0">13</button>
+                                                    </div>
+                                                </div>
+                                                <span class="fz14 ml8">분</span>
+                                                <span class="bar">-</span>
+                                                <div class="input-txt datepicker">
+                                                    <input type="text">
+                                                </div>                                            
+                                                <div class="select-box ml8">
+                                                    <select class="select" tabindex="-1">
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                    </select>
+                                                    <button type="button" id="sel01" class="select-btn">5</button>
+                                                    <div class="select-layer">
+                                                        <button type="button" class="option on" idx="0">5</button>
+                                                        <button type="button" class="option" idx="0">6</button>
+                                                        <button type="button" class="option" idx="0">7</button>
+                                                    </div>
+                                                </div>
+                                                <span class="fz14 ml8">시</span>
+                                                <div class="select-box ml12">
+                                                    <select class="select" tabindex="-1">
+                                                        <option>0</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option selected>11</option>
+                                                        <option>12</option>
+                                                        <option>13</option>
+                                                        <option>14</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
+                                                    </select>
+                                                    <button type="button" id="sel01" class="select-btn">11</button>
+                                                    <div class="select-layer">
+                                                        <button type="button" class="option" idx="0">0</button>
+                                                        <button type="button" class="option" idx="1">1</button>
+                                                        <button type="button" class="option" idx="2">2</button>
+                                                        <button type="button" class="option" idx="3">3</button>
+                                                        <button type="button" class="option" idx="4">4</button>
+                                                        <button type="button" class="option" idx="5">5</button>
+                                                        <button type="button" class="option" idx="6">6</button>
+                                                        <button type="button" class="option" idx="7">7</button>
+                                                        <button type="button" class="option" idx="8">8</button>
+                                                        <button type="button" class="option" idx="9">9</button>
+                                                        <button type="button" class="option" idx="10">10</button>
+                                                        <button type="button" class="option on" idx="11">11</button>
+                                                        <button type="button" class="option" idx="12">12</button>
+                                                        <button type="button" class="option" idx="13">13</button>
+                                                        <button type="button" class="option" idx="14">14</button>
+                                                        <button type="button" class="option" idx="15">15</button>
+                                                        <button type="button" class="option" idx="16">16</button>
+                                                        <button type="button" class="option" idx="17">17</button>
+                                                        <button type="button" class="option" idx="18">18</button>
+                                                        <button type="button" class="option" idx="19">19</button>
+                                                        <button type="button" class="option" idx="20">20</button>
+                                                    </div>
+                                                </div>
+                                                <span class="fz14 ml8">분</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- [END] //220727 추가 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">임시저장</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

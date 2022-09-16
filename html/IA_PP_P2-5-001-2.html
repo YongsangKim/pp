@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v2"><div class="slogan">영업활동관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">영상상담 설정</h2>
+                <div class="tb_stl1">
+                    <table>
+                        <caption>영상상담 설정 내용</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">서비스명</th>
+                                <td>
+                                    AAA
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->             
+                                <th scope="col">영상 상담 제공 여부</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    사용
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->              
+                                <th scope="col">상담 가능 요일 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    월  화  수  목  금
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->                              
+                                <th scope="col">상담 가능 시간 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    10시 00분 ~ 18시 30분
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->                                
+                                <th scope="col" rowspan="2">상담 안 되는 일정 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    2022-09-09  ~  2022-09-12
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    2022-09-09  ~  2022-09-12
+                                </td>
+                            </tr>
+                            <tr>                           
+                                <!-- [START] 220726 수정 -->                                
+                                <th scope="col" class="grow">상담 안 되는 시간 선택<span>(예시) 점심 시간</span></th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    10시 00분 ~ 18시 30분
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="between_center mt02">
+                    <ul class="pink-list">
+                        <li>상담 불가능 일정이 상담 가능 요일보다 우선입니다.</li>
+                        <li>점심 시간 설정(상담불가시간)이 상담 가능시간 설정보다 우선입니다.</li>
+                    </ul>
+                    <a href="javascript:void(0)" class="btn teritary lg blackline">변경 이력</a>
+                </div>
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed"  data-bs-toggle="modal" data-bs-target="#myModal1">삭제</a>
+                    <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                    <a href="javascript:void(0)" class="btn primary lg fixed">수정</a>
+                    
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">해당 서비스 영상상담 설정을 삭제하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

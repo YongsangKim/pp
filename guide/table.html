@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 <script src="../js/jquery.min.js"></script>
@@ -32,7 +32,8 @@
                 <div class="code_wrap">
 					<div class="mobileWrap">
 						<!--화면 입력영역-->
-							<section>
+							<section>								
+								<div class="txt-cp1"><span class="ast">* </span>표시는 필수 입력 항목입니다</div>
 								<div class="tb_stl1">
 									<table>
 										<caption>개인사업자 회원가입인증</caption>
@@ -42,7 +43,7 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<th scope="col">아이디</th>
+												<th scope="col"><span class="ast">아이디</span></th>
 												<td>Kim001</td>
 											</tr>
 											<tr>
@@ -50,7 +51,26 @@
 												<td>홍길동</td>
 											</tr>
 											<tr>
-												<th scope="col">생년월일</th>
+												<th scope="col">
+													<div>
+                                                        <span class="ast">th가 두줄</span>
+                                                        <span>이상일때</span>
+                                                    </div>
+												</th>
+												<td class="grow">
+													<div>td가 두줄 이상일때<br>td안에 grow클래스를<br>넣으면 됩니다.</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col" class="tooltip_area">생년월일
+													<div class="tooltip_box">
+														<button type="button" class="tooltip_ico">?</button>
+														<div class="tooltip_txt">
+															툴팁 내용
+															<button type="button" class="tooltip_close">닫기</button>
+														</div>
+													</div>
+												</th>
 												<td>810215</td>
 											</tr>
 											<tr>
@@ -95,6 +115,7 @@
 						<!--code 영역-->
 						<div class="code_html">
 							<pre><code class="hljs html">
+								<div class="txt-cp1"><span class="ast">* </span>표시는 필수 입력 항목입니다</div>
 								<div class="tb_stl1">
 									<table>
 										<caption>개인사업자 회원가입인증</caption>
@@ -104,7 +125,7 @@
 										</colgroup>
 										<tbody>
 											<tr>
-												<th scope="col">아이디</th>
+												<th scope="col"><span class="ast">아이디</span></th>
 												<td>Kim001</td>
 											</tr>
 											<tr>
@@ -112,7 +133,26 @@
 												<td>홍길동</td>
 											</tr>
 											<tr>
-												<th scope="col">생년월일</th>
+												<th scope="col">
+													<div>
+                                                        <span class="ast">th가 두줄</span>
+                                                        <span>이상일때</span>
+                                                    </div>
+												</th>
+												<td class="grow">
+													<div>td가 두줄 이상일때<br>td안에 grow클래스를<br>넣으면 됩니다.</div>
+												</td>
+											</tr>
+											<tr>
+												<th scope="col" class="tooltip_area">생년월일
+													<div class="tooltip_box">
+														<button type="button" class="tooltip_ico">?</button>
+														<div class="tooltip_txt">
+															툴팁 내용
+															<button type="button" class="tooltip_close">닫기</button>
+														</div>
+													</div>
+												</th>
 												<td>810215</td>
 											</tr>
 											<tr>
@@ -167,11 +207,13 @@
 									<table>
 										<caption>부가서비스 정보</caption>
 										<colgroup>
-											<col width="230">
-											<col width="170">
-											<col width="248">
-											<col width="308">
-											<col width="268">
+											<col width="100">
+											<col width="150">
+											<col width="200">
+											<col width="200">
+											<col width="168">
+											<col width="130">
+											<col width="163">
 											<col width="163">
 										</colgroup>
 										<thead>
@@ -182,6 +224,8 @@
 												<th scope="col">담당자 이메일</th>
 												<th scope="col">ID 생성 일시</th>
 												<th scope="col">휴면 상태</th>
+												<th scope="col">제목</th>
+												<th scope="col" class="grow02"><a href="javascript:void(0)" class="align_btn">공지 최종<br>등록일</a></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -192,9 +236,19 @@
 												<td>elstid467@naver.com</td>
 												<td>2020-09-08 16:23</td>
 												<td>정상</td>
+												<td class="tal">
+													<div class="txt-ellipsis">
+														<span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+													</div>
+												</td>
+												<td class="grow02">
+													<span class="date">
+														2022-02-02 09:00 ~<br>2022-02-05 12:00
+													</span>
+												</td>
 											</tr>
-											<tr><td class="nodata" colspan="6">조회 내역이 없습니다.</td>
-										</tr></tbody>
+											<tr><td class="nodata" colspan="8">조회 내역이 없습니다.</td></tr>
+										</tbody>
 									</table>
 								</div>
 								<div class="pagination">
@@ -230,6 +284,8 @@
 											<col width="308">
 											<col width="268">
 											<col width="163">
+											<col>
+											<col>
 										</colgroup>
 										<thead>
 											<tr>
@@ -239,6 +295,8 @@
 												<th scope="col">담당자 이메일</th>
 												<th scope="col">ID 생성 일시</th>
 												<th scope="col">휴면 상태</th>
+												<th scope="col">제목</th>
+												<th scope="col" class="grow02"><a href="javascript:void(0)" class="align_btn">공지 최종<br>등록일</a></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -249,9 +307,19 @@
 												<td>elstid467@naver.com</td>
 												<td>2020-09-08 16:23</td>
 												<td>정상</td>
+												<td class="tal">
+													<div class="txt-ellipsis">
+														<span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+													</div>
+												</td>
+												<td class="grow02">
+													<span class="date">
+														2022-02-02 09:00 ~<br>2022-02-05 12:00
+													</span>
+												</td>
 											</tr>
-											<tr><td class="nodata" colspan="6">조회 내역이 없습니다.</td>
-										</tr></tbody>
+											<tr><td class="nodata" colspan="8">조회 내역이 없습니다.</td></tr>
+										</tbody>
 									</table>
 								</div>
 								<!--pagination-->

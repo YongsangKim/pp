@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -18,12 +18,51 @@
     <link rel="stylesheet" href="../css/common.css">
 </head>
 <body>
-    <div id="wrap">
+    <div id="wrap" class="mypage">
         <header id="header"></header>
         <div id="container">
-            <div class="key-visual v6"></div>
+            <div class="key-visual v6"><div class="slogan">마이페이지</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
             <div class="content">
-                <h2 class="tit_h2">마이페이지</h2>
+                <h2 class="tit_h2 m_on">비밀번호 재확인</h2>
+                <div class="between_end">
+                    <h4 class="tit_h4">본인인증</h4>
+                    <div class="txt-cp1"><span class="ast">*</span>본인 확인을 위하여 비밀번호를 입력해 주십시오</div>
+                </div>
+                <!-- [START] 220714 클래스 변경 -->
+                <div class="tb_stl1">
+                <!-- [END] //220714 클래스 변경 -->
+                    <table>
+                        <caption>비밀번호 재확인 표</caption>
+                        <colgroup>
+                            <col style="width: 328px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">비밀번호</th>
+                                <td>
+                                    <div class="input-txt w568">
+                                        <!-- [START] 220714 placeholder 변경 -->
+                                        <input type="tel" title="" value="" placeholder="비밀번호를 한번 더 입력해 주세요">
+                                        <!-- [END] //220714 placeholder 변경 -->
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+                <div class="btn-area">
+                    <button type="button" class="btn lg fixed">취소</button>
+                    <button type="button" class="btn primary lg fixed">확인</button>
+                </div>
             </div>
         </div>
         <footer id="footer"></footer>

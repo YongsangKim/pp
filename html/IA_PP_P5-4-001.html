@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -21,11 +21,23 @@
     <div id="wrap">
         <header id="header"></header>
         <div id="container">
-            <div class="key-visual v5"><div class="slogan">1:1 문의하기</div></div>
+            <div class="key-visual v5">
+                <div class="slogan">1:1 문의하기</div>
+            </div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
             <div class="content">
-                <!-- content.s -->
+                <!-- content.s -->   
                 <h2 class="tit_h2">1:1 문의하기</h2>
-                <div class="bul txt-bd2">유플러스 관리자에게 문의할 수 있습니다. 문의에 대한 답변은 ‘답변 확인하기’ 에서 확인 가능합니다.</div>
+                <!-- [START] 220726 수정 -->                
+                <div class="bul txt-bd2">유플러스 관리자에게 문의할 수 있습니다. 문의에 대한 답변은 [답변 확인하기]를 이용해 주세요</div>
+                <!-- [END] //220726 수정 -->
                 <ul class="nav stl2 nav-pills nav-justified" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a class="nav-link active">문의하기</a>
@@ -36,7 +48,7 @@
                 </ul>
                 <section class="sc-area">
                     <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
-                    <div class="tb_stl1">
+                    <div class="tb_stl1 ask">
                         <table>
                             <caption>개인사업자 회원가입인증</caption>
                             <colgroup>
@@ -47,7 +59,7 @@
                                 <tr>
                                     <th scope="col"><span class="ast">문의유형</span></th>
                                     <td>
-                                        <div class="select-box" style="width:224px">
+                                        <div class="select-box">
                                             <select class="select" tabindex="-1">
                                                 <option>선택하세요</option>
                                                 <option>파트너 가입</option>
@@ -95,41 +107,100 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">생년월일</th>
-                                    <td>810215</td>
-                                </tr>
-                                <tr>
-                                    <th scope="col">휴대폰 번호</th>
+                                    <th scope="col">
+                                        <div>파일 첨부<span>(4개까지 등록 가능)</span></div>
+                                    </th>
                                     <td>
-                                        <div class="phone">
-                                            <div class="input-txt">
-                                                <input type="text" title="" value="010" placeholder="">
+                                        <!-- 220711 구조 변경.s -->
+                                        <div class="form-column data_room">
+                                            <div class="input-upload">
+                                                <div class="input-txt">
+                                                    <input type="file" title="" value="" placeholder="">
+                                                </div>
+                                                <button type="button" class="btn teritary lg blackline ml8">등록<span class="mo-hide">하기</span></button>
+                                                <ul class="dotList mt01">
+                                                    <li>형식 : jpg, jpeg, png, doc, hwp, pdf</li>
+                                                    <!-- [START] 220726 수정 -->                                                    
+                                                    <li>용량 : 4개 파일까지, 각 5MB 이하로 등록 가능</li>
+                                                    <!-- [END] //220726 수정 -->
+                                                </ul>
                                             </div>
-                                            <span class="bar">-</span>
-                                            <div class="input-txt">
-                                                <input type="text" title="" value="1234" placeholder="">
-                                            </div>
-                                            <span class="bar">-</span>
-                                            <div class="input-txt">
-                                                <input type="text" title="" value="5678" placeholder="">
+                                            <div class="loadList">
+                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
                                             </div>
                                         </div>
+                                        <!-- 220711 구조 변경.e -->
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th scope="col">이메일</th>
+                                    <th scope="col"><span class="ast">[필수] 개인정보 수집 및 이용 안내</span></th>
                                     <td>
-                                        <div class="email">
-                                            <div class="input-txt">
-                                                <input type="text" title="" value="user_email" placeholder="">
+                                        <div class="scroll_box2">
+                                            <div class="text_area">
+                                                <h4>제 1 조 (목적)</h4>
+                                                <p>본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.</p>
+
+                                                <h4>제 2조 (용어의 정의)</h4>
+                                                <p>본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.</p>
+                                                <ol>
+                                                    <li>1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.</li>
+                                                </ol>
+
+                                                <h4>제 3조 (용어의 정의)</h4>
+                                                <p>본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.</p>
+                                                <ol>
+                                                    <li>1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.</li>
+                                                </ol>
                                             </div>
-                                            <span class="bar">@</span>
-                                            <div class="input-txt">
-                                                <input type="text" title="" value="gmail.com" placeholder="">
-                                            </div>
+                                        </div>
+                                        <div class="check_area mt02">
+                                            <span class="checkbox">
+                                                <input id="check02_2" name="check04" type="checkbox">
+                                                <label for="check02_2">
+                                                    <!-- [START] 220726 수정 -->                                                    
+                                                    <i class="ico"></i><span>개인정보 수집 및 이용에 동의합니다</span>
+                                                    <!-- [END] //220726 수정 -->
+                                                </label>
+                                            </span>
                                         </div>
                                     </td>
                                 </tr>
+                                <!-- [START] 220726 삭제 -->
+                                <!-- <tr>
+                                    <th scope="col">마케팅 수집 및 활용 동의</th>
+                                    <td>
+                                        <div class="scroll_box2">
+                                            <div class="text_area">
+                                                <h4>제 1 조 (목적)</h4>
+                                                <p>본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.</p>
+
+                                                <h4>제 2조 (용어의 정의)</h4>
+                                                <p>본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.</p>
+                                                <ol>
+                                                    <li>1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.</li>
+                                                </ol>
+
+                                                <h4>제 3조 (용어의 정의)</h4>
+                                                <p>본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.</p>
+                                                <ol>
+                                                    <li>1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="check_area mt02">
+                                            <span class="checkbox">
+                                                <input id="check02_3" name="check04" type="checkbox">
+                                                <label for="check02_3">
+                                                    <i class="ico"></i><span>마케팅 수집 및 활용에 동의함</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr> -->
+                                <!-- [END] //220726 삭제 -->
                             </tbody>
                         </table>
                     </div>

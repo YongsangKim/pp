@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">추가정보</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">이벤트</h2>
+                <div class="tb_stl1">
+                    <table>
+                        <caption>이벤트 파일 업로드 양식</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col"><div>이벤트 업로드 요청 안내</div></th>
+                                <td class="between_center grow">
+                                    <div>                           
+                                        <!-- [START] 220726 수정 -->
+                                        - 비즈마켓 홈페이지에 안내될 서비스 이벤트를 아래와 같이 등록해 주세요.   
+                                        <!-- [D]220817 한줄추가 -->
+                                        <div>- 기타 궁금하신 점은 1:1 문의하기로 문의해 주세요.</div>
+                                        <ul class="list_rd_decimal mt01">
+                                            <li>1) 내려 받은 양식에 맞춰서 작성해 주세요.</li>
+                                            <li>2) 작성한 엑셀과 이미지 파일을 아래에 올려주세요.<br>
+                                                * 이미지 파일 형식, 용량, 사이즈는 엑셀 파일에 안내되어 있습니다</li>                                     
+                                        </ul>
+                                        <!-- [END] //220726 수정 -->
+                                    </div>
+                                    <a href="javascript:void(0)" class="btn teritary lg blackline">양식 다운로드</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    <span class="ast">이벤트 파일 업로드</span>
+                                    <span>(파일 7개까지 등록가능)</span>
+                                </th>
+                                <td class="between_center grow"><!-- [D]220817 class추가 -->
+                                    <div class="form-column input-upload data_room">                          
+                                        <div class="input-txt">
+                                            <input type="file" title="" value="" placeholder="">
+                                        </div>
+                                        <!-- [START] 220726 수정 -->
+                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                        <!-- [END] //220726 수정 -->
+                                        <div class="input-upload loadList file_none">
+                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                        </div>
+                                    </div>
+                                    <!-- [D]220817 버튼추가 -->
+                                    <a href="javascript:void(0)" class="btn teritary lg blackline">&nbsp; &nbsp; &nbsp; &nbsp;저장&nbsp; &nbsp; &nbsp; &nbsp;</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

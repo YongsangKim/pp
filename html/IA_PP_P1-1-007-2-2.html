@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">AAA(반려)</h2>
+                <div class="btn_list tar">
+                    <button class="btn ico_btn11" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">반려 사유보기</button>
+                </div>
+            </div>
+             <!-- Modal -->
+             <div class="modal fade modal_style1" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">반려사유</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <p class="txt-cp1 fz14"><span class="ast">*</span>반려 사유보기</p>
+                            <div class="txt-area mt12">
+                                <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="" disabled>1. 이벤트 페이지 이미지가 가이드와 다릅니다. 
+2. 동영상 링크의 동영상이 재생되지 않습니다.
+3. 이벤트 페이지 이미지가 가이드와 다릅니다. 
+4. 동영상 링크의 동영상이 재생되지 않습니다.
+5. 이벤트 페이지 이미지가 가이드와 다릅니다. 
+6. 동영상 링크의 동영상이 재생되지 않습니다.
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

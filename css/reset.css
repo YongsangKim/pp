@@ -80,3 +80,5 @@ label {cursor: pointer; display: inline-block;}
 textarea {width:100%; vertical-align:middle; resize:none; border:0;padding:0}
 select {appearance:none; -webkit-appearance:none; -moz-appearance:none; -o-appearance:none;border:0}
 select::-ms-expand {display:none;}
+
+legend{*width:0;width:0;height:0;font-size:0;position:absolute;z-index:-1}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="acnt_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v4"><div class="slogan">계정관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">신규 관리자아이디 생성</h2>
+                <div class="txt-cp1 tar"><span class="ast">* </span>표시는 필수 입력 항목입니다</div>
+                <div class="tb_stl1">
+                    <table>
+                        <caption>신규 관리자 정보 입력</caption>
+                        <colgroup>
+                            <col style="width: 328px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col"><span class="ast">관리자 아이디</span></th>
+                                <td>
+                                    <div class="flex_cont">
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="" placeholder="영문, 숫자 조합 6~15자">
+                                        </div>
+                                        <button type="button" class="btn teritary lg blackline ml8">중복확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자명</span></th>
+                                <td>
+                                    <div class="input-txt flex_cont">
+                                        <input type="text" title="" value="" placeholder="이름을 입력해 주세요">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자 휴대폰번호</span></th>
+                                <td>
+                                    <div class="flex_cont">
+                                        <!-- 220729 삭제 <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>010</option>
+                                                <option>02</option>
+                                                <option>031</option>
+                                                <option>032</option>
+                                                <option>041</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">010</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">010</button>
+                                                <button type="button" class="option" idx="1">02</button>
+                                                <button type="button" class="option" idx="2">031</button>
+                                                <button type="button" class="option" idx="3">032</button>
+                                                <button type="button" class="option" idx="4">041</button>
+                                            </div>
+                                        </div> -->
+                                        <!-- [D]220812 placehoder 수정 -->
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="" placeholder="휴대폰번호를 입력해 주세요">
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">담당자 이메일</span></th>
+                                <td>
+                                    <div class="email">
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="" placeholder="이메일주소를 입력해주세요">
+                                        </div>
+                                        <span class="bar">@</span>
+                                        <div class="input-txt">
+                                            <input type="text" title="" value="" placeholder="">
+                                        </div>
+                                        <div class="select-box" style="width:200px">
+                                            <select class="select" tabindex="-1">
+                                                <option>직접입력</option>
+                                                <option>gmail.com</option>
+                                                <option>dreamwiz.com</option>
+                                                <option>naver.com</option>
+                                                <option>chol.com</option>
+                                                <option>nate.com</option>
+                                                <option>yahoo.co.kr</option>
+                                                <option>hanmail.net</option>
+                                                <option>hotmail.com</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">직접입력</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">직접입력</button>
+                                                <button type="button" class="option" idx="1">gmail.com</button>
+                                                <button type="button" class="option" idx="2">dreamwiz.com</button>
+                                                <button type="button" class="option" idx="3">naver.com</button>
+                                                <button type="button" class="option" idx="4">chol.com</button>
+                                                <button type="button" class="option" idx="5">nate.com</button>
+                                                <button type="button" class="option" idx="6">yahoo.co.kr</button>
+                                                <button type="button" class="option" idx="7">hanmail.net</button>
+                                                <button type="button" class="option" idx="8">hotmail.com</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- [D]220822 수정 -->
+                            <tr>
+                                <th scope="col"><span class="ast">필수 약관 동의</span></th>
+                                <td>
+                                    <div class="txt-cp1 point-pink"><span class="ast"></span>아래 관리자아이디 필수 약관 동의는 대표 아이디의 동의로 갈음합니다. </div>
+                                    <div class="tb-st1">
+                                        <div class="tb-tr">
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check01_1" name="check01" type="checkbox">
+                                                    <label for="check01_1">
+                                                        <i class="ico"></i> <span>파트너포털 이용약관에 동의함</span>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0)" class="btn teritary lg blackline" data-bs-toggle="modal" data-bs-target="#myModal4">파트너포털 이용약관 보기</a>
+                                            </div>
+                                        </div>
+                                        <div class="tb-tr">
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check02_1" name="check02" type="checkbox">
+                                                    <label for="check02_1">
+                                                        <i class="ico"></i> <span>개인정보 제3자 제공 안내에 동의함</span>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0)" class="btn teritary lg blackline" data-bs-toggle="modal" data-bs-target="#myModal4">개인정보 제3자 제공안내 약관 보기</a>
+                                            </div>
+                                        </div>
+                                        <div class="tb-tr">
+                                            <div>
+                                                <span class="checkbox">
+                                                    <input id="check03_1" name="check03" type="checkbox">
+                                                    <label for="check03_1">
+                                                        <i class="ico"></i> <span>개인정보 수집 및 이용 안내에 동의함</span>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0)" class="btn teritary lg blackline" data-bs-toggle="modal" data-bs-target="#myModal4">개인정보 수집 및 이용안내 약관 보기</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- [START] 220726 수정 -->                
+                <div class="txt-cp1 mt02"><span class="ast">* </span>만든 관리자 아이디 휴대폰 번호로 임시 비밀번호를 보내드립니다. U+파트너포털에 접속한 후 [마이페이지]에서 임시비밀번호를 변경해 주세요</div>
+                <!-- [END] //220726 수정 -->
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                    <a href="javascript:void(0)" class="btn primary lg fixed">생성</a>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">이미 사용 중인 아이디 입니다.<br>
+                                다른 아이디를 입력해 주세요.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">사용 가능한 아이디입니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">해당 정보로 계정 생성 하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        var myModal2 = new bootstrap.Modal(document.getElementById('myModal2'));
+        var myModal3 = new bootstrap.Modal(document.getElementById('myModal3'));
+        myModal1.show();
+        myModal2.show();
+        myModal3.show();
+    </script>
+</body>
+</html>

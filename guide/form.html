@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
 <script src="../js/jquery.min.js"></script>
@@ -121,6 +121,50 @@
 			</section>
 
 			<section>
+				<h3>FILE UPLOAD</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<section>
+							<div class="form-column input-upload data_room">                          
+								<div class="input-txt">
+									<input type="file" title="" value="" placeholder="">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">등록하기</button>
+								<div class="input-upload loadList">
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+								</div>
+							</div>
+							<p class="txt-bd4">메인용 아이콘  -  형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지 사이즈 : 200*200</p>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="form-column input-upload data_room">                          
+								<div class="input-txt">
+									<input type="file" title="" value="" placeholder="">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">등록하기</button>
+								<div class="input-upload loadList">
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+									<div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+								</div>
+							</div>
+							<p class="txt-bd4">메인용 아이콘  -  형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지 사이즈 : 200*200</p>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+				</div>
+			</section>
+
+			<section>
 				<h3>TEXTAREA</h3>
 				<div class="code_wrap">
 					<div class="mobileWrap">
@@ -156,16 +200,28 @@
 				<div class="code_wrap">
 					<div class="mobileWrap">
 						<section>
-							<div class="input-txt sm datepicker">
-								<input type="text">
+							<div class="calendar">
+								<div class="input-txt sm datepicker">
+									<input type="text">
+								</div>
+								<span class="bar">-</span>
+								<div class="input-txt sm datepicker">
+									<input type="text">
+								</div>
 							</div>
 						</section>
 					</div>
 					<!--code 영역-->
 					<div class="code_html">
 						<pre><code class="hljs html">
-							<div class="input-txt sm datepicker">
-								<input type="text">
+							<div class="calendar">
+								<div class="input-txt sm datepicker">
+									<input type="text">
+								</div>
+								<span class="bar">-</span>
+								<div class="input-txt sm datepicker">
+									<input type="text">
+								</div>
 							</div>
 						</code></pre>
 					</div>
@@ -187,6 +243,8 @@
 									<option>031</option>
 									<option>032</option>
 									<option>041</option>
+									<option>042</option>
+									<option>043</option>
 								</select>
 								<button type="button" id="sel01" class="select-btn">010</button>
 								<div class="select-layer">
@@ -195,6 +253,8 @@
 									<button type="button" class="option" idx='2'>031</button>
 									<button type="button" class="option" idx='3'>032</button>
 									<button type="button" class="option" idx='4'>041</button>
+									<button type="button" class="option" idx='5'>042</button>
+									<button type="button" class="option" idx='6'>043</button>
 								</div>
 							</div>
 							<div class="select-box">
@@ -204,11 +264,18 @@
 									<option>031</option>
 									<option>032</option>
 									<option>041</option>
+									<option>042</option>
+									<option>043</option>
 								</select>
 								<button type="button" id="sel02" class="select-btn" disabled>010</button>
 								<div class="select-layer">
 									<button type="button" class="option on" idx='0'>010</button>
 									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
+									<button type="button" class="option" idx='5'>042</button>
+									<button type="button" class="option" idx='6'>043</button>
 								</div>
 							</div>
 							<p class="guide_title">Small(H40)</p>
@@ -216,6 +283,11 @@
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
+									<option>042</option>
+									<option>043</option>
 								</select>
 								<button type="button" id="sel01" class="select-btn">010</button>
 								<div class="select-layer">
@@ -224,17 +296,29 @@
 									<button type="button" class="option" idx='2'>031</button>
 									<button type="button" class="option" idx='3'>032</button>
 									<button type="button" class="option" idx='4'>041</button>
+									<button type="button" class="option" idx='5'>042</button>
+									<button type="button" class="option" idx='6'>043</button>
 								</div>
 							</div>
 							<div class="select-box sm">
 								<select class="select" tabindex="-1">
 									<option>010</option>
 									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+									<option>041</option>
+									<option>042</option>
+									<option>043</option>
 								</select>
 								<button type="button" id="sel02" class="select-btn" disabled>010</button>
 								<div class="select-layer">
 									<button type="button" class="option on" idx='0'>010</button>
 									<button type="button" class="option" idx='1'>02</button>
+									<button type="button" class="option" idx='2'>031</button>
+									<button type="button" class="option" idx='3'>032</button>
+									<button type="button" class="option" idx='4'>041</button>
+									<button type="button" class="option" idx='5'>042</button>
+									<button type="button" class="option" idx='6'>043</button>
 								</div>
 							</div>
 						</section>
@@ -334,13 +418,13 @@
 								<span class="radio">
 									<input id="radio02_1" name="radio02" type="radio" checked="">
 									<label for="radio02_1">
-										<i class="ico"></i> 라디오1
+										<i class="ico"></i> <span>라디오1</span>
 									</label>
 								</span>
 								<span class="radio">
 									<input id="radio02_2" name="radio02" type="radio">
 									<label for="radio02_2">
-										<i class="ico"></i> 라디오2
+										<i class="ico"></i> <span>라디오2</span>
 									</label>
 								</span>
 							</div>
@@ -366,13 +450,13 @@
 								<span class="checkbox">
 									<input id="check02_1" name="check02" type="checkbox" checked="">
 									<label for="check02_1">
-										<i class="ico"></i> 체크박스1
+										<i class="ico"></i> <span>체크박스1</span>
 									</label>
 								</span>
 								<span class="checkbox">
 									<input id="check02_2" name="check02" type="checkbox">
 									<label for="check02_2">
-										<i class="ico"></i> 체크박스2
+										<i class="ico"></i> <span>체크박스2</span>
 									</label>
 								</span>
 							</div>
@@ -402,13 +486,29 @@
 								<span class="radio">
 									<input id="radio02_1" name="radio02" type="radio" checked="">
 									<label for="radio02_1">
-										<i class="ico"></i> 라디오1
+										<i class="ico"></i> <span>라디오1</span>
 									</label>
 								</span>
 								<span class="radio">
 									<input id="radio02_2" name="radio02" type="radio">
 									<label for="radio02_2">
-										<i class="ico"></i> 라디오2
+										<i class="ico"></i> <span>라디오2</span>
+									</label>
+								</span>
+							</div>
+
+							<!--checkbox Text-->
+							<div>
+								<span class="checkbox">
+									<input id="check02_1" name="check02" type="checkbox" checked="">
+									<label for="check02_1">
+										<i class="ico"></i> <span>체크박스1</span>
+									</label>
+								</span>
+								<span class="checkbox">
+									<input id="check02_2" name="check02" type="checkbox">
+									<label for="check02_2">
+										<i class="ico"></i> <span>체크박스2</span>
 									</label>
 								</span>
 							</div>

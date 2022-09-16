@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="authority_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v4"><div class="slogan">권한관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">권한관리</h2>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:110px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>검색어</span></th>
+                                <td>
+                                    <div class="select-box sm">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택하세요</option>
+                                            <option>관리자아이디</option>
+                                            <option>담당자명</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                            <button type="button" class="option" idx="1">관리자아이디</button>
+                                            <button type="button" class="option" idx="2">담당자명</button>
+                                        </div>
+                                    </div>  
+                                    <div class="input-txt sm ml12 srch">
+                                        <input type="text" title="" value="" maxlength="40">
+                                    </div>  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>
+                </div>
+                <div class="chk_wrap">
+                    <div class="txt-cp1"><span class="ast">*</span> 관리자 아이디를 선택한 후 오른쪽 항목에서 부여할 권한을 선택하고 [저장]을 누르세요</div>
+                    <div class="chk_area">
+                        <div class="chk_cont01 chk_box mt12">
+                            <div class="tb_stl2">
+                                <!-- [D]220812 담당자명 마스킹 처리 -->
+                                <table>
+                                    <caption>아이디 리스트</caption>
+                                    <colgroup>
+                                        <col style="width:65px;">
+                                        <col style="width:162px;">
+                                        <col style="width:162px;">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">선택</th>
+                                            <th scope="col"><a href="javascript:void(0)" class="align_btn">관리자 아이디</a></th>
+                                            <th scope="col"><a href="javascript:void(0)" class="align_btn">담당자 명</a></th>
+                                            <th scope="col"><a href="javascript:void(0)" class="align_btn">아이디 생성 일시</a></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio01" name="radio" type="radio" checked="">
+                                                    <label for="radio01">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA1</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio02" name="radio" type="radio">
+                                                    <label for="radio02">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio03" name="radio" type="radio">
+                                                    <label for="radio03">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio04" name="radio" type="radio">
+                                                    <label for="radio04">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio05" name="radio" type="radio">
+                                                    <label for="radio05">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio06" name="radio" type="radio">
+                                                    <label for="radio06">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio07" name="radio" type="radio">
+                                                    <label for="radio07">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio08" name="radio" type="radio">
+                                                    <label for="radio08">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio09" name="radio" type="radio">
+                                                    <label for="radio09">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio10" name="radio" type="radio">
+                                                    <label for="radio10">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio11" name="radio" type="radio">
+                                                    <label for="radio11">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio12" name="radio" type="radio">
+                                                    <label for="radio12">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="radio">
+                                                    <input id="radio13" name="radio" type="radio">
+                                                    <label for="radio13">
+                                                        <i class="ico"></i>
+                                                    </label>
+                                                </span>
+                                            </td>
+                                            <td>AAA</td>
+                                            <td>홍*동</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="chk_cont02">
+                            <div class="chk_box">
+                                <ul class="depth01">
+                                    <li> 
+                                        <span class="checkbox">
+                                            <input id="check01" name="check01" type="checkbox">
+                                            <label for="check01">
+                                                <i class="ico"></i> <span>서비스관리</span>
+                                            </label>
+                                        </span>
+                                        <ul class="depth02">
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check01_1" name="check01_1" type="checkbox" disabled>
+                                                    <label for="check01_1">
+                                                        <i class="ico"></i> <span>서비스관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check01_2" name="check01_1" type="checkbox">
+                                                    <label for="check01_2">
+                                                        <i class="ico"></i> <span>평점</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check01_3" name="check01_1" type="checkbox">
+                                                    <label for="check01_3">
+                                                        <i class="ico"></i> <span>자주하는 질문</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check01_4" name="check01_1" type="checkbox">
+                                                    <label for="check01_4">
+                                                        <i class="ico"></i> <span>추가정보</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> 
+                                        <span class="checkbox">
+                                            <input id="check02" name="check02" type="checkbox">
+                                            <label for="check02">
+                                                <i class="ico"></i> <span>영업활동관리</span>
+                                            </label>
+                                        </span>
+                                        <ul class="depth02">
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check02_1" name="check02_1" type="checkbox">
+                                                    <label for="check02_1">
+                                                        <i class="ico"></i> <span>견적문의 관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check02_2" name="check02_1" type="checkbox">
+                                                    <label for="check02_2">
+                                                        <i class="ico"></i> <span>무료체험 관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check02_3" name="check02_1" type="checkbox">
+                                                    <label for="check02_3">
+                                                        <i class="ico"></i> <span>체험신청 관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check02_4" name="check02_1" type="checkbox">
+                                                    <label for="check02_4">
+                                                        <i class="ico"></i> <span>고객문의 상담</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check02_5" name="check02_1" type="checkbox">
+                                                    <label for="check02_5">
+                                                        <i class="ico"></i> <span>영상상담 관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> 
+                                        <span class="checkbox">
+                                            <input id="check03" name="check03" type="checkbox">
+                                            <label for="check03">
+                                                <i class="ico"></i> <span>판매관리</span>
+                                            </label>
+                                        </span>
+                                        <ul class="depth02">
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check03_1" name="check03_1" type="checkbox">
+                                                    <label for="check03_1">
+                                                        <i class="ico"></i> <span>진행 현황</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check03_2" name="check03_1" type="checkbox">
+                                                    <label for="check03_2">
+                                                        <i class="ico"></i> <span>판매현황</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check03_3" name="check03_1" type="checkbox">
+                                                    <label for="check03_3">
+                                                        <i class="ico"></i> <span>정산관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> 
+                                        <span class="checkbox">
+                                            <input id="check04" name="check04" type="checkbox">
+                                            <label for="check04">
+                                                <i class="ico"></i> <span>일반관리</span>
+                                            </label>
+                                        </span>
+                                        <ul class="depth02">
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check04_1" name="check04_1" type="checkbox">
+                                                    <label for="check04_1">
+                                                        <i class="ico"></i> <span>계정관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check04_2" name="check04_1" type="checkbox">
+                                                    <label for="check04_2">
+                                                        <i class="ico"></i> <span>권한관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check04_3" name="check04_1" type="checkbox">
+                                                    <label for="check04_3">
+                                                        <i class="ico"></i> <span>API관리</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check04_4" name="check04_1" type="checkbox">
+                                                    <label for="check04_4">
+                                                        <i class="ico"></i> <span>알림설정</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li> 
+                                        <span class="checkbox">
+                                            <input id="check05" name="check05" type="checkbox">
+                                            <label for="check05">
+                                                <i class="ico"></i> <span>파트너지원관리</span>
+                                            </label>
+                                        </span>
+                                        <ul class="depth02">
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check05_1" name="check05_1" type="checkbox">
+                                                    <label for="check05_1">
+                                                        <i class="ico"></i> <span>판매자 가이드</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check05_2" name="check05_1" type="checkbox">
+                                                    <label for="check05_2">
+                                                        <i class="ico"></i> <span>공지사항</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check05_3" name="check05_1" type="checkbox">
+                                                    <label for="check05_3">
+                                                        <i class="ico"></i> <span>자주하는 질문</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="checkbox">
+                                                    <input id="check05_4" name="check05_1" type="checkbox">
+                                                    <label for="check05_4">
+                                                        <i class="ico"></i> <span>1:1문의하기</span>
+                                                    </label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn primary lg fixed">저장</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

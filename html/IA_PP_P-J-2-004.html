@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="join">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal1">아이디중복확인>불가</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal2">아이디중복확인>가능</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal3">주소검색</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal9">주소검색>결과없음</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal4">파일첨부>용량</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal5">파일첨부>형식</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal6">심사요청</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal7">본인인증</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal8">유형변경</button>
+            </div>            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">이미 사용 중인 아이디 입니다.<br>다른 아이디를 입력해 주세요.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">사용 가능한 아이디입니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <!-- [D]220810 전체수정 -->
+            <div class="modal fade addr" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">주소검색</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="form-column">
+                                <div class="input-txt">
+                                    <input type="text" title="" value="" placeholder="도로명/건물번호 입력">
+                                </div>
+                                <button type="button" class="btn teritary lg blackline ml8">검색</button>
+                            </div>
+                            <div class="addr_list">
+                                <ul>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 가양대로 117</a>
+                                            <a href="">서울특별시 마포구 상암동 1667</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 월드컵북로 396 누리꿈스퀘어</a>
+                                            <a href="">서울특별시 마포구 상암동 1605</a>
+                                        </span>
+                                        <span class="zip">03925</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 가양대로 117</a>
+                                            <a href="">서울특별시 마포구 상암동 1667</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 월드컵북로 396 누리꿈스퀘어</a>
+                                            <a href="">서울특별시 마포구 상암동 1605</a>
+                                        </span>
+                                        <span class="zip">03925</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 가양대로 117</a>
+                                            <a href="">서울특별시 마포구 상암동 1667</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 월드컵북로 396 누리꿈스퀘어</a>
+                                            <a href="">서울특별시 마포구 상암동 1605</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 가양대로 117</a>
+                                            <a href="">서울특별시 마포구 상암동 1667</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 월드컵북로 396 누리꿈스퀘어</a>
+                                            <a href="">서울특별시 마포구 상암동 1605</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 가양대로 117</a>
+                                            <a href="">서울특별시 마포구 상암동 1667</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                    <li>
+                                        <span class="addr">
+                                            <a href="">서울특별시 마포구 월드컵북로 396 누리꿈스퀘어</a>
+                                            <a href="">서울특별시 마포구 상암동 1605</a>
+                                        </span>
+                                        <span class="zip">04389</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <!-- [D]220811 추가 -->
+            <div class="modal fade addr" id="myModal9" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">주소검색</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="form-column">
+                                <div class="input-txt">
+                                    <input type="text" title="" value="" placeholder="도로명/건물번호 입력">
+                                </div>
+                                <button type="button" class="btn teritary lg blackline ml8">검색</button>
+                            </div>
+                            <div class="no-result">검색 결과 없습니다.</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal4" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">5MB 이하의 파일을 올려주세요.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- [START] 220726 수정 -->  
+                            <p class="tac info">올릴 수 없는 파일 형식입니다.</p>
+                            <!-- [END] //220726 수정 -->    
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal6" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">최종 심사 요청하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal7" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">정상 인증되었습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal8" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">유형 변경시 정보가 초기화 됩니다.<br>변경하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        var myModal2 = new bootstrap.Modal(document.getElementById('myModal2'));
+        var myModal3 = new bootstrap.Modal(document.getElementById('myModal3'));
+        var myModal4 = new bootstrap.Modal(document.getElementById('myModal4'));
+        var myModal5 = new bootstrap.Modal(document.getElementById('myModal5'));
+        var myModal6 = new bootstrap.Modal(document.getElementById('myModal6'));
+        var myModal7 = new bootstrap.Modal(document.getElementById('myModal7'));
+        var myModal7 = new bootstrap.Modal(document.getElementById('myModal8'));
+        //myModal1.show();
+        //myModal2.show();
+        //myModal3.show();
+        //myModal4.show();
+        //myModal5.show();
+        //myModal6.show();
+        //myModal7.show();
+        //myModal8.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">AAA(판매중지)</h2>                
+                <div class="between_end">
+                    <div>
+                        <span class="fz14 bul point-pink">판매 중지 일시  : 2022-05-15 12:30</span>
+                        <span class="fz14 bul ml30 point-pink">관리자에 의해 판매 중지되었습니다. 자세한 사항은 1:1 문의하기를 통해 문의 해주세요.</span>
+                    </div>
+                    <div class="btn_list">
+                        <!-- 220729 2차 <button class="btn ico_btn07" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">이력확인</button> -->
+                        <button class="btn ico_btn13" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal3">1:1 문의하기</button>
+                    </div>
+                </div>
+                <!-- [START] 220729 문구수정 -->
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">서비스 개요</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (검수필요)</a>
+                    </li>
+                </ul>   
+                <!-- [END] //220729 문구수정 -->
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                        <div class="tb_stl1">
+                            <table>
+                                <caption>도입성공사례 상세</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"><span class="ast">서비스명</span></th>
+                                        <td>AAA</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"><span class="ast">카테고리</span></th>
+                                        <td class="grow">
+                                            <div>솔루션 &gt; 그룹웨어</div>
+                                            <div>솔루션 &gt; 그룹웨어</div>
+                                            <div>솔루션 &gt; 그룹웨어</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <!-- [START] 220726 수정 -->
+                                            <span class="ast">서비스 대표 이미지</span>
+                                            <!-- [END] //220726 수정 -->
+                                            <span>(2개 필수 등록)</span>
+                                        </th>
+                                        <!-- [D]220816 수정 -->
+                                        <td class="grow">
+                                            <div class="thumbnail">
+                                                <div class="thmbn_img">
+                                                    <img src="../images/img_none.png" alt="썸네일 이미지">
+                                                </div>
+                                                <div class="download"><a href="#">MainIcon.jepg</a></div>
+                                            </div>
+                                            <div class="thumbnail">
+                                                <div class="thmbn_img">
+                                                    <img src="../images/img_none.png" alt="썸네일 이미지">
+                                                </div>
+                                                <div class="download"><a href="#">MainIcon.jepg</a></div>
+                                            </div>
+                                        </td>
+                                    </tr> 
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">서비스 한줄 소개</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                     <!-- [START] 220726 수정 -->
+                                                     서비스를 알릴 수 있는 간단한 소개말을 입력해 주세요
+                                                     <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>AAA 그룹웨어는 최고의  솔루션입니다</td>
+                                    </tr>      
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">서비스 태그</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    고객이 원하는 서비스를 검색할 때 노출될 수 있도록 태그를 입력해 주세요. 태그는 3개까지 입력할 수 있습니다<br>예시) 그룹웨어, 메일, 메신저 등 
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="grow">
+                                            <div>그룹웨어</div>
+                                            <div>이메일</div>
+                                            <div>웍스</div>
+                                        </td>
+                                    </tr>        
+                                    <tr>
+                                        <!-- [START] 220726 수정 -->
+                                        <th scope="col" class="tooltip_area">서비스 인터넷 주소
+                                        <!-- [END] //220726 수정 -->
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    서비스를 소개하는 웹이나 앱이 있다면 인터넷 주소를 입력해 주세요
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <!-- [D]220816 수정 -->
+                                        <td class="grow">
+                                            <div class="service_link">
+                                                <span><i class="chk"></i></span>
+                                                <span>웹</span>
+                                                <span>
+                                                    <a href="" class="lnk">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000011</a>
+                                                </span>
+                                            </div>
+                                            <div class="service_link">
+                                                <span></span>
+                                                <span>앱(AOS)</span>
+                                                <span></span>
+                                            </div>
+                                            <div class="service_link">
+                                                <span><i class="chk"></i></span>
+                                                <span>앱(IOS)</span>
+                                                <span>
+                                                    <a href="" class="lnk">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000011</a>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- [START] 220726 삭제 -->
+                                    <!-- <tr>
+                                        <th scope="col" class="tooltip_area">수수료율
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    툴팁 내용
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td class="flex-row">              
+                                            <div class="input-txt">
+                                                <input type="text" title="" value="" placeholder="숫자만 입력해 주세요">
+                                                <span>%</span>
+                                            </div>
+                                        </td>
+                                    </tr> -->
+                                    <!-- [END] //220726 삭제 -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">무료체험 설정상태</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    고객에게 해당 서비스 무료 체험을 제공할 것인지를 선택해 주세요<br>‘사용’ 선택 시 [체험 신청 관리] 메뉴로 고객 요청 입인 시 답변해 주셔야 합니다.
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>사용</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <!-- [D]220831 수정 -->
+                                            <span class="ast">기본요금(부가세 포함)</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    U+비즈마켓 서비스 소개 화면에서 안내할 기본요금을 입력해 주세요
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>127,750원</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">바우처 지원 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    <!-- [START] 220726 수정 -->
+                                                    정부가 지원하는 바우처 상품에 해당되는지 여부를 선택해 주세요
+                                                    <!-- [END] //220726 수정 -->
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>지원없음</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area"><div>서비스 이용약관<span>(1개만 등록 가능)</span></div>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    고객에게 보여질 서비스 이용약관을 등록해 주세요<br>등록하지 않을 경우 U+비즈마켓 공통 약관으로 안내합니다
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <!-- [D]220816 수정 -->
+                                        <td class="download"><a href="#">어떤파일.txt</a></td>
+                                    </tr>
+                                    <!-- 220729 삭제 <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">구매자 일시 정지 가능 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    구매자가 서비스 구매 후 서비스 일시 정지 신청을 가능하게 할 것인지 여부
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>불가능</td>
+                                    </tr> -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">가입 가능 유형</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    해당 서비스 구매가 가능한 유형 선택
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>법인, 개인사업자, 비영리법인</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">중복 가입 가능 여부</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    사업자번호 기준으로 서비스 중복 가입 가능한지 여부
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>가능</td>
+                                    </tr>
+                                    <!-- [START] 220728 수정 -->
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">판매기간</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    해당 서비스 판매할 기간을 선택
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td><span class="date">2022.10.09 12:00 - 2099.12.31 24:00</span></td>
+                                    </tr>
+                                    <!-- [END] //220728 수정 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                </div>  
+                <div class="btn-area">
+                    <button type="button" class="btn primary lg fixed">목록</button>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

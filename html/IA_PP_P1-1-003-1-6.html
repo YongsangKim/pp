@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">AAA(판매중)</h2>
+                <div class="between_end">
+                    <!-- [D]220812문구수정 -->
+                    <span class="fz14 txt-bd4">진행중인 변경 요청 건이 있습니다.(요청 건은 진행중 서비스 리스트에서 확인 해주세요)</span>
+                    <!-- [D]220812삭제 -->
+                    <!-- <div class="btn_list">                        
+                        <div class="tooltip_area">
+                            <div class="tooltip_box">
+                                <button type="button" class="tooltip_ico">?</button>
+                                <div class="tooltip_txt">
+                                    툴팁 내용
+                                    <button type="button" class="tooltip_close">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn ico_btn08" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal2">일시 중지요청</button>
+                        <button class="btn ico_btn02 on" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal3">변경검수</button>
+                    </div> -->
+                </div>
+                <!-- [D]220812탭수정 -->
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 개요</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- [D]220906 수정 -->
+                        <a class="nav-link" href="#">요금 정보 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">요금제 관리 (검수필요)</a>
+                    </li>
+                </ul>   
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                        <div class="tb_stl1">
+                            <table>
+                                <caption>요금제 양식</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">요금제 양식 다운로드</th>
+                                        <td class="between_center pr0">
+                                            <ul>
+                                                <!-- [START] 220726 수정 -->
+                                                <li>- 내려받은 요금제 양식에 맞춰서 작성한 후 등록해 주세요</li>
+                                                <li>- 자세한 등록 방법은 내려받은 파일 안에 있는 설명을 확인해 주세요</li>   
+                                                <!-- [END] //220726 수정 -->                                                 
+                                            </ul>
+                                            <a href="javascript:void(0)" class="btn teritary lg blackline" style="display:none;">양식 다운로드</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">
+                                            <div>
+                                                <span class="ast">요금제 업로드</span>
+                                                <span>(1개만 등록 가능)</span>
+                                            </div>
+                                        </th>
+                                        <td class="download"><a href="#">어떤파일.txt</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- [D]220812삭제 -->
+                        <!-- 요금제 정보 노출 -->
+                        <!-- <div class="tb_stl1 mt06">
+                            <table>
+                                <caption>요금제 양식</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> -->
+                        <!-- //요금제 정보 노출 -->
+                    </div>
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">신청서 보기</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

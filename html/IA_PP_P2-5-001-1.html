@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v2"><div class="slogan">영업활동관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">영상상담 신규설정</h2>
+                <div class="tb_stl1">
+                    <table>
+                        <caption>영상상담 상세 내용</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">서비스명</th>
+                                <td>
+                                    <div class="select-box w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col">영상 상담 제공 여부</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    <span class="radio">
+                                        <input id="radio01_1" name="radio01" type="radio" checked="">
+                                        <label for="radio01_1">
+                                            <i class="ico"></i> <span>미사용</span>
+                                        </label>
+                                    </span>
+                                    <span class="radio">
+                                        <input id="radio01_2" name="radio01" type="radio">
+                                        <label for="radio01_2">
+                                            <i class="ico"></i> <span>사용</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col">상담 가능 요일 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    <span class="checkbox">
+                                        <input id="check01_1" name="check01" type="checkbox" checked="">
+                                        <label for="check01_1">
+                                            <i class="ico"></i> <span>월</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_2" name="check02" type="checkbox">
+                                        <label for="check01_2">
+                                            <i class="ico"></i> <span>화</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_3" name="check02" type="checkbox">
+                                        <label for="check01_3">
+                                            <i class="ico"></i> <span>수</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_4" name="check02" type="checkbox">
+                                        <label for="check01_4">
+                                            <i class="ico"></i> <span>목</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_5" name="check02" type="checkbox">
+                                        <label for="check01_5">
+                                            <i class="ico"></i> <span>금</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_6" name="check02" type="checkbox">
+                                        <label for="check01_6">
+                                            <i class="ico"></i> <span>토</span>
+                                        </label>
+                                    </span>
+                                    <span class="checkbox">
+                                        <input id="check01_7" name="check02" type="checkbox">
+                                        <label for="check01_7">
+                                            <i class="ico"></i> <span>일</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col">상담 가능 시간 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    <div class="flex_cont">
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">6</button>
+                                                <button type="button" class="option" idx="0">7</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">시</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">12</button>
+                                                <button type="button" class="option" idx="0">13</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">분</span>
+                                        <span class="bar">-</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">6</button>
+                                                <button type="button" class="option" idx="0">7</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">시</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">12</button>
+                                                <button type="button" class="option" idx="0">13</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">분</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>  
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col">상담 안 되는 일정 선택</th>
+                                <!-- [END] //220726 수정 -->
+                                <td>
+                                    <div class="flex_cont">
+                                        <div class="chk-wrap mr12">
+                                            <span class="checkbox">
+                                                <input id="check03_1" name="check03" type="checkbox">
+                                                <label for="check03_1">
+                                                    <i class="ico"></i> <span>설정</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                        <div>
+                                            <div class="add_wrap stl2">
+                                                <div class="add_contents">       
+                                                    <div class="input-txt datepicker">
+                                                        <input type="text">
+                                                    </div>
+                                                    <span class="bar">-</span>
+                                                    <div class="input-txt datepicker">
+                                                        <input type="text">
+                                                    </div>
+                                                </div>  
+                                                <button class="add_btn fz0 len10">항목추가</button>
+                                                <span class="txt-bd4 ml30">10개 까지 추가 가능합니다.</span>
+                                            </div>  
+                                            <div class="add_area"></div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>                           
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col" class="grow">상담 안 되는 시간 선택<span>(예시) 점심 시간</span></th>
+                                <!-- [END] //220726 수정 -->                                
+                                <td>
+                                    <div class="flex_cont">
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">6</button>
+                                                <button type="button" class="option" idx="0">7</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">시</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">12</button>
+                                                <button type="button" class="option" idx="0">13</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">분</span>
+                                        <span class="bar">-</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>6</option>
+                                                <option>7</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">6</button>
+                                                <button type="button" class="option" idx="0">7</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">시</span>
+                                        <div class="select-box">
+                                            <select class="select" tabindex="-1">
+                                                <option>선택</option>
+                                                <option>12</option>
+                                                <option>13</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">선택</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">선택</button>
+                                                <button type="button" class="option" idx="0">12</button>
+                                                <button type="button" class="option" idx="0">13</button>
+                                            </div>
+                                        </div>
+                                        <span class="sel-txt">분</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <ul class="pink-list mt02">
+                    <li>상담 불가능 일정이 상담 가능 요일보다 우선입니다.</li>
+                    <li>점심 시간 설정(상담불가시간)이 상담 가능시간 설정보다 우선입니다.</li>
+                </ul>
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                    <a href="javascript:void(0)" class="btn primary lg fixed">저장</a>
+                </div>
+            </div>
+
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

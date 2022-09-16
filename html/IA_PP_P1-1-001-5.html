@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- [START] 220726 수정 -->                
+                <h2 class="tit_h2">서비스 등록</h2>
+                <!-- [END] //220726 수정 -->
+                <div class="between_end">
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">검수요청팝업</button>
+                        <button class="btn ico_btn01 active" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal2">검수요청완료팝업</button>
+                    </div>                    
+                </div>
+            </div>
+            <!-- [START] 220803 추가 -->
+             <!-- Modal -->
+             <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">검수요청 안내</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <p>검수를 요청 하시겠습니까?<br>
+                                ※ 검수 요청 시 수정이 불가하며, 판매대기 또는 반려 시 수정이 가능합니다.<br><br>                                
+                                검수 관련 특이사항은 아래에 입력해주세요.</p>
+                            <div class="txt-area mt05">
+                                <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="내용을 입력해주세요."></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal2">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- [END] //220803 추가 -->
+            <!-- [START] 220803 수정 -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">검수요청 안내</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <p class="tac">검수 요청을 완료했습니다.<br>결과는 이메일과 문자메시지로 알려 드립니다.</p>
+                        </div>
+                        <div class="modal-footer skinny_pd2">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- [END] //220803 수정 -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>    
+</body>
+</html>

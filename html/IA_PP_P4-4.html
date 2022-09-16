@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="authority_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v4"><div class="slogan">알림설정</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">알림설정</h2>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:110px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>서비스</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>관리자아이디</option>
+                                            <option>담당자명</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">관리자아이디</button>
+                                            <button type="button" class="option" idx="2">담당자명</button>
+                                        </div>
+                                    </div>  
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>
+                </div>                
+                <div class="txt-cp1 mt06"><span class="ast">*</span>알림 설정할 서비스를 선택해 주세요</div>
+                <div class="tb_stl2">
+                    <table>
+                        <caption>공지사항 세부 사항</caption>
+                        <colgroup>
+                            <col style="width:58px">
+                            <col>
+                            <col style="width:208px">
+                            <col style="width:208px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col"><a href="javascript:void(0)" class="align_btn">서비스명</a></th>
+                                <th scope="col">서비스 상태</th>
+                                <!-- [START] 220726 수정 -->                    
+                                <th scope="col" class="grow"><a href="javascript:void(0)" class="align_btn">서비스 상태<br>최종 변경일</a></th>
+                                <!-- [END] //220726 수정 -->            
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td class="tal">시간관리 최강자</td>
+                                <td>판매중</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="tal">잘 나가는 영업비밀</td>
+                                <td>검수대기</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="tal">시간관리 최강자</td>
+                                <td>판매중</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="tal">잘 나가는 영업비밀</td>
+                                <td>검수대기</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="tal">시간관리 최강자</td>
+                                <td>판매중</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="tal">잘 나가는 영업비밀</td>
+                                <td>검수대기</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="tal">시간관리 최강자</td>
+                                <td>판매중</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="tal">잘 나가는 영업비밀</td>
+                                <td>검수대기</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="tal">시간관리 최강자</td>
+                                <td>판매중</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="tal">잘 나가는 영업비밀</td>
+                                <td>검수대기</td>
+                                <td>2020-09-08</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="#none">12</a>
+                    <a href="#none">13</a>
+                    <a href="#none">14</a>
+                    <a href="#none">15</a>
+                    <a href="#none">16</a>
+                    <a href="#none">17</a>
+                    <a href="#none">18</a>
+                    <a href="#none">19</a>
+                    <a href="#none">20</a>
+                    <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

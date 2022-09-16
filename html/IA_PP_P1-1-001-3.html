@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- [START] 220726 수정 -->                
+                <h2 class="tit_h2">서비스 등록</h2>
+                <!-- [END] //220726 수정 -->
+                <div class="between_end">
+                    <span class="fz14 txt-bd4">서비스 개요, 소개, 연동정보관리, 요금제 관리 정보를 모두 등록하시면 검수요청이 가능합니다.</span>
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 hover_tooltip disabled">검수요청<span class="tooltip_txt">모든 항목 임시 저장 후에 검수 요청이 가능합니다.</span></button>
+                    </div>
+                </div>
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 개요 (완료)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (작성필요)</a>
+                    </li>
+                    <!-- [START] 220802 문구수정 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">요금 정보 (완료)</a>
+                    </li>
+                    <!-- [END] //220802 문구수정 -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (작성필요)</a>
+                    </li>
+                </ul>   
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="between_end">
+                            <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                            <a href="javascript:void(0)" class="btn teritary lg blackline md fz14">기존 데이터 가져오기</a>
+                        </div>
+                        <div class="tb_stl1">
+                            <table>
+                                <caption>API</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">API소개 및 연동 가이드</th>
+                                        <td class="between_center pr0">
+                                            <ul>
+                                                <!-- [START] 220726 수정 -->
+                                                <li>- 연동 가이드를 확인하고 아래 API 정보를 등록해 주세요</li>
+                                                <li>- API 연동 없이 파트너가 직접 처리하려면 ‘미설정’을 선택해 주세요</li>
+                                                <!-- [END] //220726 수정 -->
+                                            </ul>
+                                            <a href="javascript:void(0)" class="btn teritary lg blackline">API 소개 및 연동 가이드</a>
+                                        </td>
+                                    </tr>
+                                    <!-- [START] 220727 수정 -->
+                                    <tr>
+                                        <th scope="col">연동정보 설정여부</th>
+                                        <td>
+                                            <span class="radio">
+                                                <input id="radio02_1" name="radio02" type="radio" value="unset" checked="">
+                                                <label for="radio02_1">
+                                                    <i class="ico"></i> <span>미설정</span>
+                                                </label>
+                                            </span>
+                                            <span class="radio">
+                                                <input id="radio02_2" name="radio02" type="radio" value="set">
+                                                <label for="radio02_2">
+                                                    <i class="ico"></i> <span>설정</span>
+                                                </label>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <!-- [END] //220727 수정 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- [START] 220727 수정, 220802 api_wrap 추가 -->
+                        <div id="api_wrap">
+                            <div class="api_area mt06">
+                                <p class="tit_h3 be_none">기본정보</p>
+                                <div class="tb_stl1 mt01">
+                                    <table>
+                                        <caption>API</caption>
+                                        <colgroup>
+                                            <col style="width:320px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col"><span class="ast">서비스 연동 URL</span></th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="IP 혹은 도메인 형식입력">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">프록시 IP</span></th>
+                                                <td>
+                                                    <div class="flex_cont">
+                                                        <div class="input-txt input-ip flex-row">
+                                                            <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                            <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                            <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                            <input type="text" title="" value="" maxlength="3">
+                                                        </div>
+                                                        <div class="input-txt input-ip flex-row">
+                                                            <span class="port">Port</span>
+                                                            <input type="text" title="" value="" maxlength="5">
+                                                        </div>
+                                                    </div>
+                                                    <ul class="pink-list mt01">
+                                                        <li>서비스 연동 시스템이 외부에 있을 경우 Front의 Proxy를 타고 접속함.<br>
+                                                            반드시 시스템 운영자와 협의 후 등록하세요. (방화벽 사전 오픈 필요)</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">인증키</span></th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="인증키를 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="api_area mt06">
+                                <p class="tit_h3 be_none">API 연동정보</p>
+                                <div class="tb_stl1 mt01">
+                                    <table>
+                                        <caption>API</caption>
+                                        <colgroup>
+                                            <col style="width:320px">
+                                            <col style="width:240px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><div>비즈마켓 접근 허용 IP<span>(InBound)</span></div></th>
+                                                <th class="bdl"><span class="ast">IP</span><span>(1개 필수, 최대 5개)</span></th>
+                                                <td>
+                                                    <div class="add_wrap">
+                                                        <div class="add_contents">
+                                                            <div class="input-txt input-ip flex-row">
+                                                                <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                                <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                                <input type="text" title="" value="" maxlength="3"><span class="dot">.</span>
+                                                                <input type="text" title="" value="" maxlength="3">
+                                                            </div>
+                                                        </div>
+                                                        <button class="add_btn fz0 len5">항목추가</button>
+                                                    </div>
+                                                    <div class="add_area"></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="rowgroup" rowspan="8"><div>비즈마켓 정보전송 AIP정보<span>(OutBound)</span></div></th>
+                                                <th scope="row" class="bdl">가입신청 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">가입변경 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">가입해지 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">개통 취소 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">일시정지/해제 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">미납정지/해제 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">고객정보 변경 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="bdl">무료체험 API URL</th>
+                                                <td>
+                                                    <div class="input-txt w538">
+                                                        <input type="text" title="" value="" placeholder="URL을 입력해 주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [END] //220727 수정 -->
+                    </div> 
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">임시저장</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        $('#api_wrap').hide();
+        $("input[name='radio02']:radio").change(function () {
+            var val = this.value;
+            if(val == 'set') {
+                $('#api_wrap').show();
+            } else {
+                $('#api_wrap').hide();
+            }
+        });       
+    </script>
+</body>
+</html>

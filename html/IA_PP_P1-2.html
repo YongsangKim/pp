@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="rating_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">평점</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">평점</h2>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:110px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>서비스 명</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>평점 등록일</span></th>
+                                <td>
+                                    <div class="input-txt sm datepicker">
+                                        <input type="text">
+                                    </div>
+                                    <span class="bar">-</span>
+                                    <div class="input-txt sm datepicker">
+                                        <input type="text">
+                                    </div>
+                                    <!-- [D]220906 수정 -->
+                                    <div class="checkbox-group ml30">
+                                        <span class="radio">
+                                            <input id="radio02_1" name="radio02" type="radio" checked="">
+                                            <label for="radio02_1">
+                                                <i class="ico"></i> <span>당일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_2" name="radio02" type="radio">
+                                            <label for="radio02_2">
+                                                <i class="ico"></i> <span>1주일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_3" name="radio02" type="radio">
+                                            <label for="radio02_3">
+                                                <i class="ico"></i> <span>1개월</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_4" name="radio02" type="radio">
+                                            <label for="radio02_4">
+                                                <i class="ico"></i> <span>직접선택</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>
+                </div>
+                <div class="tb_stl2 mt06">
+                    <table>
+                        <caption>평점 정보</caption>
+                        <colgroup>
+                            <col style="width:58px">
+                            <col style="width:440px">
+                            <col style="width:288px">
+                            <col style="width:252px">
+                            <col style="width:320px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">서비스명</th>
+                                <th scope="col">평점</th>
+                                <th scope="col">평점 등록일</th>
+                                <th scope="col">고객 아이디</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>잘 나가는 영업비밀</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>Ca*******</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>결제 한번에 오케이</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>그룹웨어 원라인 서비스</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>시간관리 최강자</td>
+                                <td>
+                                    <span class="star_rating">
+                                        <span class="on"></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </span>
+                                </td>
+                                <td>2020-09-08</td>
+                                <td>wo*******</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="#none">12</a>
+                    <a href="#none">13</a>
+                    <a href="#none">14</a>
+                    <a href="#none">15</a>
+                    <a href="#none">16</a>
+                    <a href="#none">17</a>
+                    <a href="#none">18</a>
+                    <a href="#none">19</a>
+                    <a href="#none">20</a>
+                    <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

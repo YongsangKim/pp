@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -21,7 +21,17 @@
     <div id="wrap">
         <header id="header"></header>
         <div id="container">
-            <div class="key-visual v5"><div class="slogan">공지사항</div></div>
+            <div class="key-visual v5">
+                <div class="slogan">공지사항</div>
+            </div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
             <div class="content">
                 <h2 class="tit_h2">공지사항</h2>
                 <div class="bbs-view">
@@ -49,7 +59,7 @@
 언제나 고객님께 비즈마켓에서 제공하는 솔루션 최고의 경험을 제공하도록 노력하겠습니다.<br>
 감사합니다.
                         </div>
-                        <div class="file-down">
+                        <div class="file-down download">
                             <a href="">개선 내용 상세.pdf</a>
                         </div>
                     </div>
@@ -69,7 +79,9 @@
                     </div>
                 </div>
                 <div class="btn-area">
-                    <a href="javascript:void(0)" class="btn primary lg fixed">목록으로</a>
+                    <!-- [START] 220726 수정 -->                    
+                    <a href="javascript:void(0)" class="btn primary lg fixed">목록으로 이동</a>
+                    <!-- [END] //220726 수정 -->
                 </div>
 
             </div>

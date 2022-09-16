@@ -87,3 +87,16 @@ button {display: inline-block; background: transparent; font-weight: 400; color:
 .code_html {width: 100%; margin-left:0}
 .tab-content{background:#eee}
 .tab-pane{padding:40px}
+
+@media(max-width: 768px) {
+    .container{min-width:auto}
+    .guide main{padding:10px}
+    .guide nav{display:none}
+    .sub_wrap{margin:0 -10px}
+    .code_html{overflow-x:scroll}
+    .code_html pre{width:1000px}
+}
+@media(min-width: 769px) {
+    .guide-width{width:448px}
+}
+.guide #wrap{min-height:auto}

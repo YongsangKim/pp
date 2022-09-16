@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v3"><div class="slogan">진행현황</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">청약관리</h2>   
+                
+                <h4 class="tit_h4 mt06">상품정보 샘플(1)</h4>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>상품 정보 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="col">서비스명</th>
+                                <td>
+                                    <span class="fw-bold">U+웹팩스</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">상품명</th>
+                                <td>
+                                    <span class="fw-bold">웹(WEB)형</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">가입유형</th>
+                                <td>
+                                    <span class="fw-bold">단독가입</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">수신번호 신청여부</th>
+                                <td>
+                                    사용
+                                    <ul class="dotList">
+                                        <li>수신번호는 서비스 신청/개통 완료 후 웹팩스 홈페이지(webfax.uplus.co.kr)에서 관리자 계정으로 접속, 관리자 > 수신번호관리 메뉴에서 신청하시기 바랍니다.</li>
+                                        <li>수신번호 신청 후 정상 연동 시 최저이용료(3,300원)은 부과되지 않으며 패키지 할인 및 하기 약정 기간에 따른 할인 적용된 수신번호 사용료와 종량과금 금액이 청구됩니다.</li>
+                                        <li>월납부 예상금액의 수신번호 요금은 0503번호 제공 기준 산정</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">팩스 예상 최대 발송량</th>
+                                <td>팩스 : 일 400 이내, 월 1000 이내</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">문자 예상 최대 발송량</th>
+                                <td>문자 : 사용, 일 1000 이내, 월 10000 초과</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">자유통화 웹팩스팩 신청 여부</th>
+                                <td>
+                                    미신청
+                                    <ul class="dotList">
+                                        <li>자유통화웹팩스팩이란 ? U+인터넷전화(자유통화요금제)와 U+웹팩스를 결합한 상품으로 웹팩스 수신번호 이용료를 50% 할안된 금액으로 이용할 수 있습니다.</li>
+                                        <li>자유통화웹팩스팩 요금제  :  <a href="" class="lnk">자세히보기 ></a></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">수신번호 이용료 약정기간</th>
+                                <td>
+                                    2년 (10% 할인)
+                                    <ul class="pink-list">
+                                        <li class="point-pink">약정기간 할인은 수신번호 이용료에만 적용되며 약정할인에 따른 이용료는 수신번호 신청 및 연동 완료 후 청구서에서 확인 가능합니다.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">결합상품(관련가입번호)</th>
+                                <td>
+                                    결합할인 미존재
+                                    <ul class="dotList">
+                                        <li>U+ 기업서비스를 이용하신다면 수신이용료가 추가할인됩니다.</li>
+                                        <li>결합할인 대상 상품   :   오피스넷, 전용회선, 070, 시내전화, 웹하드, 그룹웨어, 호스팅 등</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">U+웹팩스 관리자 아이디</th>
+                                <td>wcxv</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">사업자 등록첨부</th>
+                                <td class="download">
+                                    <a href="">XXX.png</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">가입유형</th>
+                                <td>단독가입</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">신청계정수</th>
+                                <td>22</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">약정기간</th>
+                                <td>무약정</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="tit_h4 mt06">상품정보 샘플(2)</h4>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>상품 정보 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="col">웍스 접속 도메인</th>
+                                <td>
+                                    <div class="rt-wrap">
+                                        <div class="w420">
+                                            <div>기본 제공 도메인</div>
+                                            <div>Https:// 1234123cc. Upluswork.co.kr   </div>
+                                        </div>
+                                        <button class="btn teritary lg blackline">중복확인완료</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">웍스 접속 도메인</th>
+                                <td>
+                                    <div class="rt-wrap">
+                                        <div class="w420">
+                                            <div>기본 제공 도메인</div>
+                                            <div>Https:// 1234123cc. Upluswork.co.kr   </div>
+                                        </div>
+                                        <button class="btn teritary lg blackline">중복확인</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">웍스관리자아이디</th>
+                                <td>test1212</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">결합상품(관련가입번호)</th>
+                                <td>U+SMS  (501232323)</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">요청사항</th>
+                                <td>가나다</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">U+근무시간관리 회사아이디(회사명)</th>
+                                <td>
+                                    <div class="rt-wrap">
+                                        <div class="w200">Test1221</div>
+                                        <button class="btn teritary lg blackline">중복확인완료</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">희망 도메인 주소 1순위</th>
+                                <td>http://111.webex.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">평형</th>
+                                <td>50 평</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">동시접속자수</th>
+                                <td>50 명</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">웍스 접속 도메인</th>
+                                <td>
+                                    <div>기본 제공 도메인</div>
+                                    <div>Https:// 1234123cc. Upluswork.co.kr   </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">설치AP대수</th>
+                                <td>2 대</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Trunk 가입번호</th>
+                                <td>타사</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">오피스 365 접속 URL</th>
+                                <td>Test1212</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">라이선스 및 교육비</th>
+                                <td>계정 무제한</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">전용도메인</th>
+                                <td>
+                                    <div>신청</div>
+                                    <div>Https:// 1234123cc. Upluswork.co.kr   </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="tit_h4 mt06">상품정보 샘플(3)</h4>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>상품 정보 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="col">SMS발송번호</th>
+                                <td>
+                                    <div>휴대폰번호</div>
+                                    <div>01023235342</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">통신서비스 이용증명원</th>
+                                <td class="download">
+                                    <a href="">XXX.png</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">사업자등록첨부</th>
+                                <td class="download">
+                                    <a href="">XXX.png</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col" rowspan="5">상품선택</th>
+                                <td>베이직 (월 9,900원)   1 계정</td>
+                            </tr>
+                            <tr>
+                                <td>스탠다드 (월 9,900원)   1 계정</td>
+                            </tr>
+                            <tr>
+                                <td>골드 (월 9,900원)   1 계정</td>
+                            </tr>
+                            <tr>
+                                <td>프리미엄 (월 9,900원)   1 계</td>
+                            </tr>
+                            <tr>
+                                <td>스마트 (월 9,900원)   1 계정</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">U+오피스넷(기업인터넷) 가입번호</th>
+                                <td>23232323</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">패키지 할인</th>
+                                <td>
+                                    <div>신청(5% 추가할인)</div>
+                                    <div>(가나다)</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">기존페키지</th>
+                                <td>* 신청</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">라이브클래스 사용 도메인 1순위</th>
+                                <td>https://sdkjfkdf.co.kr/login</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">방문 설치 신청</th>
+                                <td>
+                                    미신청
+                                    <ul class="dotList">
+                                        <li>방문 설치 신청 시 1회만 청구됩니다.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 class="tit_h4 mt06">부가서비스 정보 샘플</h4> 
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>부가서비스 정보 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="col">부가서비스</th>
+                                <td>
+                                    <div>멀티도메인 - 월 5,500 원</div>
+                                    <div>오피스 용량증설 - 월 11,000원(5G당),   5 GB,   10 개</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">부가서비스</th>
+                                <td>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                    <div>휴대폰 앱 - 월 1,100원(1계정당),   5  계정</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">부가서비스</th>
+                                <td>
+                                    <div>보안 장비 - 월 96,800 원</div>
+                                    <div>PoE8 포트 - 월 27,500 원</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">부가서비스</th>
+                                <td>
+                                    <div>계정 추가 - 월 5,500 원(월 1계정) ,   5 계정</div>
+                                    <div>계정 추가 - 월 5,500 원(월 1계정) ,   5 계정</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="tit_h4 mt06">월 납부금액 정보 샘플</h4>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>월 납부금액 정보 상세</caption>
+                        <colgroup>
+                            <col width="25%">
+                            <col>
+                        </colgroup>                        
+                        <tbody>
+                            <tr>
+                                <th scope="col">월 납부금액</th>
+                                <td>
+                                    월 <strong class="point-pink">2,318,800</strong> 원 (부가세 포함)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">상품요금</th>
+                                <td>15인 (531,300원)</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">할인요금</th>
+                                <td>
+                                    <div>- 약정기간 : 무약정</div>
+                                    <div>- 결합할인 : 5% 추가할인</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">부가서비스 요금</th>
+                                <td>
+                                    <div>1,677,500 원</div>
+                                    <div>- 계정 추가 (5계정) - 용량증설 (5 TB)</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //[D]220812 테이블구조변경 -->
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

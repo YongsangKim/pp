@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="sub_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v2"><div class="slogan">영업활동관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">무료체험 관리</h2>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:160px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>서비스명</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>무료 체험 설정 상태</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel02" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>
+                </div>
+                <div class="tb_scr">
+                    <ul class="pink-list">
+                        <li>무료체험 설정상태’가 ‘미사용’ 상태일 경우 홈페이지에서 ‘무료 체험 ’ 버튼이 노출되지 않습니다.</li>
+                        <li>각 항목을 눌러서 무료체험 설정상태를 변경할 수 있습니다.</li>
+                    </ul>
+                    <div class="table-area">
+                        <div class="tb_stl2 mt01">
+                            <table>
+                                <caption>무료체험</caption>
+                                <colgroup>
+                                    <col style="width:80px">
+                                    <col>
+                                    <col style="width:200px">
+                                    <col style="width:200px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col"><a href="javascript:void(0)" class="align_btn">서비스명</a></th>
+                                        <th scope="col">무료 체험 설정 상태</th>
+                                        <th scope="col"><a href="javascript:void(0)" class="align_btn">최근 설정 변경일</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td class="tal">
+                                            <div class="txt-ellipsis">
+                                                <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                            </div>
+                                        </td>
+                                        <td>미사용</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="#none">12</a>
+                    <a href="#none">13</a>
+                    <a href="#none">14</a>
+                    <a href="#none">15</a>
+                    <a href="#none">16</a>
+                    <a href="#none">17</a>
+                    <a href="#none">18</a>
+                    <a href="#none">19</a>
+                    <a href="#none">20</a>
+                    <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

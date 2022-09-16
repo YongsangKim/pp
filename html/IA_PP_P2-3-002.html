@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v2"><div class="slogan">체험신청관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">체험신청 관리</h2>
+                <h4 class="tit_h4">고객정보</h4>
+                <div class="tb_stl1 mt02">
+                    <table>
+                        <caption>고객정보 상세 내용</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">회원 유형</th>
+                                <td>법인사업자</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">회사명</th>
+                                <td>굿컴퍼니</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">고객명</th>
+                                <td>홍길동</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">고객아이디</th>
+                                <td>dbskdkf</td>
+                            </tr>
+                            <!-- 220801 삭제 <tr>
+                                <th scope="col">서비스명</th>
+                                <td>AAA</td>
+                            </tr> -->
+                            <tr>
+                                <th scope="col">연락처</th>
+                                <td>010-7565-5678</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">메일 주소</th>
+                                <td>abc@naver.com</td>
+                            </tr>
+                            <!-- 220801 삭제 <tr>
+                                <th scope="col">문의등록일시</th>
+                                <td>2021-09-08 11:54</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- [START] 220801 수정 -->
+                <h4 class="tit_h4 mt06">상담정보</h4>
+                <div class="tb_stl1 mt02">
+                    <table>
+                        <caption>상담정보 상세 내용</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">처리상태</th>
+                                <td>처리완료</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">문의등록일시</th>
+                                <td class="date">2021-09-08 11:54</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">답변일시</th>
+                                <td class="date">2021-09-08 11:54</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">처리 담당자 ID / 담당자명</th>
+                                <td>Eksldg(대표아이디) / 홍길동</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4 class="tit_h4 mt06">상담내역</h4>
+                <div class="tb_stl1 ask mt01">
+                    <table>
+                        <caption>상담내역 상세</caption>
+                        <colgroup>
+                            <col style="width:328px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">서비스명</th>
+                                <td>AAA</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">문의내용</th>
+                                <td class="grow">
+                                    회사명 : 굿컴퍼니<br>
+                                    담당자명 : 홍길동<br><br>
+                                    서비스 체험 요청 드립니다
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                <h4 class="tit_h4 mt06">답변하기</h4>
+                <div class="tb_stl1 ask mt01">
+                    <table>
+                        <caption>답변하기 상세</caption>
+                        <colgroup>
+                            <col style="width:328px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">답변</th>
+                                <td class="grow">
+                                    안녕하세요  U+비즈마켓입니다.<br>
+                                    요청하신 AAA 서비스에 대한 무료체험 방법을 안내해 드립니다.<br><br>
+                                    - 무료체험 접속 URL : http:// XXX.XXX.co.kr<br>
+                                    - 접속 계정 : BBB<br>
+                                    - 접속 비밀번호 : CCC<br><br>
+                                    감사합니다.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+                <!-- [END] //220801 수정 -->               
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn primary lg fixed">목록</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

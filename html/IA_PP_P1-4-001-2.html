@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="intrd_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">추가정보</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">도입성공사례</h2>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>도입성공사례 상세</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col"><span class="ast">서비스 상태</span></th>
+                                <td>판매대기</td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">서비스</span></th>
+                                <td>AAA</td>
+                            </tr>    
+                            <tr>
+                                <th scope="col"><span class="ast">업종</span></th>
+                                <td>의료</td>
+                            </tr>   
+                            <tr>
+                                <th scope="col"><span class="ast">제목</span></th>
+                                <td>AAA솔루션을 사용하고 업무 효율이 높아졌습니다.</td>
+                            </tr>   
+                            <tr>
+                                <!-- [START] 220726 수정 -->
+                                <th scope="col"><span class="ast">대표 이미지</span></th>
+                                <!-- [END] //220726 수정 -->  
+                                <td class="grow">
+                                    <div class="thumbnail">
+                                        <div class="thmbn_img">
+                                            <img src="../images/img_none.png" alt="썸네일 이미지">
+                                        </div>
+                                        <a href="#" class="download">MainIcon.jepg</a>
+                                    </div>
+                                </td>
+                            </tr>                          
+                        </tbody>
+                    </table>
+                    <div class="tb_stl1 bd1 mt06">
+                        <table>
+                            <caption>본문</caption>
+                            <colgroup>
+                                <col style="width:320px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col"><span class="ast">본문</span></th>
+                                    <td>
+                                        <!-- [START] 220728 수정 -->
+                                        <div class="select-box sm w_st1">
+                                            <select class="select" tabindex="-1">
+                                                <option>전체</option>
+                                                <option>02</option>
+                                                <option>031</option>
+                                                <option>032</option>
+                                                <option>041</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn" disabled>전체</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx='0'>전체</button>
+                                                <button type="button" class="option" idx='1'>02</button>
+                                                <button type="button" class="option" idx='2'>031</button>
+                                                <button type="button" class="option" idx='3'>032</button>
+                                                <button type="button" class="option" idx='4'>041</button>
+                                            </div>
+                                        </div>
+                                        <!-- [END] //220728 수정 -->
+                                        <p class="mt04">지인 추천으로 AAA솔루션을 사용하게 되었습니다.</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tb_stl1 bd1 mt06">
+                        <table>
+                            <caption>본문</caption>
+                            <colgroup>
+                                <col style="width:320px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col"><span class="ast">본문</span></th>
+                                    <td>
+                                        <!-- [START] 220728 수정 -->
+                                        <div class="select-box sm w_st1">
+                                            <select class="select" tabindex="-1">
+                                                <option>이미지</option>
+                                                <option>02</option>
+                                                <option>031</option>
+                                                <option>032</option>
+                                                <option>041</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn" disabled>이미지</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx='0'>이미지</button>
+                                                <button type="button" class="option" idx='1'>02</button>
+                                                <button type="button" class="option" idx='2'>031</button>
+                                                <button type="button" class="option" idx='3'>032</button>
+                                                <button type="button" class="option" idx='4'>041</button>
+                                            </div>
+                                        </div>
+                                        <!-- [END] //220728 수정 -->
+                                        <div class="thumbnail mt04">
+                                            <div class="thmbn_img">
+                                                <img src="../images/img_none.png" alt="썸네일 이미지">
+                                            </div>
+                                            <a href="#" class="download">MainIcon.jepg</a>
+                                        </div>
+                                        <div class="caption">
+                                            <strong>대체 텍스트(선택)</strong>
+                                            <div>
+                                                <span>솔루션, 그룹웨어</span>
+                                                <p class="txt-bd4">대체텍스트는 이미지를 표현하는 문구로 자유롭게 입력 가능합니다. (최대 20자)</p>
+                                            </div>
+                                        </div>
+                                        <div class="caption">
+                                            <strong>연결 URL(선택)</strong>
+                                            <div>
+                                                <span>http://www.XXX.co.kr</span>
+                                                <p class="txt-bd4">연결URL은 이미지에 페이지 또는 사이트 연결이 필요할 경우에만 입력해주세요.</p>
+                                            </div>
+                                            <span class="checkbox">
+                                                <input id="check02_1" name="check02" type="checkbox" checked="">
+                                                <label for="check02_1">
+                                                    <i class="ico"></i> <span>새창으로 열기</span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn lg fixed">삭제</button>
+                    <button type="button" class="btn lg fixed">목록</button>
+                    <button type="button" class="btn primary lg fixed">수정</button>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="mypage">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v6"><div class="slogan">마이페이지</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="nav stl1 justify-content-center">
+                    <h2 class="nav-item">
+                        <a class="nav-link">회원정보 변경</a>
+                    </h2>
+                    <h2 class="nav-item">
+                        <!-- [START] 220718 문구수정, br추가 -->
+                        <a class="nav-link active">약관 확인 및<br class="pc-hide"> 수신 변경</a>
+                        <!-- [END] //220718 문구수정, br추가 -->
+                    </h2>
+                    <h2 class="nav-item">
+                        <a class="nav-link">회사정보 변경</a>
+                    </h2>
+                </div>
+                <div class="tab-content">
+                    <!-- [START] 220718 추가 -->
+                    <h3 class="tit_h4 hr">필수 동의 약관</h3>
+                    <div class="between_center">
+                        <div class="graybox titbox1">
+                            <p class="tit">파트너포털 서비스 이용약관 (필수)</p>
+                            <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal2">보기</button>
+                        </div>
+                        <div class="graybox titbox1">
+                            <p class="tit">개인정보 수집 및 이용 안내 (필수)</p>
+                            <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal3">보기</button>
+                        </div>
+                    </div>
+                    <div class="between_center">
+                        <div class="graybox titbox1">
+                            <p class="tit">개인정보 제3자 제공 안내 (필수)</p>
+                            <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal4">보기</button>
+                        </div>
+                        <div class="graybox titbox1">
+                            <p class="tit">개인정보 처리 위탁 (필수)</p>
+                            <button type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal5">보기</button>
+                        </div>
+                    </div>
+                    <h3 class="tit_h4 hr mt06">선택 동의 약관</h3>
+                    <!-- [END] //220718 추가 -->
+                    <!-- [START] 220718 mt06 삭제 -->
+                    <div class="between_center">
+                    <!-- [END] //220718 mt06 삭제 -->
+                        <div class="graybox">
+                            <!-- [START] 220718 수정 -->
+                            <div class="titbox2"><p class="tit">고객혜택을 위한 광고 수신 동의(선택)</p><button>보기</button></div>
+                            <div class="graybox_cont">
+                                <div class="between_center">
+                                    <span class="radio">
+                                        <input id="radio01_1" name="radio01" type="radio" checked="">
+                                        <label for="radio01_1">
+                                            <i class="ico"></i> <span>동의</span>
+                                        </label>
+                                    </span>
+                                    <span class="radio">
+                                        <input id="radio01_2" name="radio01" type="radio">
+                                        <label for="radio01_2">
+                                            <i class="ico"></i> <span>거부</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="dotted">변경이력 : 2022.03.01</div>  
+                            </div>           
+                            <!-- [END] //220718 수정 -->              
+                        </div>
+                        <div class="graybox">
+                            <!-- [START] 220718 수정 -->
+                            <div class="titbox2"><p class="tit">이메일</p></div>
+                            <div class="graybox_cont">
+                                <div class="between_center">
+                                    <span class="radio">
+                                        <input id="radio02_1" name="radio02" type="radio" checked="">
+                                        <label for="radio02_1">
+                                            <i class="ico"></i> <span>수신동의</span>
+                                        </label>
+                                    </span>
+                                    <span class="radio">
+                                        <input id="radio02_2" name="radio02" type="radio">
+                                        <label for="radio02_2">
+                                            <i class="ico"></i> <span>수신거부</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="dotted">변경이력 : 2022.03.01</div>  
+                            </div> 
+                            <!-- [END] //220718 수정 --> 
+                        </div>
+                        <div class="graybox">
+                            <!-- [START] 220718 수정 -->
+                            <div class="titbox2"><p class="tit">SMS/MMS</p></div>
+                            <div class="graybox_cont">
+                                <div class="between_center">
+                                    <span class="radio">
+                                        <input id="radio03_1" name="radio03" type="radio" checked="">
+                                        <label for="radio03_1">
+                                            <i class="ico"></i> <span>수신동의</span>
+                                        </label>
+                                    </span>
+                                    <span class="radio">
+                                        <input id="radio03_2" name="radio03" type="radio">
+                                        <label for="radio03_2">
+                                            <i class="ico"></i> <span>수신거부</span>
+                                        </label>
+                                    </span>
+                                </div>
+                                <div class="dotted">변경이력 : 2022.03.01</div>  
+                            </div> 
+                            <!-- [END] //220718 수정 -->
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">저장</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">정상 저장되었습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">파트너포털 서비스 이용약관</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="scroll_box">
+                                <div class="text_area">
+                                    <pre>
+제 1 조 (목적)
+본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.
+
+제 2조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.
+
+제 3조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">개인정보 수집 및 이용 안내</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="scroll_box">
+                                <div class="text_area">
+                                    <pre>
+제 1 조 (목적)
+본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.
+
+제 2조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.
+
+제 3조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal4" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">개인정보 제3자 제공 안내</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="scroll_box">
+                                <div class="text_area">
+                                    <pre>
+제 1 조 (목적)
+본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.
+
+제 2조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.
+
+제 3조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">개인정보 처리 위탁</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="scroll_box">
+                                <div class="text_area">
+                                    <pre>
+제 1 조 (목적)
+본 약관은 주식회사 LG유플러스(이하 ‘회사’)가 운영하는 U+비즈마켓 서비스(이하 ‘서비스’)를 이용함에 있어 필요한 그 이용조건 및 절차에 관한 사항을 정함을 목적으로 합니다.
+
+제 2조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 오피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용신청 등을 제공하는 서비스를 말합니다.
+
+제 3조 (용어의 정의)
+본 약관에서 사용하는 용어의 정의는 다음 각 호와 같습니다.
+
+1. ‘서비스’란 “회사” 에서 제공하는 웍스서비스, 근무시간관리서비스, 문서중앙화서비스, 피스365서비스, 얼마에요ERP 서비스, 프리미엄와이파이서비스, 호스팅서비스 등의 기업서비스(이하 “기업서비스”)의 안내 및 서비스 이용 신청 등 을 제공하는 서비스를 말합니다.
+                                    </pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>    
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

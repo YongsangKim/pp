@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -24,19 +24,31 @@
             <div class="content">
                 <!-- Modal -->
                 <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p class="tac">해당 사업자번호로 기 등록된 대표아이디가 존재합니다.<br>
-                                    아이디를 모르실 경우 아이디 찾기를 이용하시거나<br>
-                                    새롭게 가입하는 것도 가능합니다.</p>
+                                <!-- [start] 220726 문구 수정 -->
+                                <p class="tac mt07">등록한 휴대폰 번호로 인증번호를 보냈습니다</p>
+                                <!-- [end] 220726 문구 수정 -->
+                                <p class="tac txt-num">010-****-1234</p>
+                                <div class="form-column">
+                                    <div class="input-txt">
+                                        <input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+                                    </div>
+                                    <!-- [D]220810 버튼명수정 -->
+                                    <button type="button" class="btn teritary lg blackline ml8">재전송</button>
+                                    <p class="error-txt tal">남은시간 03:00</p>
+                                </div>
+                                <!-- [START] 220802 추가 -->
+                                <div class="txt-bd4 mt4">인증번호가 발송되었습니다.</div>
+                                <!-- [END] //220802 추가 -->
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                                <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
                             </div>
                         </div>
                     </div>

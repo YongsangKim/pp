@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script src="../js/masonry.pkgd.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+    <div id="wrap" class="main">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <div class="between_center">
+                    <div class="main_date">3월 8일 화요일 09:15</div>
+                    <a href="javascript:void(0)" class="btn teritary lg blackline refresh" role="button">새로고침</a>
+                </div>
+                <div class="grid">
+                    <div class="dash_cont">
+                        <div class="between_center">
+                            <h2 class="tit_h3">고객문의상담</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st01">
+                            <ul>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>총 미처리건<span class="sm">(최근 7일 기준)</span></span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 접수건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont">                        
+                        <div class="between_center">
+                            <h2 class="tit_h3">체험신청관리</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st01">
+                            <ul>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>총 미처리건<span class="sm">(최근 7일 기준)</span></span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 접수건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont">                        
+                        <div class="between_center">
+                            <h2 class="tit_h3">견적문의관리</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st01">
+                            <ul>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>총 미처리건<span class="sm">(최근 7일 기준)</span></span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 접수건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont dash01">                        
+                        <div class="between_center">
+                            <h2 class="tit_h3">판매현황</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>                        
+                        <div class="radio_area">
+                            <span class="radio">
+                                <input id="radio01_1" name="radio01" type="radio" checked="">
+                                <label for="radio01_1">
+                                    <i class="ico"></i><span>월간</span>
+                                </label>
+                            </span>
+                            <span class="radio">
+                                <input id="radio01_2" name="radio01" type="radio">
+                                <label for="radio01_2">
+                                    <i class="ico"></i><span>주간</span>
+                                </label>
+                            </span>
+                            <span class="radio">
+                                <input id="radio01_3" name="radio01" type="radio">
+                                <label for="radio01_3">
+                                    <i class="ico"></i><span>일간</span>
+                                </label>
+                            </span>
+                        </div>
+                        <div>
+                            <ul class="between_center mo-br">
+                                <li>
+                                    <div class="between_center g_st03">
+                                        <span>당일 판매 금액</span>
+                                        <div class="num">1,200,000<small>원</small></div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="between_center">
+                                            <h3>일간 판매 금액 추이</h3>
+                                            <span>(단위 : 천원)</span>
+                                        </div>
+                                        <div class="chart_area">
+                                            <img src="../images/chart_ex.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="between_center g_st03">
+                                        <span>당일 판매 건수</span>
+                                        <div class="num">10<small>건</small></div>
+                                    </div>
+                                    <div class="chart">
+                                        <div class="between_center">
+                                            <h3>일간 판매 금액 추이</h3>
+                                            <span>(단위 : 건)</span>
+                                        </div>
+                                        <div class="chart_area">
+                                            <img src="../images/chart_ex.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont">
+                        <div class="between_center">
+                            <h2 class="tit_h3">판매서비스 현황</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st02">
+                            <ul class="fl_wrap">
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>판매중</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>판매 대기</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>일시 중지</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>판매 중지</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont">
+                        <div class="between_center">
+                            <h2 class="tit_h3">무료체험관리</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st02">
+                            <ul>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>사용 서비스</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>미사용 서비스</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont dash02">
+                        <div class="between_center">
+                            <h2 class="tit_h3">진행현황 <span>(신규개통/변경요청건)</span></h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st01 hr">
+                            <h3>신규 개통 요청건</h3>
+                            <ul class="fl_wrap">
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>총 미처리건<span class="sm">(최근 7일 기준)</span></span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 접수건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="g_st g_st01 mt02">
+                            <h3>변경 개통 요청건</h3>
+                            <ul class="fl_wrap">
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>총 미처리건<span class="sm">(최근 7일 기준)</span></span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 접수건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                                <li>
+                                    <span class="num">5</span>
+                                    <span>당일 답변건</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont">
+                        <div class="between_center">
+                            <h2 class="tit_h3">영상상담 설정현황</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st02">
+                            <ul>
+                                <li>
+                                    <span class="num">4</span>
+                                    <span>사용 서비스</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>미사용 서비스</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont guide_area">
+                        <div class="between_center">
+                            <h2 class="tit_h3">판매자 가이드 다운로드</h2>
+                            <a href="javascript:void(0)" class="btn teritary md down">다운로드</a>
+                        </div>
+                        <div class="between_center mo-block">
+                            <p>추가 문의사항은 자주 하는 질문을 확인하거나<br class="mo-hide">파트너포털 고객센터 1544-7003(유료)로 문의해 주세요</p>
+                        </div>
+                        <div class="swiper guide_banner">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide guide_bn01">
+                                    <a href="#">
+                                        <!-- <img src="../images/banner_bg01.jpg" alt=""> -->
+                                        <div class="banner_txt">
+                                            <p class="txt01">얼마에요 ERP 도입 후 매출 1위!</p>
+                                            <p class="txt02">#비하인드 #대공개 #왜비즈마켓인가</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide guide_bn02">
+                                    <a href="#"></a>
+                                        <!-- <img src="../images/banner_bg01.jpg" alt=""> -->
+                                        <div class="banner_txt">
+                                            <p class="txt01">얼마에요 ERP 도입 후 매출 1위!</p>
+                                            <p class="txt02">#비하인드 #대공개 #왜비즈마켓인가</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide guide_bn03">
+                                    <a href="#">
+                                        <!-- <img src="../images/banner_bg01.jpg" alt=""> -->
+                                        <div class="banner_txt">
+                                            <p class="txt01">얼마에요 ERP 도입 후 매출 1위!</p>
+                                            <p class="txt02">#비하인드 #대공개 #왜비즈마켓인가</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="pagination-wrap">
+                                <span class="guide_pagination"></span>
+                                <span class="autoplay-toggle" tabindex="0" role="button"><img src="../images/ico_stop.png" alt="정지"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash_cont">
+                        <div class="between_center">
+                            <h2 class="tit_h3">관리자아이디 현황</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <div class="g_st g_st02">
+                            <ul>
+                                <li>
+                                    <span class="num">15</span>
+                                    <span>관리자<br class="pc-hide"> 아이디 수</span>
+                                </li>
+                                <li>
+                                    <span class="num">3</span>
+                                    <span>관리자 아이디<br class="pc-hide"> 휴면 계정</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dash_cont m_notice">
+                        <div class="between_center">
+                            <h2 class="tit_h3">공지사항</h2>
+                            <a href="#" class="main_link">상세페이지로 이동</a>
+                        </div>
+                        <ul class="dotList">
+                            <li class="fw-bold">
+                                <a href="#">
+                                    <span>비즈마켓 파트너를 위한 프로그램 안내</span>
+                                    <span class="date">21-03-08</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>비즈마켓 정기 점검 안내</span>
+                                    <span class="date">21-02-25</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>파트너 패키지 상품 할인 프로모션</span>
+                                    <span class="date">21-02-05</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span>파트너 협업 프로그램 안내</span>
+                                    <span class="date">21-01-27</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>    
+        //대시보드
+        setTimeout(function() {
+            $('.grid').masonry({
+                itemSelector: '.dash_cont',
+                gutter: 24
+            });
+        }, 50);
+
+        //대시보드 - 판매자 가이드 슬라이드
+        var guide_swiper = new Swiper(".guide_banner", {
+            pagination: {
+                el: ".guide_pagination",
+                type: "fraction",
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,  
+            on: {
+                init: function () {
+                    var toggleBtn = $(".guide_banner .autoplay-toggle")
+                    toggleBtn.click(function(){
+                        toggleBtn.toggleClass("on");
+                        if(toggleBtn.hasClass("on")){
+                            $(this).find('img').attr({src:"../images/ico_start.png", alt:"시작"});
+                            guide_swiper.autoplay.stop();
+                        }else{
+                            guide_swiper.autoplay.start();
+                            $(this).find('img').attr({src:"../images/ico_stop.png", alt:"정지"});
+                        }
+                    })
+                },
+            },
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
     <title>Document</title>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/common.js"></script>
@@ -21,22 +21,35 @@
     <div id="wrap">
         <header id="header"></header>
         <div id="container">
-            <div class="key-visual v5"><div class="slogan">공지사항</div></div>
+            <div class="key-visual v5">
+                <div class="slogan">공지사항</div>
+            </div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
             <div class="content">
                 <h2 class="tit_h2">공지사항</h2>
                 <div class="bbs-search">
                     <div class="input-txt sm">
-                        <input type="text" title="" value="" placeholder="찾고 있는 내용을 검색해보세요">
+                        <!-- [START] 220726 수정 -->                        
+                        <input type="text" title="" value="" placeholder="찾는 내용을 검색해 보세요">
+                        <!-- [END] //220726 수정 -->
                     </div>
                     <button type="button" class="btn teritary md ml5">검색</button>
                 </div>
-                <div class="tb_stl2 bbs">
+                <!-- 220711 class 변경 -->
+                <div class="tb_stl2 notice">
                     <table>
                         <caption>공지사항</caption>
                         <colgroup>
-                            <col width="60">
-                            <col width="">
-                            <col width="172">
+                            <col style="width:60px;">
+                            <col>
+                            <col style="width:172px;">
                         </colgroup>
                         <thead>
                             <tr>
@@ -45,9 +58,6 @@
                                 <th scope="col">게시일</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr class="nodata"><td colspan="3"><span>검색 결과가 없습니다.</span></td></tr>
-                        </tfoot>
                         <tbody>
                             <tr>
                                 <td>10</td>

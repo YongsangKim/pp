@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="login">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <div class="inquiry">
+                    <!-- [START] 220726 수정 -->
+                    <h2 class="tit_h2">준회원 비밀번호 변경</h2>    
+                    <!-- [END] //220726 수정 -->
+                    <p class="txt-bd3 hr">새로운 비밀번호를 설정해 주세요</p>
+                    <div class="form_box">
+                        <div class="form-column">
+                            <div class="label">새 비밀번호</div>
+                            <div class="input-txt">
+                                <input type="password" title="" value="" placeholder="새 비밀번호를 입력해주세요">
+                            </div>
+                            <!-- <p class="error-txt">에러텍스트</p> -->
+                        </div>     
+                        <div class="form-column">
+                            <div class="label">새 비밀번호 확인</div>
+                            <div class="input-txt">
+                                <input type="password" title="" value="" placeholder="새 비밀번호를 다시 입력해주세요">
+                            </div>
+                            <!-- <p class="error-txt">에러텍스트</p> -->
+                        </div>    
+                        <!-- [START] 220712 div추가 버튼 클래스 mt05삭제 -->
+                        <div class="btn-area">
+                            <a href="javascript:void(0)" class="btn primary lg w100p">비밀번호 변경</a>
+                        </div>
+                        <!-- [END] //220712 div추가 버튼 클래스 mt05삭제 -->
+                    </div>
+                    <!-- [START] 220712 mt07클래스 추가-->
+                    <div class="dotList mt07">
+                    <!-- [END] //220712 mt07클래스 추가-->
+                        <p>꼭 확인하세요!</p>
+                        <ul>
+                            <li>비밀번호 변경 완료 이후에는 신규 비밀번호로 로그인하십시오.</li>
+                            <li>안전한 패스워드 사용을 위해 영문 대소문자, 숫자, 특수문자 조합으로 8자리 이상 설정하십시오.</li>
+                            <li>안전한 패스워드 사용을 위해 영문 대소문자, 숫자 조합으로 10자리 이상으로 설정하십시오.</li>
+                            <li>비밀번호로 생년월일, 주민등록번호 앞자리, 핸드폰 번호 등의 개인정보는 사용 하지 마십시오.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">비밀번호 변경이 정상적으로 처리되었습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <!-- [D]220829 삭제 -->
+        <!-- <footer id="footer"></footer> -->
+    </div>    
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

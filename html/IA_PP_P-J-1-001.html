@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="join">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal1">사업자번호 가입여부 확인 중복 시</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal2">사업자번호 가입여부 확인 정상 시</button>
+                <!-- Modal -->
+                <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header r_close">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="tac info">해당 사업자번호로 기 등록된 대표아이디가 존재합니다.<br>
+                                    아이디를 모르실 경우 아이디 찾기를 이용하시거나<br>
+                                    새롭게 가입하는 것도 가능합니다.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn black lg fixed" data-bs-dismiss="modal">아이디 찾기</button>
+                                <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">계속 가입</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Modal -->
+                <!-- Modal -->
+                <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header r_close">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p class="tac info">기존 대표 아이디가 존재하지 않습니다.<br>
+                                    약관 동의후 가입을 진행하시기 바랍니다.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Modal -->
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        // var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        // var myModal2 = new bootstrap.Modal(document.getElementById('myModal2'));
+        // myModal1.show();
+        // myModal2.show();
+    </script>
+</body>
+</html>

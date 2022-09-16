@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="faq_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">자주하는 질문</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">자주하는 질문</h2>
+                <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                <div class="tb_stl1 ask">
+                    <table>
+                        <caption>자주하는 질문 표</caption>
+                        <colgroup>
+                            <col style="width:328px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col"><span class="ast">서비스</span></th>
+                                <td>
+                                    <div class="select-box">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택하세요</option>
+                                            <option>판매중</option>
+                                            <option>판매대기</option>
+                                            <option>검수대기</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                            <button type="button" class="option" idx="1">판매중</button>
+                                            <button type="button" class="option" idx="2">판매대기</button>
+                                            <button type="button" class="option" idx="3">검수대기</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">질문 유형</span></th>
+                                <td>
+                                    <div class="select-box">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택하세요</option>
+                                            <option>서비스</option>
+                                            <option>부가서비스</option>
+                                            <option>청약</option>
+                                            <option>결제/취소</option>
+                                            <option>회원</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                            <button type="button" class="option" idx="1">서비스</button>
+                                            <button type="button" class="option" idx="2">부가서비스</button>
+                                            <button type="button" class="option" idx="3">청약</button>
+                                            <button type="button" class="option" idx="4">결제/취소</button>
+                                            <button type="button" class="option" idx="5">회원</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">제목</span></th>
+                                <td>
+                                    <div class="input-txt">
+                                        <input type="text" title="" value="" placeholder="제목을 입력해 주세요">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">답변내용</span></th>
+                                <td>
+                                    <!-- 에디터 넣어 주세요 -->
+                                    <div class="txt-area">
+                                        <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="답변을 입력해 주세요."></textarea>
+                                        <div class="count-wrap">
+                                            <span class="txt-count">0</span>
+                                            <span>/3000</span>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">저장</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

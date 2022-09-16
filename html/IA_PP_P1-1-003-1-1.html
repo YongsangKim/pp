@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">AAA(판매중)</h2>                
+                <div class="between_end">
+                    <div class="btn_list">
+                        <button class="btn ico_btn07" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">이력확인</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Modal -->
+            <!-- [D]220812 팝업전체수정 -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">이력확인</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <span class="fz14 txt-bd4"><i class="chk"></i> 는 대표 아이디</span>
+                            <div class="tb_stl2 mt01">
+                                <table>
+                                    <caption>부가서비스 정보</caption>
+                                    <colgroup>
+                                        <col width="160">
+                                        <col width="150">
+                                        <col>
+                                        <col width="100">
+                                        <col width="160">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">요청일시</th>
+                                            <th scope="col">요청내용</th>
+                                            <th scope="col">요청자(ID/성명)</th>
+                                            <th scope="col">상태</th>
+                                            <th scope="col">처리일시</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td><i class="chk"></i> db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(변경)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>대기</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="date">2020-09-08 16:23</td>
+                                            <td>검수요청(신규)</td>
+                                            <td>db******(홍*동)</td>
+                                            <td>승인</td>
+                                            <td class="date">2020-09-08 16:23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--pagination-->
+                            <div class="pagination">
+                                <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                                <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                                <strong>11</strong>
+                                <a href="#none">12</a>
+                                <a href="#none">13</a>
+                                <a href="#none">14</a>
+                                <a href="#none">15</a>
+                                <a href="#none">16</a>
+                                <a href="#none">17</a>
+                                <a href="#none">18</a>
+                                <a href="#none">19</a>
+                                <a href="#none">20</a>
+                                <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                                <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>

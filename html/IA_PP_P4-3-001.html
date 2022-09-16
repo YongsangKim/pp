@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v4"><div class="slogan">API 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">API 관리</h2>
+                <h4 class="tit_h4">기본정보</h4>
+                <div class="tb_stl1 mt01">
+                    <table>
+                        <caption>API</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col">서비스명</th>
+                                <td>AAA</td>
+                            </tr>
+                            <tr>
+                                <th scope="col">서비스 상태</th>
+                                <td>판매중</td>
+                            </tr>
+                            <tr>
+                                <!-- [START] 220726 수정 -->                                
+                                <th scope="col"> 서비스 상태 최종 변경일</th>
+                                <!-- [END] //220726 수정 -->
+                                <td class="date">2021-10-29 15:10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>            
+                <!-- [START] 220728 수정 -->
+                <div class="api_area mt06">
+                    <p class="tit_h3 be_none">기본정보</p>
+                    <div class="tb_stl1 mt01">
+                        <table>
+                            <caption>API</caption>
+                            <colgroup>
+                                <col style="width:320px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col"><span class="ast">서비스 연동 URL</span></th>
+                                    <td class="ip_txt">
+                                        <div class="add_wrap">
+                                            <div class="add_contents">
+                                                <div class="input-txt input-ip flex-row">
+                                                    <span>172</span><span class="dot">.</span>
+                                                    <span>20</span><span class="dot">.</span>
+                                                    <span>34</span><span class="dot">.</span>
+                                                    <span>124</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">프록시 IP</span></th>
+                                    <td class="ip_txt">
+                                        <div class="input-txt input-ip flex-row">
+                                            <span>172</span><span class="dot">.</span>
+                                            <span>172</span><span class="dot">.</span>
+                                            <span>172</span><span class="dot">.</span>
+                                            <span>172</span>
+                                        </div>
+                                        <div class="input-txt input-ip flex-row">
+                                            <span class="port">Port</span>
+                                            <span>25</span>
+                                        </div>
+                                        <ul class="pink-list mt01">
+                                            <li>서비스 연동 시스템이 외부에 있을 경우 Front의 Proxy를 타고 접속함.<br>
+                                                반드시 시스템 운영자와 협의 후 등록하세요. (방화벽 사전 오픈 필요)</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">인증키</span></th>
+                                    <td>13543ehzzioaAWgh</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="api_area mt06">
+                    <p class="tit_h3 be_none">API 연동정보</p>
+                    <div class="tb_stl1 mt01">
+                        <table>
+                            <caption>API</caption>
+                            <colgroup>
+                                <col style="width:320px">
+                                <col style="width:240px">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><div>비즈마켓 접근 허용 IP<span>(InBound)</span></div></th>
+                                    <th class="bdl"><span class="ast">IP</span><span>(1개 필수, 최대 5개)</span></th>
+                                    <td class="ip_txt">
+                                        <div>
+                                            <div class="input-txt input-ip flex-row">
+                                                <span>172</span><span class="dot">.</span>
+                                                <span>20</span><span class="dot">.</span>
+                                                <span>34</span><span class="dot">.</span>
+                                                <span>124</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="input-txt input-ip flex-row">
+                                                <span>172</span><span class="dot">.</span>
+                                                <span>20</span><span class="dot">.</span>
+                                                <span>34</span><span class="dot">.</span>
+                                                <span>124</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="input-txt input-ip flex-row">
+                                                <span>172</span><span class="dot">.</span>
+                                                <span>20</span><span class="dot">.</span>
+                                                <span>34</span><span class="dot">.</span>
+                                                <span>124</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="input-txt input-ip flex-row">
+                                                <span>172</span><span class="dot">.</span>
+                                                <span>20</span><span class="dot">.</span>
+                                                <span>34</span><span class="dot">.</span>
+                                                <span>124</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="input-txt input-ip flex-row">
+                                                <span>172</span><span class="dot">.</span>
+                                                <span>20</span><span class="dot">.</span>
+                                                <span>34</span><span class="dot">.</span>
+                                                <span>124</span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="rowgroup" rowspan="8"><div>비즈마켓 정보전송 AIP정보<span>(OutBound)</span></div></th>
+                                    <th scope="row" class="bdl">가입신청 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">가입변경 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">가입해지 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">개통 취소 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">일시정지/해제 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">미납정지/해제 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">고객정보 변경 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row" class="bdl">무료체험 API URL</th>
+                                    <td>
+                                        <a href="#" class="underline">https://bizmarket.uplus.co.kr/intro/introMain?sltnId=&sltnId1=BPZ0000005</a>
+                                        <a href="javascript:void(0)" class="btn teritary lg blackline fz14 fr">연동확인하기</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- [END] //220728 수정 -->
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                    <a href="javascript:void(0)" class="btn primary lg fixed">API 추가 / 수정 / 삭제</a>
+                </div>          
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

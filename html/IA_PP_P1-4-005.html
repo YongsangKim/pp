@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="notice_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">추가정보</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">공지사항 관리</h2>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:110px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>서비스명</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>                            
+                            <tr>
+                                <th><span>공지 유형</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>일반</option>
+                                            <option>긴급</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">일반</button>
+                                            <button type="button" class="option" idx="2">긴급</button>
+                                        </div>
+                                    </div>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>공지 등록일</span></th>
+                                <td>                                    
+                                    <div class="input-txt sm datepicker">
+                                        <input type="text">
+                                    </div>
+                                    <span class="bar">-</span>
+                                    <div class="input-txt sm datepicker">
+                                        <input type="text">
+                                    </div>
+                                    <!-- [D]220906 수정 -->
+                                    <div class="checkbox-group ml30">
+                                        <span class="radio">
+                                            <input id="radio02_1" name="radio02" type="radio" checked="">
+                                            <label for="radio02_1">
+                                                <i class="ico"></i> <span>당일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_2" name="radio02" type="radio">
+                                            <label for="radio02_2">
+                                                <i class="ico"></i> <span>1주일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_3" name="radio02" type="radio">
+                                            <label for="radio02_3">
+                                                <i class="ico"></i> <span>1개월</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_4" name="radio02" type="radio">
+                                            <label for="radio02_4">
+                                                <i class="ico"></i> <span>직접선택</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>
+                </div>
+                <div class="btnbox mt06 tar">
+                    <a href="javascript:void(0)" class="btn teritary md blackline">신규공지등록</a>
+                </div>
+                <!-- [D]220817 담당자명 항목 삭제 -->
+                <div class="tb_stl2 mt01">
+                    <table>
+                        <caption>공지사항 세부 사항</caption>
+                        <colgroup>
+                            <col style="width:68px">
+                            <col style="width:180px">
+                            <col style="width:80px">
+                            <col style="width:200px">
+                            <col style="width:390px">
+                            <col style="width:140px">
+                            <!-- <col style="width:120px"> -->
+                            <col style="width:220px">
+                            <col style="width:110px">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col"><a href="javascript:void(0)" class="align_btn">서비스명</a></th>
+                                <th scope="col" class="grow02">공지<br>유형</th>
+                                <th scope="col">공지 게시 기간</th>                                
+                                <th scope="col">제목</th>
+                                <th scope="col" class="grow02"><a href="javascript:void(0)" class="align_btn">공지 최종<br>등록일</a></th>
+                                <!-- <th scope="col" class="grow02">최종 등록<br>담당자 명</th> -->
+                                <th scope="col">최종 등록 아이디</th>
+                                <th scope="col" class="grow02">긴급승인<br>여부</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>시간관리 최강자</td>
+                                <td>일반</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>8</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>시간관리 최강자</td>
+                                <td>일반</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>시간관리 최강자</td>
+                                <td>일반</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>시간관리 최강자</td>
+                                <td>일반</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>시간관리 최강자</td>
+                                <td>긴급</td>
+                                <td class="grow02">
+                                    <span class="date">
+                                        2022-02-02 09:00 ~<br>2022-02-05 12:00
+                                    </span>
+                                </td>
+                                <td class="tal">
+                                    <div class="txt-ellipsis">
+                                        <span>시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자시간관리 최강자</span>
+                                    </div>
+                                </td>
+                                <td>2020-09-08</td>
+                                <!-- <td>홍길동</td> -->
+                                <td>wo*******(대표 아이디)</td>
+                                <td>대기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="#none">12</a>
+                    <a href="#none">13</a>
+                    <a href="#none">14</a>
+                    <a href="#none">15</a>
+                    <a href="#none">16</a>
+                    <a href="#none">17</a>
+                    <a href="#none">18</a>
+                    <a href="#none">19</a>
+                    <a href="#none">20</a>
+                    <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

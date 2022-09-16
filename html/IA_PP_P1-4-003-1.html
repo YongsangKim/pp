@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="data_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">추가정보</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">자료실</h2>
+                <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                <div class="tb_stl1 ask">
+                    <table>
+                        <caption>자료실 파일 업로드 양식</caption>
+                        <colgroup>
+                            <col style="width:320px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="col"><span class="ast">서비스</span></th>
+                                <td>
+                                    <div class="select-box">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택하세요</option>
+                                            <option>판매중</option>
+                                            <option>검수대기</option>
+                                            <option>판매대기</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                            <button type="button" class="option" idx="1">판매중</button>
+                                            <button type="button" class="option" idx="2">검수대기</button>
+                                            <button type="button" class="option" idx="3">판매대기</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">문서 / 동영상 자료 선택</span></th>
+                                <td>
+                                    <span class="radio">
+                                        <input id="radio02_1" name="radio02" type="radio" checked="">
+                                        <label for="radio02_1">
+                                            <i class="ico"></i> <span>문서 자료</span>
+                                        </label>
+                                    </span>
+                                    <span class="radio">
+                                        <input id="radio02_2" name="radio02" type="radio">
+                                        <label for="radio02_2">
+                                            <i class="ico"></i> <span>동영상 자료</span>
+                                        </label>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col"><span class="ast">제목</span></th>
+                                <td>
+                                    <div class="input-txt w100p">
+                                        <input type="" title="" value="" placeholder="제목을  입력해 주세요" maxlength="40">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">
+                                    <span class="ast">문서업로드</span>
+                                    <span>(1개만 등록가능)</span>
+                                </th>
+                                <td>  
+                                    <div class="form-column input-upload data_room">                          
+                                        <div class="input-txt">
+                                            <input type="file" title="" value="" placeholder="">
+                                        </div>
+                                        <!-- [START] 220726 수정 -->
+                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                        <!-- [END] //220726 수정 -->
+                                        <div class="input-upload loadList">
+                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                        </div>
+                                    </div>
+                                    <p class="txt-bd4">형식 : doc, hwp, pdf. xls, xlsx / 용량 : 10MB 이하</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="btn-area">
+                    <button type="button" class="btn lg fixed">목록</button>
+                    <button type="button" class="btn primary lg fixed">저장</button>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script src="../js/jquery.MultiFile.min.js"></script>
+    <script>
+        $(function(){
+            $('.multi15').MultiFile({
+                list:'#loadlist15'
+            });
+        });
+    </script>
+</body>
+</html>

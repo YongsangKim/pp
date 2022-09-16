@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="sub_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v3"><div class="slogan">진행현황</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">청약변경관리</h2>
+                <ul class="nav stl2 nav-pills nav-justified">
+                    <li class="nav-item">
+                        <a class="nav-link active">전체</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">변경 개통 대기</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">변경 개통 접수</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">변경 개통 완료</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">변경 완료</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">변경 취소</a>
+                    </li>
+                </ul>
+                <div class="search-box">
+                    <table>
+                        <caption>공통영역</caption>
+                        <colgroup>
+                            <col style="width:110px">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><span>검색어</span></th>
+                                <td>
+                                    <div class="select-box sm">
+                                        <select class="select" tabindex="-1">
+                                            <option>선택하세요</option>
+                                            <option>회사명(고객명)</option>
+                                            <option>고객ID</option>
+                                            <option>사업자번호</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">선택하세요</button>
+                                            <button type="button" class="option" idx="1">회사명(고객명)</button>
+                                            <button type="button" class="option" idx="2">고객ID</button>
+                                            <button type="button" class="option" idx="3">사업자번호</button>
+                                        </div>
+                                    </div>  
+                                    <div class="input-txt sm ml12 srch">
+                                        <input type="text" title="" value="">
+                                    </div>  
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>서비스 명</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>02</option>
+                                            <option>031</option>
+                                            <option>032</option>
+                                            <option>041</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">02</button>
+                                            <button type="button" class="option" idx="2">031</button>
+                                            <button type="button" class="option" idx="3">032</button>
+                                            <button type="button" class="option" idx="4">041</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>회원유형</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>법인사업자</option>
+                                            <option>개인사업자</option>
+                                            <option>개인</option>
+                                            <option>비영리법인</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">법인사업자</button>
+                                            <button type="button" class="option" idx="2">개인사업자</button>
+                                            <button type="button" class="option" idx="3">개인</button>
+                                            <button type="button" class="option" idx="4">비영리법인</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>신청서유형</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <select class="select" tabindex="-1">
+                                            <option>전체</option>
+                                            <option>온라인 신청</option>
+                                            <option>대리점 대행</option>
+                                            <option>고객센터 대행</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">전체</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">전체</button>
+                                            <button type="button" class="option" idx="1">온라인 신청</button>
+                                            <button type="button" class="option" idx="2">대리점 대행</button>
+                                            <button type="button" class="option" idx="3">고객센터 대행</button>
+                                        </div>
+                                    </div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><span>조회기간</span></th>
+                                <td>
+                                    <div class="select-box sm w_st1">
+                                        <!-- [D]220826 수정 -->
+                                        <select class="select" tabindex="-1">
+                                            <option>변경신청일자</option>
+                                            <option>변경접수일자</option>
+                                            <option>변경개통일자</option>
+                                            <option>변경완료일자</option>
+                                            <option>변경취소일자</option>
+                                        </select>
+                                        <button type="button" id="sel01" class="select-btn">변경신청일자</button>
+                                        <div class="select-layer">
+                                            <button type="button" class="option on" idx="0">변경신청일자</button>
+                                            <button type="button" class="option" idx="1">변경접수일자</button>
+                                            <button type="button" class="option" idx="2">변경개통일자</button>
+                                            <button type="button" class="option" idx="3">변경완료일자</button>
+                                            <button type="button" class="option" idx="4">변경취소일자</button>
+                                        </div>
+                                    </div>  
+                                    <div class="calendar">
+                                        <div class="input-txt sm datepicker ml12">
+                                            <input type="text">
+                                        </div>
+                                        <span class="bar">-</span>
+                                        <div class="input-txt sm datepicker">
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="checkbox-group ml30">
+                                        <!-- [D]220812삭제 -->
+                                        <!-- <span class="radio">
+                                            <input id="radio02_1" name="radio02" type="radio">
+                                            <label for="radio02_1">
+                                                <i class="ico"></i> <span>전체</span>
+                                            </label>
+                                        </span> -->
+                                        <span class="radio">
+                                            <input id="radio02_2" name="radio02" type="radio" checked="">
+                                            <label for="radio02_2">
+                                                <i class="ico"></i> <span>당일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_3" name="radio02" type="radio">
+                                            <label for="radio02_3">
+                                                <i class="ico"></i> <span>1주일</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_4" name="radio02" type="radio">
+                                            <label for="radio02_4">
+                                                <i class="ico"></i> <span>1개월</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio02_5" name="radio02" type="radio">
+                                            <label for="radio02_5">
+                                                <i class="ico"></i> <span>직접선택</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn teritary md aside">검색</button>              
+                    <button class="search-toggle pc-hide">고급검색 열기</button>
+                </div>
+                <div class="tb_scr">
+                    <div class="table-area">
+                        <div class="tb_stl2 tb01 sbsChnMng01">
+                            <table>
+                                <caption>청약변경관리</caption>
+                                <colgroup>
+                                    <col style="width:53px">
+                                    <col style="width:76px">
+                                    <col style="width:100px">
+                                    <col style="width:90px">
+                                    <col style="width:62px">
+                                    <col style="width:58px">
+                                    <col style="width:86px">
+                                    <col style="width:72px">
+                                    <col style="width:124px">
+                                    <col style="width:72px">
+                                    <col style="width:104px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">신청단계</th>
+                                        <th scope="col">변경요청<br>내용</th>
+                                        <th scope="col">서비스 명</th>
+                                        <th scope="col">상품명</th>
+                                        <th scope="col">회원<br>유형</th>
+                                        <th scope="col" class="grow"><div>회사명<span>(고객명)</span></div></th>
+                                        <th scope="col">고객ID</th>
+                                        <th scope="col">신청 번호</th>
+                                        <th scope="col">신청서<br>유형</th>
+                                        <th scope="col">사업자<br>번호</th>
+                                        <th scope="col">변경신청<br>일자</th>
+                                        <th scope="col">변경접수<br>일자</th>
+                                        <th scope="col">변경개통<br>일자</th>
+                                        <!-- [D]220826 수정 -->
+                                        <th scope="col">변경완료<br>일자</th>
+                                        <th scope="col">변경취소<br>일자</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>고급형</td>
+                                        <td>개인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>고객센터 대행</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>변경개통 대기</td>
+                                        <td>상품변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>-</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>변경개통 대기</td>
+                                        <td>계정수 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>변경취소</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>변경개통 대기</td>
+                                        <td>부가서비스 변경</td>
+                                        <td>AAA</td>
+                                        <td>웹형</td>
+                                        <td>법인사업자</td>
+                                        <td>최고회사명</td>
+                                        <td>db****</td>
+                                        <td>ULVE0000000000199151</td>
+                                        <td>온라인 신청</td>
+                                        <td>2148687288</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                        <td>2020-09-08</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="#none" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="#none" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="#none">12</a>
+                    <a href="#none">13</a>
+                    <a href="#none">14</a>
+                    <a href="#none">15</a>
+                    <a href="#none">16</a>
+                    <a href="#none">17</a>
+                    <a href="#none">18</a>
+                    <a href="#none">19</a>
+                    <a href="#none">20</a>
+                    <a href="#none" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="#none" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

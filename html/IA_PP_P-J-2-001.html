@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="join">
+        <header id="header"></header>
+        <div id="container">
+            <div class="content">
+                <div class="inner_wrap">
+                    <h2 class="tit_h2"><span class="point-pink">U+</span>파트너포털<br>회원 가입을 환영합니다</h2>
+                    <!-- [START] 220713 br에 mo-hide클래스, 띄어쓰기 추가 -->
+                    <p class="txt-bd3 hr">파트너포털은 함께 성장할 파트너를 모집하고<br class="pc-hide"> 있습니다.<br class="mo-hide"> 아래 양식대로 신청해 주시면 심사 후<br class="pc-hide"> 연락드릴 수 있도록 하겠습니다.</p>
+                    <ol class="step">
+                        <li class="cmplt"><span>1</span>약관 및 개인정보<br class="mo-hide"> 수집동의</li>
+                        <li class="on"><span>2</span>회원정보 입력 및<br class="mo-hide"> 서류 업로드</li>
+                        <li class=""><span>3</span>심사 대기</li>
+                    </ol>
+                    <!-- [END] //220713 br에 mo-hide클래스, 띄어쓰기 추가 -->
+                    <!-- [START] 220713 수정 -->
+                    <div class="mt06 between_end align_start">
+                        <h3 class="tit_h3">파트너포털 회원정보 입력</h3>
+                        <p class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</p>
+                    </div>
+                    <!-- [END] //220713 수정 -->
+                    <ul class="nav stl3 nav-pills nav-justified mt02" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active">법인사업자</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link">개인사업자</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link">비영리법인</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active">
+                            <!-- [START] 220713 클래스명 수정 box -> mt05 -->
+                            <div class="mt05">
+                            <!-- [END] 220713 클래스명 수정 box -> mt05 -->
+                                <h4 class="tit_h4">회원 가입 정보</h4>
+                                <div class="tb_stl1">
+                                    <table>
+                                        <caption>파트너포털 회원가입 정보</caption>
+                                        <colgroup>
+                                            <col style="width:230px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col"><span class="ast">대표 아이디</span></th>
+                                                <td>
+                                                    <!-- [START] 220713 rtbtn클래스 추가 -->
+                                                    <div class="form-column rtbtn">
+                                                    <!-- [END] 220713 rtbtn클래스 추가 -->
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="영문, 숫자 조합 6~15자">
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">중복확인</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">비밀번호</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="password" title="" value="" placeholder="비밀번호를 입력해주세요">
+                                                        </div>
+                                                        <p class="txt-bd4 w100p">영문, 숫자, 특수문자 3가지 조합 8자 이상, 2가지 조합 10자 이상</p>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">비밀번호 확인</span></th>
+                                                <td>                                                
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <!-- [START] 220713 placeholder 수정 -->  
+                                                            <input type="password" title="" value="" placeholder="동일한 비밀번호를 한번 더 입력해 주세요">
+                                                            <!-- [END] //220713 placeholder 수정  --> 
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">
+                                                    <div>
+                                                        <!-- [START] 220803 수정 -->   
+                                                        <span class="ast">계약 유형</span>
+                                                        <!-- [END] //220803 수정 --> 
+                                                        <span>(중복 선택 가능)</span>
+                                                    </div>
+                                                </th>                                                
+                                                <!-- [START] 220712 pt8클래스 추가 -->
+                                                <td class="pt8">
+                                                    <!-- [END] //220712 pt8클래스 추가 -->
+                                                    <div>
+                                                        <span class="checkbox">
+                                                            <input id="check01_1" name="check01" type="checkbox" checked="">
+                                                            <label for="check01_1">
+                                                                <!-- [START] 220712 문구수정 -->   
+                                                                <i class="ico"></i> <span>판매 대행</span>
+                                                                <!-- [END] //220712 문구수정 --> 
+                                                            </label>
+                                                        </span>
+                                                        <span class="checkbox">
+                                                            <input id="check01_2" name="check02" type="checkbox">
+                                                            <label for="check01_2">
+                                                                <!-- [START] 220712 문구수정 -->   
+                                                                <i class="ico"></i> <span>단순 소개</span>
+                                                                <!-- [END] //220712 문구수정 --> 
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr>              
+                                            <!-- [START] 220712 삭제 -->
+                                            <!-- <tr>
+                                                <th scope="col">마케팅 정보 수신 동의</th>
+                                                <td>
+                                                    <div>
+                                                        <span class="checkbox">
+                                                            <input id="check02_1" name="check03" type="checkbox" checked="">
+                                                            <label for="check02_1">
+                                                                <i class="ico"></i> <span>SMS</span>
+                                                            </label>
+                                                        </span>
+                                                        <span class="checkbox">
+                                                            <input id="check02_2" name="check04" type="checkbox">
+                                                            <label for="check02_2">
+                                                                <i class="ico"></i> <span>이메일</span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </td>
+                                            </tr> -->
+                                            <!-- [START] 220712 삭제 -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- [START] 220713 클래스명 수정 box -> mt40 -->
+                            <div class="mt40">
+                            <!-- [END] 220713 클래스명 수정 box -> mt40 -->
+                                <h4 class="tit_h4">담당자 정보</h4>
+                                <div class="tb_stl1">
+                                    <table>
+                                        <caption>파트너포털 회원가입 담당자 정보</caption>
+                                        <colgroup>
+                                            <col style="width:230px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col"><span class="ast">담당자 이름</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="이름을 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- 220729 삭제 <tr>
+                                                <th scope="col"><span class="ast">담당자 생년월일</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="생년월일 6자리 (예 : 810912)">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr> -->
+                                            <tr>
+                                                <!-- [START] 220729 수정 -->
+                                                <th scope="col">담당자 연락처</th>
+                                                <!-- [END] 220729 수정 -->
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="숫자로만 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">담당자 휴대폰번호</span></th>
+                                                <td>
+                                                    <!-- [START] 220713 rtbtn클래스 추가 -->
+                                                    <div class="form-column rtbtn">
+                                                    <!-- [END] 220713 rtbtn클래스 추가 -->
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="숫자로만 입력해 주세요">
+                                                        </div>
+                                                        <!-- [START] 220713 인증하기 수정 -->
+                                                        <button type="button" class="btn teritary lg blackline ml8">인증하기</button>                                                        
+                                                        <!-- [END] 220713 인증하기 수정 -->
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">담당자 이메일</span></th>
+                                                <td>                                                    
+                                                    <div class="email">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="이메일 입력">
+                                                        </div>
+                                                        <span class="bar">@</span>
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="">
+                                                        </div>
+                                                        <div class="select-box">
+                                                            <select class="select" tabindex="-1">
+                                                                <option>직접입력</option>
+                                                                <option>gmail.com</option>
+                                                                <option>dreamwiz.com</option>
+                                                                <option>naver.com</option>
+                                                                <option>chol.com</option>
+                                                                <option>nate.com</option>
+                                                                <option>yahoo.co.kr</option>
+                                                                <option>hanmail.net</option>
+                                                                <option>hotmail.com</option>
+                                                            </select>
+                                                            <button type="button" id="sel01" class="select-btn">직접입력</button>
+                                                            <div class="select-layer">
+                                                                <button type="button" class="option on" idx="0">직접입력</button>
+                                                                <button type="button" class="option" idx="1">gmail.com</button>
+                                                                <button type="button" class="option" idx="2">dreamwiz.com</button>
+                                                                <button type="button" class="option" idx="3">naver.com</button>
+                                                                <button type="button" class="option" idx="4">chol.com</button>
+                                                                <button type="button" class="option" idx="5">nate.com</button>
+                                                                <button type="button" class="option" idx="6">yahoo.co.kr</button>
+                                                                <button type="button" class="option" idx="7">hanmail.net</button>
+                                                                <button type="button" class="option" idx="8">hotmail.com</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>            
+                            <!-- [START] 220713 클래스명 수정 box -> mt40 -->
+                            <div class="mt40">
+                            <!-- [END] 220713 클래스명 수정 box -> mt40 -->
+                                <h4 class="tit_h4">회사 정보</h4>
+                                <div class="tb_stl1">
+                                    <table>
+                                        <caption>파트너포털 회원가입 회사 정보</caption>
+                                        <colgroup>
+                                            <col style="width:230px">
+                                            <col>
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="col"><span class="ast">사업자 등록번호<br>(또는 고유번호)</span></th>
+                                                <td>
+                                                    <!-- [START] 220713 rtbtn클래스 추가 -->
+                                                    <div class="form-column rtbtn">
+                                                    <!-- [END] 220713 rtbtn클래스 추가 -->
+                                                        <div class="input-txt">
+                                                            <!-- [START] 220713 placeholder 수정 -->   
+                                                            <input type="text" title="" value="" placeholder="10자리 입력(숫자만 입력)">
+                                                            <!-- [END] //220713 placeholder 수정 --> 
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">인증하기</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">회사로고</span></th>
+                                                <td>
+                                                    <!-- [START] 220713 rtbtn클래스 추가 -->
+                                                    <div class="form-column input-upload rtbtn">   
+                                                    <!-- [END] 220713 rtbtn클래스 추가 -->                       
+                                                        <div class="input-txt">
+                                                            <input type="file" title="" value="" placeholder="">
+                                                        </div>
+                                                        <!-- [START] 220726 수정 -->
+                                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                        <!-- [END] 220726 수정 -->  
+                                                    </div>
+                                                    <ul class="dotList mt01">
+                                                        <li>형식 : jpg, jpeg, png, gif</li>
+                                                        <li>용량 : 1파일 당 5MB 이하. 1개만 등록가능</li>
+                                                        <!-- [D]220824 수정 -->
+                                                        <li>이미지 사이즈 : 321x174</li>
+                                                    </ul>
+                                                    <div class="input-upload loadList">
+                                                        <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">법인명 (또는 상호명)</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="법인명(또는 상호명)을 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">부서명</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="부서명을 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">법인등록번호</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="법인등록번호 13자리  입력(숫자만 입력)">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">대표자 성명</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="대표자 성명을 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">업태</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="업태를 입력해주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">업종</span></th>
+                                                <td>
+                                                    <!-- [START] 220729 수정 -->
+                                                    <div class="select-box w100p">
+                                                        <select class="select" tabindex="-1">
+                                                            <option>직접입력</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                        </select>
+                                                        <button type="button" id="sel01" class="select-btn">직접입력</button>
+                                                        <div class="select-layer">
+                                                            <button type="button" class="option on" idx="0">직접입력</button>
+                                                            <button type="button" class="option" idx="1">1</button>
+                                                            <button type="button" class="option" idx="2">2</button>
+                                                            <button type="button" class="option" idx="3">3</button>
+                                                            <button type="button" class="option" idx="4">4</button>
+                                                            <button type="button" class="option" idx="5">5</button>
+                                                            <button type="button" class="option" idx="6">6</button>
+                                                            <button type="button" class="option" idx="7">7</button>
+                                                            <button type="button" class="option" idx="8">8</button>
+                                                            <button type="button" class="option" idx="9">9</button>
+                                                            <button type="button" class="option" idx="10">10</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- [END] 220729 수정 -->
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">종목</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="종목을 입력해주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col"><span class="ast">회사 주소</span></th>
+                                                <td>
+                                                    <!-- [START] 220713 rtbtn클래스 추가 -->
+                                                    <div class="form-column rtbtn">
+                                                    <!-- [END] 220713 rtbtn클래스 추가 -->
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="우편번호">
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">주소검색</button>
+                                                    </div>
+                                                    <!-- [START] 220713 mt01->mt8 수정 -->   
+                                                    <div class="form-column mt8">
+                                                    <!-- [END] //220713 mt01->mt8 수정  -->   
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="기본 주소">
+                                                        </div>
+                                                    </div>
+                                                    <!-- [START] 220713 mt01->mt8 수정 -->   
+                                                    <div class="form-column mt8">
+                                                    <!-- [END] //220713 mt01->mt8 수정  -->   
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="나머지 주소">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- [START] 220729 추가 -->   
+                                            <tr>
+                                                <th scope="col"><span class="ast">통신판매신고번호</span></th>
+                                                <td>
+                                                    <div class="form-column">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="통신판매신고번호를 입력해 주세요.">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <!-- [END] //220729 추가  -->  
+                                            <tr>
+                                                <th scope="col">
+                                                    <span class="ast">서류 업로드</span>
+                                                    <!-- [START] 220803 수정 -->
+                                                    <span>(필수 서류 : 사업자등록증 또는 고유번호증, 통신판매업신고증)</span>
+                                                    <!-- [END] //220803 수정 -->
+                                                </th>
+                                                <td>
+                                                    <div class="form-column input-upload rtbtn">  
+                                                        <div class="input-txt">
+                                                            <input type="file" title="" value="" placeholder="">
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                    </div>
+                                                    <!-- [D]220826 수정 -->
+                                                    <ul class="dotList mt01">
+                                                        <li>형식 : jpg, jpeg, png, gif</li>
+                                                        <li>용량 : 1파일 당 5MB 이하. 4개 파일 등록 가능</li>
+                                                    </ul>                                            
+                                                    <div class="input-upload loadList">
+                                                        <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                        <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                        <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                        <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">심사 요청</button>
+                    </div>
+                </div>
+            </div>            
+            <!-- Modal -->
+            <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">이미 사용 중인 아이디 입니다.<br>다른 아이디를 입력해 주세요.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">사용 가능한 아이디입니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade addr" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">주소검색</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">
+                            <div class="form-column">
+                                <div class="input-txt">
+                                    <input type="text" title="" value="" placeholder="도로명/건물번호 입력">
+                                </div>
+                                <button type="button" class="btn teritary lg blackline ml8">검색</button>
+                            </div>
+                            <!-- [START] 220803 추가 -->
+                            <div class="addr_box">
+                                <div class="addr_list">
+                                    <ul>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="addr1">04389</span>
+                                            <span class="addr2">
+                                                <a href=""><span>서울특별시 마포구 가양대로 117</span></a>
+                                                <a href=""><i>지번</i> <span>상암동 1667</span></a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal4" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">5MB 이하의 파일을 올려주세요.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal5" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- [START] 220726 수정 -->  
+                            <p class="tac info">올릴 수 없는 파일 형식입니다.</p>
+                            <!-- [END] //220726 수정 -->    
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal6" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">최종 심사 요청하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal7" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">정상 인증되었습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal8" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header r_close">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="tac info">유형 변경시 정보가 초기화 됩니다.<br>변경하시겠습니까?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed" data-bs-dismiss="modal">확인</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        var myModal2 = new bootstrap.Modal(document.getElementById('myModal2'));
+        var myModal3 = new bootstrap.Modal(document.getElementById('myModal3'));
+        var myModal4 = new bootstrap.Modal(document.getElementById('myModal4'));
+        var myModal5 = new bootstrap.Modal(document.getElementById('myModal5'));
+        var myModal6 = new bootstrap.Modal(document.getElementById('myModal6'));
+        var myModal7 = new bootstrap.Modal(document.getElementById('myModal7'));
+        var myModal7 = new bootstrap.Modal(document.getElementById('myModal8'));
+        // myModal1.show();
+        // myModal2.show();
+        // myModal3.show();
+        // myModal4.show();
+        // myModal5.show();
+        // myModal6.show();
+        // myModal7.show();
+        // myModal8.show();
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="data_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">추가정보</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">자료실</h2>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal2">서비스</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal3">제목</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal4">문서 업로드</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal5">동영상 링크</button>
+                <button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal1">유튜브형식</button>
+
+            </div>
+        </div>
+        <footer id="footer"></footer>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable sm">
+                <div class="modal-content">
+                    <div class="modal-header r_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tac info">https://youtu.be/ 형식의 유튜브 동영상<br>주소를 입력해 주세요</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable sm">
+                <div class="modal-content">
+                    <div class="modal-header r_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tac info">서비스를 선택해 주세요</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable sm">
+                <div class="modal-content">
+                    <div class="modal-header r_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tac info">제목을 입력해 주세요</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal4" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable sm">
+                <div class="modal-content">
+                    <div class="modal-header r_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tac info">문서를 입력해 주세요</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal -->
+        <!-- Modal -->
+        <div class="modal fade" id="myModal5" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable sm">
+                <div class="modal-content">
+                    <div class="modal-header r_close">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="tac info">동영상 링크를 입력해 주세요</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Modal -->
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

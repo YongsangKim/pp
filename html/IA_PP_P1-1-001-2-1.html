@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- [START] 220726 수정 -->                
+                <h2 class="tit_h2">서비스 등록</h2>
+                <!-- [END] //220726 수정 -->
+                <div class="between_end">
+                    <!-- [START] 220803 수정 -->             
+                    <span class="fz14 txt-bd4">임시저장은 1년간 저장되며, 그 이후로는 삭제 처리됩니다.</span>
+                    <!-- [END] //220803 수정 -->
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 hover_tooltip disabled">검수요청<span class="tooltip_txt">모든 항목 임시 저장 후에 검수 요청이 가능합니다.</span></button>
+                    </div>
+                </div>
+                <!-- [START] 220729 수정 -->          
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 개요 (완료)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">서비스 소개 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (작성필요)</a>
+                    </li>
+                </ul>   
+                <!-- [END] //220729 수정 -->
+                <!-- [D]220908 구조변경 -->
+                <div class="tab-content">
+                    <div class="between_end">
+                        <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                        <a href="javascript:void(0)" class="btn teritary blackline md fz14">기존 데이터 가져오기</a>
+                    </div>
+                    <div class="addselect add_contents bdt2 mt01">
+                        <div class="tb_stl1 bd1 ask">
+                            <table>
+                                <caption>본문</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"><span class="ast">본문</span></th>
+                                        <td>
+                                            <!-- [D]220830 class추가 -->
+                                            <div class="select-box selcon-wrap">
+                                                <select class="select" tabindex="-1">
+                                                    <option>선택하세요</option>
+                                                    <option>제목</option>
+                                                    <option>텍스트 또는 HTML</option>
+                                                    <option>이미지</option>
+                                                    <option>동영상</option>
+                                                </select>
+                                                <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                                <div class="select-layer">
+                                                    <button type="button" class="option on" idx="0">선택하세요</button>
+                                                    <button type="button" class="option" idx="1">제목</button>
+                                                    <button type="button" class="option" idx="2">텍스트 또는 HTML</button>
+                                                    <button type="button" class="option" idx="3">이미지</button>
+                                                    <button type="button" class="option" idx="4">동영상</button>
+                                                </div>
+                                            </div>                   
+                                            <div class="select_cont_area">
+                                                <div class="select_cont">
+                                                    <div class="input-txt">
+                                                        <input type="text" title="" value="" placeholder="내용을 입력해주세요">
+                                                    </div>
+                                                </div>
+                                                <div class="select_cont">
+                                                    <div class="txt-area">
+                                                        <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="내용을 입력해 주세요"></textarea>
+                                                        <div class="count-wrap">
+                                                            <span class="txt-count">0</span>
+                                                            <span>/3000</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="select_cont">       
+                                                    <div class="form-column input-upload data_room mt01">                          
+                                                        <div class="input-txt">
+                                                            <input type="file" title="" value="" placeholder="">
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                        <div class="input-upload loadList">
+                                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- [D]220906 수정 -->
+                                                    <p class="txt-bd4">형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지에 텍스트 포함 시 모바일에서 텍스트가 작게 보일 수 있습니다</p>
+                                                    <div class="caption correction">
+                                                        <strong>대체 텍스트(선택)</strong>
+                                                        <div>
+                                                            <div class="form-column">
+                                                                <div class="input-txt">
+                                                                    <input type="text" title="" value="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <p class="txt-bd4">대체텍스트는 이미지를 표현하는 문구로 자유롭게 입력 가능합니다. (최대 20자)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="caption correction">
+                                                        <strong>연결 URL(선택)</strong>
+                                                        <div>
+                                                            <div class="form-column">
+                                                                <div class="input-txt">
+                                                                    <input type="text" title="" value="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <p class="txt-bd4">연결URL은 이미지에 페이지 또는 사이트 연결이 필요할 경우에만 입력해주세요.</p>
+                                                        </div>
+                                                        <span class="checkbox">
+                                                            <input id="check01_1" name="check01" type="checkbox">
+                                                            <label for="check01_1">
+                                                                <i class="ico"></i> <span>새창으로 열기</span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- [D]220817수정 -->
+                                                <div class="select_cont">
+                                                    <div class="txt-bd4">유튜브 동영상 공유하기 주소를 복사하여 넣어 주세요.<br>
+                                                        <div class="ml10">(예시 : https://youtu.be/_RfMikGsga0  )</div>
+                                                    </div>
+                                                    <div class="input-txt mt20">
+                                                        <input type="text" title="" value="" placeholder="유튜브 동영상 링크를 입력해 주세요">
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- [END] //220803 추가 -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="bdt2 mt01">
+                        <div class="tb_stl1 bd1 ask">
+                            <table>
+                                <caption>본문</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col"><span class="ast">본문</span></th>
+                                        <td>
+                                            <!-- [D]220830 class추가 -->
+                                            <div class="select-box selcon-wrap">
+                                                <select class="select" tabindex="-1">
+                                                    <option>선택하세요</option>
+                                                    <option>제목</option>
+                                                    <option>텍스트 또는 HTML</option>
+                                                    <option>이미지</option>
+                                                    <option>동영상</option>
+                                                </select>
+                                                <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                                <div class="select-layer">
+                                                    <button type="button" class="option on" idx="0">선택하세요</button>
+                                                    <button type="button" class="option" idx="1">제목</button>
+                                                    <button type="button" class="option" idx="2">텍스트 또는 HTML</button>
+                                                    <button type="button" class="option" idx="3">이미지</button>
+                                                    <button type="button" class="option" idx="4">동영상</button>
+                                                </div>
+                                            </div>
+                                            <div class="select_cont_area">
+                                                <div class="select_cont">
+                                                    <div class="input-txt">
+                                                        <input type="text" title="" value="" placeholder="내용을 입력해주세요">
+                                                    </div>
+                                                </div>
+                                                <div class="select_cont">
+                                                    <div class="txt-area">
+                                                        <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="내용을 입력해 주세요"></textarea>
+                                                        <div class="count-wrap">
+                                                            <span class="txt-count">0</span>
+                                                            <span>/3000</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="select_cont">       
+                                                    <div class="form-column input-upload data_room mt01">                          
+                                                        <div class="input-txt">
+                                                            <input type="file" title="" value="" placeholder="">
+                                                        </div>
+                                                        <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                        <div class="input-upload loadList">
+                                                            <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- [D]220906 수정 -->
+                                                    <p class="txt-bd4">형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지에 텍스트 포함 시 모바일에서 텍스트가 작게 보일 수 있습니다</p>
+                                                    <div class="caption correction">
+                                                        <strong>대체 텍스트(선택)</strong>
+                                                        <div>
+                                                            <div class="form-column">
+                                                                <div class="input-txt">
+                                                                    <input type="text" title="" value="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <p class="txt-bd4">대체텍스트는 이미지를 표현하는 문구로 자유롭게 입력 가능합니다. (최대 20자)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="caption correction">
+                                                        <strong>연결 URL(선택)</strong>
+                                                        <div>
+                                                            <div class="form-column">
+                                                                <div class="input-txt">
+                                                                    <input type="text" title="" value="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <p class="txt-bd4">연결URL은 이미지에 페이지 또는 사이트 연결이 필요할 경우에만 입력해주세요.</p>
+                                                        </div>
+                                                        <span class="checkbox">
+                                                            <input id="check02_1" name="check02" type="checkbox">
+                                                            <label for="check02_1">
+                                                                <i class="ico"></i> <span>새창으로 열기</span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <!-- [D]220817수정 -->
+                                                <div class="select_cont">
+                                                    <div class="txt-bd4">유튜브 동영상 공유하기 주소를 복사하여 넣어 주세요.<br>
+                                                        <div class="ml10">(예시 : https://youtu.be/_RfMikGsga0  )</div>
+                                                    </div>
+                                                    <div class="input-txt mt20">
+                                                        <input type="text" title="" value="" placeholder="유튜브 동영상 링크를 입력해 주세요">
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <!-- [END] //220803 추가 -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="add_area">
+                        <div class="add_area_wrap">
+                            <div class="addDel_btn tar"><button class="del_btn btn" type="button">삭제</button></div>
+                            <div class="tb_stl1 bd1 ask">
+                                <table>
+                                    <caption>본문</caption>
+                                    <colgroup>
+                                        <col style="width:320px">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="col"><span class="ast">본문</span></th>
+                                            <td>
+                                                <!-- [D]220830 class추가 -->
+                                                <div class="select-box selcon-wrap">
+                                                    <select class="select" tabindex="-1">
+                                                        <option>선택하세요</option>
+                                                        <option>제목</option>
+                                                        <option>텍스트 또는 HTML</option>
+                                                        <option>이미지</option>
+                                                        <option>동영상</option>
+                                                    </select>
+                                                    <button type="button" id="sel01" class="select-btn">선택하세요</button>
+                                                    <div class="select-layer">
+                                                        <button type="button" class="option on" idx="0">선택하세요</button>
+                                                        <button type="button" class="option" idx="1">제목</button>
+                                                        <button type="button" class="option" idx="2">텍스트 또는 HTML</button>
+                                                        <button type="button" class="option" idx="3">이미지</button>
+                                                        <button type="button" class="option" idx="4">동영상</button>
+                                                    </div>
+                                                </div>
+                                                
+                                                <!-- [START] 220803 추가 -->
+                                                <div class="select_cont_area">
+                                                    <div class="select_cont">
+                                                        <div class="input-txt">
+                                                            <input type="text" title="" value="" placeholder="내용을 입력해주세요">
+                                                        </div>
+                                                    </div>
+                                                    <div class="select_cont">
+                                                        <div class="txt-area">
+                                                            <textarea name="" id="" cols="30" rows="5" maxlength="3000" class="txt-length" placeholder="내용을 입력해 주세요"></textarea>
+                                                            <div class="count-wrap">
+                                                                <span class="txt-count">0</span>
+                                                                <span>/3000</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="select_cont">       
+                                                        <div class="form-column input-upload data_room mt01">                          
+                                                            <div class="input-txt">
+                                                                <input type="file" title="" value="" placeholder="">
+                                                            </div>
+                                                            <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                            <div class="input-upload loadList">
+                                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- [D]220906 수정 -->
+                                                        <p class="txt-bd4">형식 : jpg, jpeg, png, gif    /   용량 : 파일당 5MB 이하    /   이미지에 텍스트 포함 시 모바일에서 텍스트가 작게 보일 수 있습니다</p>
+                                                        <div class="caption correction">
+                                                            <strong>대체 텍스트(선택)</strong>
+                                                            <div>
+                                                                <div class="form-column">
+                                                                    <div class="input-txt">
+                                                                        <input type="text" title="" value="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <p class="txt-bd4">대체텍스트는 이미지를 표현하는 문구로 자유롭게 입력 가능합니다. (최대 20자)</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="caption correction">
+                                                            <strong>연결 URL(선택)</strong>
+                                                            <div>
+                                                                <div class="form-column">
+                                                                    <div class="input-txt">
+                                                                        <input type="text" title="" value="" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                                <p class="txt-bd4">연결URL은 이미지에 페이지 또는 사이트 연결이 필요할 경우에만 입력해주세요.</p>
+                                                            </div>
+                                                            <span class="checkbox">
+                                                                <input id="check03_1" name="check03" type="checkbox">
+                                                                <label for="check03_1">
+                                                                    <i class="ico"></i> <span>새창으로 열기</span>
+                                                                </label>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- [D]220817수정 -->
+                                                    <div class="select_cont">
+                                                        <div class="txt-bd4">유튜브 동영상 공유하기 주소를 복사하여 넣어 주세요.<br>
+                                                            <div class="ml10">(예시 : https://youtu.be/_RfMikGsga0  )</div>
+                                                        </div>
+                                                        <div class="input-txt mt20">
+                                                            <input type="text" title="" value="" placeholder="유튜브 동영상 링크를 입력해 주세요">
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <!-- [END] //220803 추가 -->
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                                
+                    </div>
+                    <div class="addDel_btn tac">
+                        <button class="add_btn btn" type="button">항목추가</button>
+                    </div>
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">임시저장</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

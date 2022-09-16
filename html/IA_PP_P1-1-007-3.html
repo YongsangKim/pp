@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>            
+            <div class="content">
+                <h2 class="tit_h2">AAA(임시저장)</h2>                
+                <div class="between_end">
+                    <div>
+                        <span class="fz14 txt-bd4">임시저장은 1년간 저장되며, 그 이후로는 삭제 처리됩니다.</span>
+                    </div>
+                    <div class="btn_list">
+                        <button class="btn ico_btn12" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#">임시저장건 삭제</button>
+                        <!-- 2차 <button class="btn ico_btn07" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#">이력확인</button> -->
+                        <button class="btn ico_btn01 active hover_tooltip" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#">검수요청<span class="tooltip_txt">검수 요청 시 완료 전까지 수정이 불가능합니다.</span></button>
+                    </div>
+                </div>
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">서비스 개요</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보(검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (검수필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">연동정보관리</a>
+                    </li>
+                </ul>   
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="bd_box">
+                            <div class="tit_h4 ico_scr04">즉시 수정 가능 항목은 승인 완료 서비스 상세에서 수정이 가능합니다.</div>
+                            <div class="btn-area">
+                                <a href="javascript:void(0)" class="btn blackline lg fixed2">바로가기</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>                  
+                <div class="btn-area">
+                    <a href="javascript:void(0)" class="btn primary lg fixed">목록</a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

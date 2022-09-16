@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">   
+                <h2 class="tit_h2">서비스 등록</h2>
+                <div class="between_end">
+                    <span class="txt-bd4 fz14">임시저장은 1년간 저장되며, 그 이후로는 삭제 처리됩니다.</span>
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 hover_tooltip disabled">검수요청<span class="tooltip_txt">모든 항목 임시 저장 후에 검수 요청이 가능합니다.</span></button>
+                    </div>
+                </div>
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">서비스 개요 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보 (작성필요)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금제 관리 (작성필요)</a>
+                    </li>
+                </ul>    
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="between_end">
+                            <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                            <a href="javascript:void(0)" class="btn teritary blackline md fz14" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#myModal1">기존 데이터 가져오기</a>
+                        </div>
+                    </div> 
+                </div>               
+            </div>
+            <!-- [D]220830 radio로 변경 -->
+            <!-- Modal -->
+            <div class="modal fade modal_style1" id="myModal1" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">데이터 가져오기</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body skinny_pd">       
+                            <div class="tab-pane fade show active" id="join1" role="tabpanel" aria-labelledby="join1-tab">
+                                <div class="scroll_box bdt2">
+                                    
+                                    <div class="text_area">
+                                        <span class="radio">
+                                            <input id="radio11" name="radio10" type="radio" checked="">
+                                            <label for="radio11">
+                                                <i class="ico"></i> <span>AAA 서비스 (판매중)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio12" name="radio10" type="radio">
+                                            <label for="radio12">
+                                                <i class="ico"></i> <span>BBB 서비스 (판매대기)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio13" name="radio10" type="radio">
+                                            <label for="radio13">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio14" name="radio10" type="radio">
+                                            <label for="radio14">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio15" name="radio10" type="radio">
+                                            <label for="radio15">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio16" name="radio10" type="radio">
+                                            <label for="radio16">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio17" name="radio10" type="radio">
+                                            <label for="radio17">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                        <span class="radio">
+                                            <input id="radio18" name="radio10" type="radio">
+                                            <label for="radio18">
+                                                <i class="ico"></i> <span>CCC 서비스 (판매중지)</span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="txt-bd4 mt01 fz14">기존 서비스의 데이터를 탭별로 불러와서 사용할 수 있습니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn lg fixed" data-bs-dismiss="modal">취소</button>
+                            <button type="button" class="btn primary lg fixed">데이터 가져오기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Modal -->
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();        
+    </script>
+</body>
+</html>

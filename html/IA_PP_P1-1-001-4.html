@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"> -->
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="servicelist_wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v1"><div class="slogan">서비스 관리</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <!-- [START] 220726 수정 -->                
+                <h2 class="tit_h2">서비스 등록</h2>
+                <!-- [END] //220726 수정 -->
+                <div class="between_end">
+                    <span class="fz14 txt-bd4">검수 요청 시 수정이 불가하며, 판매대기 또는 반려 시 수정이 가능합니다.</span>
+                    <div class="btn_list">
+                        <button class="btn ico_btn01 hover_tooltip active">검수요청<span class="tooltip_txt">검수 요청 시 완료 전까지 수정이 불가능합니다.</span></button>
+                    </div>
+                </div>
+                <!-- [D]220812 탭수정 -->
+                <ul class="nav nav01 stl2 nav-pills nav-justified" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 개요 (완료)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">서비스 소개 (완료)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">요금 정보 (완료)</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">요금제 관리 (작성필요)</a>
+                    </li>
+                </ul>   
+                <div class="tab-content">
+                    <div class="tab-pane fade show active">
+                        <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다</div>
+                        <div class="tb_stl1">
+                            <table>
+                                <caption>요금제 양식</caption>
+                                <colgroup>
+                                    <col style="width:320px">
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="col">요금제 양식 다운로드</th>
+                                        <td class="between_center pr0">
+                                            <ul>
+                                                <!-- [START] 220726 수정 -->
+                                                <li>- 내려받은 요금제 양식에 맞춰서 작성한 후 등록해 주세요</li>
+                                                <li>- 자세한 등록 방법은 내려받은 파일 안에 있는 설명을 확인해 주세요</li>
+                                                <!-- [END] //220726 수정 -->
+                                            </ul>
+                                            <a href="javascript:void(0)" class="btn teritary lg blackline">양식 다운로드</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col" class="tooltip_area">
+                                            <span class="ast">요금제 업로드</span>
+                                            <span>(1개만 등록 가능)</span>
+                                            <div class="tooltip_box">
+                                                <button type="button" class="tooltip_ico">?</button>
+                                                <div class="tooltip_txt">
+                                                    툴팁 내용
+                                                    <button type="button" class="tooltip_close">닫기</button>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <td>
+                                            <div class="form-column input-upload data_room">                          
+                                                <div class="input-txt">
+                                                    <input type="file" title="" value="" placeholder="">
+                                                </div>
+                                                <!-- [START] 220726 수정 -->
+                                                <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                                <!-- [END] //220726 수정 -->
+                                                <div class="input-upload loadList">
+                                                    <div><input type="file">MainIcon.xlsx<button class="btn_del"></button></div>
+                                                </div>
+                                            </div>
+                                            <!-- [D]220906 수정 -->
+                                            <p class="txt-bd4">형식 : xls, xlsx   /   용량 :  5MB 이하</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                    <div class="btn-area">
+                        <a href="javascript:void(0)" class="btn lg fixed">목록</a>
+                        <a href="javascript:void(0)" class="btn primary lg fixed">임시저장</a>
+                    </div>
+                </div>               
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

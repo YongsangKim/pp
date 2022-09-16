@@ -129,7 +129,6 @@ sup {
   top: -0.5em;
 }
 
-pre,
 code,
 kbd,
 samp {
@@ -4578,10 +4577,10 @@ textarea.form-control-lg {
   z-index: 2;
 }
 .accordion-button:focus {
-  z-index: 3;
+  /* z-index: 3;
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
 }
 
 .accordion-header {
@@ -5355,7 +5354,7 @@ textarea.form-control-lg {
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 0.5rem;
+  margin: 1.6rem;
   pointer-events: none;
 }
 .modal.fade .modal-dialog {
@@ -5375,7 +5374,7 @@ textarea.form-control-lg {
 }
 
 .modal-dialog-scrollable {
-  height: calc(100% - 1rem);
+  height: calc(100% - 3.2rem);
 }
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
@@ -5388,7 +5387,7 @@ textarea.form-control-lg {
 .modal-dialog-centered {
   display: flex;
   align-items: center;
-  min-height: calc(100% - 1rem);
+  min-height: calc(100% - 3.2rem);
 }
 
 .modal-content {
@@ -5465,6 +5464,14 @@ textarea.form-control-lg {
   .modal-dialog {
     max-width: 684px;
     margin: 1.75rem auto;
+  }
+
+  .modal-dialog.lg {
+    max-width: 858px;
+  }
+
+  .modal-dialog.sm {
+    max-width: 560px;
   }
 
   .modal-dialog-scrollable {

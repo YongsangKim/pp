@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap" class="mypage">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v6"><div class="slogan">마이페이지</div></div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="nav stl1 justify-content-center">
+                    <h2 class="nav-item">
+                        <a class="nav-link">회원정보 변경</a>
+                    </h2>
+                    <h2 class="nav-item">
+                        <!-- [START] 220715 문구수정, br추가 -->
+                        <a class="nav-link">약관 확인 및<br class="pc-hide"> 수신 변경</a>
+                        <!-- [END] //220715 문구수정, br추가 -->
+                    </h2>
+                    <h2 class="nav-item">
+                        <a class="nav-link active">회사정보 변경</a>
+                    </h2>
+                </div>
+                <div class="tab-content">
+                    <!-- [START] 220729 txt-cp2, br추가 -->
+                    <div class="tac txt-cp2">‘회원가입 유형, 사업자등록번호(고유번호), 법인명,<br class="pc-hide"> 법인등록번호,통신판매신고번호’ 변경을 원하시면,<br>‘파트너 지원 &gt; 1:1 문의하기’를 통해 변경요청 해주세요</div>
+                    <!-- [END] //220729 txt-cp2, br추가 --> 
+                    <div class="between_end mt07">
+                        <h4 class="tit_h4">회사정보</h4>
+                        <div class="txt-cp1"><span class="ast">*</span>표시는 필수 입력 항목입니다.</div>
+                    </div>
+                    <!-- [START] 220715 클래스 수정 -->
+                    <div class="tb_stl1">
+                        <!-- [END] //220715 클래스 수정 -->
+                        <table>
+                            <caption>개인사업자 회원가입인증</caption>
+                            <colgroup>
+                                <col style="width: 328px;">
+                                <col>
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="col"><span class="ast">회원가입 유형</span></th>
+                                    <td>비영리법인</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">사업자 등록번호(또는 고유번호)</span></th>
+                                    <td>1231212345</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><div>회사로고<span>(1개만 등록가능)</span></div></th>
+                                    <!-- [D]220830 수정 -->
+                                    <td>
+                                        <div class="form-column input-upload data_room rtbtn">                          
+                                            <div class="input-txt">
+                                                <input type="file" title="" value="" placeholder="">
+                                            </div>
+                                            <button type="button" class="btn teritary lg blackline ml8">파일 첨부</button>
+                                        </div>
+                                        <ul class="dotList mt01">
+                                            <li>형식 : jpg, jpeg, png, gif</li>
+                                            <li>용량 : 파일 당 5MB 이하</li>
+                                            <li>이미지 사이즈 : 321x174</li>
+                                        </ul>
+                                        <div class="thumbnail mt02">
+                                            <div class="input-upload loadList">
+                                                <div><input type="file">MainIcon.jpeg<button class="btn_del"></button></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">법인명</span></th>
+                                    <td>무한소프트</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col">법인등록번호</th>
+                                    <td>1301110006246</td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">대표자 성명</span></th>
+                                    <td>
+                                        <div class="input-txt w568">
+                                            <input type="text" title="" value="홍길동" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">업태</span></th>
+                                    <td>
+                                        <div class="input-txt w568">
+                                            <input type="text" title="" value="정보통신" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">업종</span></th>
+                                    <td>
+                                        <!-- [D]220825 수정 -->
+                                        <div class="select-box w568">
+                                            <select class="select" tabindex="-1">
+                                                <option>전자상거래</option>
+                                                <option>1</option>
+                                                <option>2</option>
+                                            </select>
+                                            <button type="button" id="sel01" class="select-btn">전자상거래</button>
+                                            <div class="select-layer">
+                                                <button type="button" class="option on" idx="0">전자상거래</button>
+                                                <button type="button" class="option" idx="1">1</button>
+                                                <button type="button" class="option" idx="2">2</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">종목</span></th>
+                                    <td>
+                                        <div class="input-txt w568">
+                                            <input type="text" title="" value="통신" placeholder="">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="col"><span class="ast">회사 주소</span></th>
+                                    <td>
+                                        <!-- [START] 220715 클래스 수정 -->
+                                        <div class="form-column data_room rtbtn">    
+                                        <!-- [END] //220715 클래스 수정 -->                                  
+                                            <div class="input-txt">
+                                                <input type="text" title="" value="" placeholder="우편번호">
+                                            </div>
+                                            <button type="button" class="btn teritary lg blackline ml8">주소검색</button>
+                                        </div>
+                                        <div class="input-txt w568 mt01">
+                                            <input type="text" title="" value="" placeholder="기본 주소">
+                                        </div>
+                                        <div class="input-txt w568 mt01">
+                                            <input type="text" title="" value="" placeholder="나머지 주소">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- [D]220811추가 -->
+                                <tr>
+                                    <th scope="col"><span class="ast">통신판매신고번호</span></th>
+                                    <td>
+                                        <!-- [D]220825 수정 -->
+                                        2019-서울강남-1234
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="btn-area">
+                        <button type="button" class="btn lg fixed">취소</button>
+                        <button type="button" class="btn primary lg fixed">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>    
+    <script>
+        var myModal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+        myModal1.show();
+    </script>
+</body>
+</html>
