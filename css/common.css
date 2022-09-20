@@ -69,6 +69,7 @@ button.btn{vertical-align:top}
 .align_btn{position:relative;display:inline-block;padding-right:22px}
 .align_btn::after{content:'';width:12px;height:7px;background:url('../images/arrw_down.png') -6px -9px no-repeat;transition:all .2s;position:absolute;top:50%;right:0;margin-top:-3.5px}
 .align_btn.on::after{transform:translateY(-20%) rotate(180deg)}
+.align_btn.align_no::after{background:url('../images/arrow_no.png') -6px -9px no-repeat}
 .ath_btn{border-color:#1a1d1d;color:#1a1d1d;background-color:#fff}
 .ath_btn.on{border-color:#2a2d3e;background:#2a2d3e;color:#FFF}
 .btn.black{color:#3a3a3d;background:#f2f3f4}
@@ -366,6 +367,8 @@ h4.modal-title{font-size:24px;color:#1a1d1d;font-weight:500;padding-bottom:0}
 /* .search-box .bar{display:inline-block;margin:0 8px;text-align:center;font-size:24px;height:40px;line-height:38px} */
 .calendar .bar{display:inline-flex;margin:0 8px;justify-content:center;align-items:center;font-size:0}
 .calendar .bar::before{content:'';display:inline-block;width:8px;height:1px;background:#1a1d1d}
+.search-box .bar{display:inline-flex;margin:0 8px;justify-content:center;align-items:center;font-size:0}
+.search-box .bar::before{content:'';display:inline-block;width:8px;height:1px;background:#1a1d1d}
 .search-box .sub{float:left;font-size:13px;padding-left:12px}
 /*---------------------------------------/
     footer
@@ -1166,7 +1169,7 @@ i.chk{display:inline-block;width:16px;height:16px;background:url('../images/ico_
     .pt24{padding-top:24px !important}
     .mo-hide{display:none !important}
     .mo-block{display:block !important}
-    body #wrap{font-size:1.4rem;letter-spacing:-0.02em}
+    body #wrap{font-size:1.4rem;letter-spacing:-0.02em;min-width:auto}
     span, strong{letter-spacing:-0.02em}
     .mw140{min-width:140px !important}
     #wrap .m_tal{text-align:left !important}

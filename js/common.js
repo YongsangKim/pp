@@ -198,7 +198,8 @@ $(function(){
 
     //테이블 정렬
     $('.align_btn').click(function(){
-        $(this).toggleClass('on');
+        $(this).parent().siblings().children().addClass('align_no');
+        $(this).removeClass('align_no').toggleClass('on');
     });
 
     //table border-bottom
